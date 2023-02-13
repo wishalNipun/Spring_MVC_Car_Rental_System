@@ -1,16 +1,16 @@
 main>div:nth-child(1){
-    background:url("../img/img1.png");
+    background:url("../img/creatAccountImg2.png");
     background-size:cover;
     background-position:center;
 
     position: absolute;
     right: 0;
-    top: 0;
-    width: 1100px;
-    height: 712px;
+    bottom: 0;
+    width: 500px;
+    height: 500px;
 }
 main>div:nth-child(2){
-    background:url("../img/blob2.png");
+    background:url("../img/creatAccountImg1.png");
     background-size:cover;
     background-position:center;
 
@@ -20,17 +20,7 @@ main>div:nth-child(2){
     width: 400px;
     height: 430px;
 }
-main>div:nth-child(3){
-    background:url("../img/car.png");
-    background-size:cover;
-    background-position:center;
 
-    position: absolute;
-    top: 308px;
-    left: 666px;
-    width: 850px;
-    height: 345px;
-}
 .headerNav{
     z-index: 1;
     position: absolute;
