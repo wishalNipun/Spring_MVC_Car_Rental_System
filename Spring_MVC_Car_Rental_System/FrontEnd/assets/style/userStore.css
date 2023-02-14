@@ -1,13 +1,12 @@
 main>div:nth-child(1){
-    background:url("../img/creatAccountImg2.png");
+    background:url("../img/storeblob1.png");
     background-size:cover;
     background-position:center;
 
     position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 500px;
-    height: 500px;
+    right: 400px;
+    width: 700px;
+    height: 700px;
 }
 
 .headerNav{
@@ -43,7 +42,7 @@ header>nav>ul>li>a:hover{
 }
 main>div:nth-child(2){
     position: relative;
-    top: 80px;
+    top: 70px;
 
 }
 
@@ -51,15 +50,20 @@ main>div:nth-child(2)>h1{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: 2.1rem;
-    line-height: 60px;
+    font-size: 2rem;
+    margin: 0;
+}
+main>div:nth-child(2)>h2{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
     margin: 0;
 }
 main>div:nth-child(2)>p{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    line-height: 42px;
     margin: 0;
     color: #747474;
 }
@@ -67,7 +71,7 @@ span{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 1.5rem;
     line-height: 60px;
 
     color: #0300A7
@@ -86,3 +90,50 @@ main>div:nth-child(2)>form>div:nth-child(2){
     width: 896px;
     margin-bottom: 20px;
 }
+main>div:nth-child(2)>div:nth-child(5){
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*card Manage start*/
+.card>hr{
+    margin: 0;
+}
+.card-body{
+    padding: 10px;
+}
+.card-body>div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.card-body>h5{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+}
+.card-body>div>div>h5{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+
+}
+.card-body>div>div>p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 0;
+}
+.card-body>a{
+    width: 100%;
+}
+
+/*card Manage End*/
