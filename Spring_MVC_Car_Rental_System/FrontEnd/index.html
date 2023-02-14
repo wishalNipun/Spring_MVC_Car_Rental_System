@@ -12,19 +12,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/userCreateAccount.css">
 
 </head>
 <body>
-<header>
-    <nav  class="headerNav">
+<header id="UserDashBoardHead">
+    <nav id="UserDashBoardHeadNav" class="headerNav">
         <ul>
-            <li id="Home"><a href="#">Home</a></li>
-            <li id="Account"><a href="#">Account</a></li>
-            <li id="Store"><a href="#">Store</a></li>
-            <li id="CheckOut"><a href="#">Check Out</a></li>
+            <li class="Home" ><a href="#">Home</a></li>
+            <li class="Account"><a href="#">Account</a></li>
+            <li class="Store"><a href="#">Store</a></li>
+            <li class="CheckOut"><a href="#">Check Out</a></li>
+        </ul>
+    </nav>
+
+    <nav id="UserAccountNav" class="headerNav">
+        <ul>
+            <li class="Home" ><a href="#">Home</a></li>
+            <li class="Account"><a href="#">Account</a></li>
+            <li class="Store"><a href="#">Store</a></li>
+            <li class="CheckOut"><a href="#">Check Out</a></li>
         </ul>
     </nav>
 </header>
+
 <main id="UserDashBoard">
     <div></div>
     <div></div>
@@ -36,8 +47,53 @@
         Car Select from a range of car options and local specials.</p>
 
 </main>
+<main id="UserAccount" class="container-fluid">
+    <div></div>
+    <div></div>
+    <div>
+        <h1 >Create Your Account.</h1>
+        <p>Since this your first trip. You’ll need to provide us
+            with some information before you can check out.</p>
+        <form>
+            <div>
+                <input type="text" class="form-control" id="" placeholder="Enter Name">
+                <input type="text" class="form-control" id="" placeholder="Enter NIC Number / Driving License">
 
+            </div>
+            <div>
+                <input type="text" class="form-control" id="" placeholder="Enter Email">
+                <input type="text" class="form-control" id="" placeholder="Enter Contact Number">
+            </div>
+            <div>
+                <input type="text" class="form-control" id="" placeholder="Enter Address">
+                <input type="text" class="form-control" id="" placeholder="Enter New Password">
+            </div>
+            <div>
+                <img src="assets/img/uploadIcon.png">
+                <div>
+                    <p>Upload Nic / Driving License</p>
+                    <input type="file"  >
+                </div>
+            </div>
+            <div>
+                <button id="btnSignUp" type="button" class="btn btn-primary">Sign Up</button>
+            </div>
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="or">
+                <h1>OR</h1>
+            </div>
+            <div>
+                <button id="btnSignIn" type="button" class="btn btn-primary"><img id="google" src="assets/img/googleIcon.png">Sign Up</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <p>Alreary have account sign in <a href="#">here</a></p>
+    </div>
+</main>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/controllers/DashBoardController.js"></script>
 </body>
 </html>

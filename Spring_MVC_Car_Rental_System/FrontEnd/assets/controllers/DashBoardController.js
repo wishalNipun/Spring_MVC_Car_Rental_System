@@ -1,26 +1,17 @@
-$('#Home').click(function (){
-    // $('#navHome').css('display','block');
-    // $('#navCustomer').css('display','none');
-    // $('#navItem').css('display','none');
-    // $('#navPlaceOrder').css('display','none');
-    // $('#navOrderDetail').css('display','none');
+$('#UserDashBoard').css('display','block');
 
-    $('#UserDashBoard').css('display','none');
+$('#UserAccount').css('display','none');
 
-    $('#UserCreateAccount').css('display','none');
+$('.Home').click(function (){
+    $('#UserDashBoard').css('display','block');
 
+    $('#UserAccount').css('display','none');
 });
 
 
-$('#Account').click(function (){
-    console.log("ssss")
-    // $('#navHome').css('display','block');
-    // $('#navCustomer').css('display','none');
-    // $('#navItem').css('display','none');
-    // $('#navPlaceOrder').css('display','none');
-    // $('#navOrderDetail').css('display','none');
+$('.Account').click(function (){
+    $('#UserAccount').css('display','block');
 
     $('#UserDashBoard').css('display','none');
-
 
 });

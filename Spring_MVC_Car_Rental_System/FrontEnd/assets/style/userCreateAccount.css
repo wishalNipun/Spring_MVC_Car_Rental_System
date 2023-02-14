@@ -1,4 +1,4 @@
-main>div:nth-child(1){
+#UserAccount>div:nth-child(1){
     background:url("../img/creatAccountImg2.png");
     background-size:cover;
     background-position:center;
@@ -9,7 +9,7 @@ main>div:nth-child(1){
     width: 500px;
     height: 500px;
 }
-main>div:nth-child(2){
+#UserAccount>div:nth-child(2){
     background:url("../img/creatAccountImg1.png");
     background-size:cover;
     background-position:center;
@@ -21,14 +21,14 @@ main>div:nth-child(2){
     height: 430px;
 }
 
-.headerNav{
+#UserAccountNav{
     z-index: 1;
     position: absolute;
     top: 16px;
     right: 65px;
 }
 
-header>nav>ul>li{
+#UserAccountNav>ul>li{
     display: inline-block;
     padding-left: 25px;
     font-family: 'Poppins', sans-serif;
@@ -38,52 +38,52 @@ header>nav>ul>li{
     line-height: 45px;
 
 }
-header>nav>ul>li:nth-child(1)>a:hover{
+#UserAccountNav>ul>li:nth-child(1)>a:hover{
     text-decoration: none;
 }
-header>nav>ul>li:nth-child(2)>a{
+#UserAccountNav>ul>li:nth-child(2)>a{
     color: black;
 }
-header>nav>ul>li>a{
+#UserAccountNav>ul>li>a{
     color: black;
     text-decoration: none;
 }
-header>nav>ul>li>a:hover{
+#UserAccountNav>ul>li>a:hover{
     color: black;
     text-decoration: none;
 }
 
 
-main>div:nth-child(3),main>div:nth-child(4){
+#UserAccount>div:nth-child(3),main>div:nth-child(4){
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     top: 70px;
 }
-main>div>h1,main>div>form>div>h1{
+#UserAccount>div>h1,main>div>form>div>h1{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 2.1rem;
     line-height: 60px;
 }
-main>div>form{
+#UserAccount>div>form{
     width: 50%;
 }
-main>div>form>div{
+#UserAccount>div>form>div{
     display: flex;
     gap: 2%;
     flex-direction: row;
     margin: 2%;
 }
-main>div>form>div>img{
+#UserAccount>div>form>div>img{
     height: 3rem;
 }
-main>div>form>div>div>p{
+#UserAccount>div>form>div>div>p{
    margin-bottom: 0;
 }
-main>div>form>div>div>input{
+#UserAccount>div>form>div>div>input{
     font-size: 9px;
 }
 #btnSignUp{
