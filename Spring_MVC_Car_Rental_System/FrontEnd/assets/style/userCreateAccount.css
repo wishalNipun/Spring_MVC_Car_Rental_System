@@ -52,3 +52,75 @@ header>nav>ul>li>a:hover{
     color: black;
     text-decoration: none;
 }
+
+
+main>div:nth-child(3),main>div:nth-child(4){
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 70px;
+}
+main>div>h1,main>div>form>div>h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.1rem;
+    line-height: 60px;
+}
+main>div>form{
+    width: 50%;
+}
+main>div>form>div{
+    display: flex;
+    gap: 2%;
+    flex-direction: row;
+    margin: 2%;
+}
+main>div>form>div>img{
+    height: 3rem;
+}
+main>div>form>div>div>p{
+   margin-bottom: 0;
+}
+main>div>form>div>div>input{
+    font-size: 9px;
+}
+#btnSignUp{
+    width: 100%;
+    background-color: #FEBE29;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+
+}
+
+#bar{
+    border:1px solid black;
+}
+#or{
+    display: flex;
+    justify-content: center;
+}
+#btnSignIn{
+    width: 100%;
+    background-color: #2572E6;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+
+}
+#line1{
+ position: absolute;
+    border: 1px solid;
+    width: 19rem;
+}
+#line2{
+    position: absolute;
+    border: 1px solid;
+    width: 19rem;
+    right: 375px;
+}
+#google{
+    height: 1.5rem;
+}

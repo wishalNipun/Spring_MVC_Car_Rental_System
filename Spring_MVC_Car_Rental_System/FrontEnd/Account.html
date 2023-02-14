@@ -6,8 +6,6 @@
     <meta content="width=device-width initial-scale=1" name="viewport">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
-    <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" rel="stylesheet">
     <link rel="stylesheet" href="assets/style/userCreateAccount.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,28 +22,49 @@
         </ul>
     </nav>
 </header>
-<main id="UserDashBoard">
+<main id="UserDashBoard" class="container-fluid">
     <div></div>
     <div></div>
-    <div class="container-fluid text-center">
-        <div class="row align-middle">
-            <h1>Create Your Account.</h1>
-        </div>
-        <div class="row align-middle">
-            <p>Since this your first trip. You’ll need to provide us
-                with some information before you can check out.</p>
-        </div>
-        <div class="row">
-            <div class="col">
-                Column
+    <div>
+        <h1 >Create Your Account.</h1>
+        <p>Since this your first trip. You’ll need to provide us
+            with some information before you can check out.</p>
+        <form>
+            <div>
+                <input type="text" class="form-control" id="" placeholder="Enter Name">
+                <input type="text" class="form-control" id="" placeholder="Enter NIC Number / Driving License">
+
             </div>
-            <div class="col">
-                Column
+            <div>
+                <input type="text" class="form-control" id="" placeholder="Enter Email">
+                <input type="text" class="form-control" id="" placeholder="Enter Contact Number">
             </div>
-            <div class="col">
-                Column
+            <div>
+                <input type="text" class="form-control" id="" placeholder="Enter Address">
+                <input type="text" class="form-control" id="" placeholder="Enter New Password">
             </div>
-        </div>
+            <div>
+                <img src="assets/img/uploadIcon.png">
+                <div>
+                    <p>Upload Nic / Driving License</p>
+                    <input type="file"  >
+                </div>
+            </div>
+            <div>
+                <button id="btnSignUp" type="button" class="btn btn-primary">Sign Up</button>
+            </div>
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="or">
+                <h1>OR</h1>
+            </div>
+            <div>
+                <button id="btnSignIn" type="button" class="btn btn-primary"><img id="google" src="assets/img/googleIcon.png">Sign Up</button>
+            </div>
+             </form>
+    </div>
+    <div>
+        <p>Alreary have account sign in <a href="#">here</a></p>
     </div>
   </main>
 
