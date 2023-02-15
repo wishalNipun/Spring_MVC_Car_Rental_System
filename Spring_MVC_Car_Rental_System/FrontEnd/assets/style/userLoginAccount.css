@@ -1,4 +1,4 @@
-main>div:nth-child(1){
+#UserLoginAccount>div:nth-child(1){
     background:url("../img/creatAccountImg2.png");
     background-size:cover;
     background-position:center;
@@ -9,7 +9,7 @@ main>div:nth-child(1){
     width: 500px;
     height: 500px;
 }
-main>div:nth-child(2){
+#UserLoginAccount>div:nth-child(2){
     background:url("../img/creatAccountImg1.png");
     background-size:cover;
     background-position:center;
@@ -21,68 +21,68 @@ main>div:nth-child(2){
     height: 430px;
 }
 
-.headerNav{
-    z-index: 1;
-    position: absolute;
-    top: 16px;
-    right: 65px;
-}
+/*#UserLoginAccountHeadNav{*/
+/*    z-index: 1;*/
+/*    position: absolute;*/
+/*    top: 16px;*/
+/*    right: 65px;*/
+/*}*/
 
-header>nav>ul>li{
-    display: inline-block;
-    padding-left: 25px;
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 45px;
+/*#UserLoginAccountHeadNav>ul>li{*/
+/*    display: inline-block;*/
+/*    padding-left: 25px;*/
+/*    font-family: 'Poppins', sans-serif;*/
+/*    font-style: normal;*/
+/*    font-weight: 400;*/
+/*    font-size: 30px;*/
+/*    line-height: 45px;*/
 
-}
-header>nav>ul>li:nth-child(1)>a:hover{
-    text-decoration: none;
-}
-header>nav>ul>li:nth-child(2)>a{
-    color: black;
-}
-header>nav>ul>li>a{
-    color: black;
-    text-decoration: none;
-}
-header>nav>ul>li>a:hover{
-    color: black;
-    text-decoration: none;
-}
+/*}*/
+/*#UserLoginAccountHeadNav>ul>li:nth-child(1)>a:hover{*/
+/*    text-decoration: none;*/
+/*}*/
+/*#UserLoginAccountHeadNav>ul>li:nth-child(2)>a{*/
+/*    color: black;*/
+/*}*/
+/*#UserLoginAccountHeadNav>ul>li>a{*/
+/*    color: black;*/
+/*    text-decoration: none;*/
+/*}*/
+/*#UserLoginAccountHeadNav>ul>li>a:hover{*/
+/*    color: black;*/
+/*    text-decoration: none;*/
+/*}*/
 
 
-main>div:nth-child(3),main>div:nth-child(4){
+#UserLoginAccount>div:nth-child(3),main>div:nth-child(4){
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     top: 100px;
 }
-main>div>h1,main>div>form>div>h1{
+#UserLoginAccount>div>h1,main>div>form>div>h1{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 2.1rem;
     line-height: 60px;
 }
-main>div>form{
+#UserLoginAccount>div>form{
     width: 35%;
 }
 
-main>div>form>input:nth-child(1){
+#UserLoginAccount>div>form>input:nth-child(1){
     margin-top: 30px;
     margin-bottom: 20px;
 }
-main>div>form>input:nth-child(2){
+#UserLoginAccount>div>form>input:nth-child(2){
     margin-bottom: 20px;
 }
-main>div>form>p{
+#UserLoginAccount>div>form>p{
     margin: 0;
 }
-#btnSignUp{
+#btnSignnUp{
 
     background-color: #FEBE29;
     font-family: 'Poppins';
@@ -94,7 +94,7 @@ main>div>form>p{
 #bar{
     border:1px solid black;
 }
-#or{
+#orr{
     display: flex;
     justify-content: center;
 
@@ -102,7 +102,7 @@ main>div>form>p{
 #or>h1{
     margin: 0;
 }
-#btnSignIn{
+#btnSignnIn{
 
     background-color: #2572E6;
     font-family: 'Poppins';
@@ -111,19 +111,19 @@ main>div>form>p{
     width: 100%;
     margin-bottom: 20px;
 }
-#line1{
+#linee1{
  position: absolute;
     border: 1px solid;
     width: 14rem;
     top: 307px;
 }
-#line2{
+#linee2{
     position: absolute;
     border: 1px solid;
     width: 14rem;
     top: 307px;
     right: 490px;
 }
-#google{
+#googlee{
     height: 1.5rem;
 }

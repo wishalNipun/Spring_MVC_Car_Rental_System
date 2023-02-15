@@ -53,15 +53,16 @@
 }
 #UserDashBoardHeadNav>ul>li:nth-child(1)>a{
     color: black;
+    font-weight: 800;
 }
 #UserDashBoardHeadNav>ul>li>a{
     color: white;
     text-decoration: none;
 }
-#UserDashBoardHeadNav>ul>li>a:hover{
-    color: black;
-    text-decoration: none;
-}
+/*#UserDashBoardHeadNav>ul>li>a:hover{*/
+/*    color: black;*/
+/*    text-decoration: none;*/
+/*}*/
 #UserDashBoard>h1{
     position: absolute;
     font-family: 'Poppins', sans-serif;
