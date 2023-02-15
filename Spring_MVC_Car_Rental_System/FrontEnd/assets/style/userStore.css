@@ -118,13 +118,24 @@ span{
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
+    margin-bottom: 0;
+}
+.card-body>p{
+  margin-bottom: 0;
+}
+.card-body>.viewDetail{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    color: blue;
+    font-size: 10px;
 }
 .card-body>div>div>h5{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 10px;
-
+    margin: 0;
 }
 .card-body>div>div>p{
     font-family: 'Poppins';

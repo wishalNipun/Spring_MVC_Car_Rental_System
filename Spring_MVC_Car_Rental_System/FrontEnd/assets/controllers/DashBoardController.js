@@ -3,7 +3,7 @@ $('#UserDashBoard').css('display','block');
 $('#UserAccount').css('display','none');
 $('#UserLoginAccount').css('display','none');
 $('#UserStore').css('display','none');
-
+$('#userCarCatalogue').css('display','none');
 
 $('.Home').click(function (){
     $('#UserDashBoard').css('display','block');
@@ -12,7 +12,7 @@ $('.Home').click(function (){
     $('#UserAccount').css('display','none');
     $('#UserLoginAccount').css('display','none');
     $('#UserStore').css('display','none');
-
+    $('#userCarCatalogue').css('display','none');
 
     $('#UserDashBoardHeadNav>ul>li>a').css('color','white');
     $(' #UserDashBoardHeadNav>ul>li:nth-child(1)>a').css('color','black');
@@ -30,6 +30,7 @@ $('.Account').click(function (){
     $('#UserDashBoard').css('display','none');
     $('#UserLoginAccount').css('display','none');
     $('#UserStore').css('display','none');
+    $('#userCarCatalogue').css('display','none');
 
     $('#UserDashBoardHeadNav>ul>li>a').css('color','black');
     $('#UserDashBoardHeadNav>ul>li>a').css('font-weight','400');
@@ -45,6 +46,7 @@ $('#logHere').click(function (){
     $('#UserDashBoard').css('display','none');
     $('#UserAccount').css('display','none');
     $('#UserStore').css('display','none');
+    $('#userCarCatalogue').css('display','none');
 });
 
 $('.Store').click(function (){
@@ -54,6 +56,22 @@ $('.Store').click(function (){
     $('#UserDashBoard').css('display','none');
     $('#UserAccount').css('display','none');
     $('#UserLoginAccount').css('display','none');
+    $('#userCarCatalogue').css('display','none');
+
+    $('#UserDashBoardHeadNav>ul>li>a').css('color','black');
+    $('#UserDashBoardHeadNav>ul>li>a').css('font-weight','400');
+    $(' #UserDashBoardHeadNav>ul>li:nth-child(3)>a').css('font-weight','800');
+});
+
+$('.viewDetail').click(function (){
+
+    $('#userCarCatalogue').css('display','block');
+
+
+    $('#UserDashBoard').css('display','none');
+    $('#UserAccount').css('display','none');
+    $('#UserLoginAccount').css('display','none');
+    $('#UserStore').css('display','none');
 
     $('#UserDashBoardHeadNav>ul>li>a').css('color','black');
     $('#UserDashBoardHeadNav>ul>li>a').css('font-weight','400');
