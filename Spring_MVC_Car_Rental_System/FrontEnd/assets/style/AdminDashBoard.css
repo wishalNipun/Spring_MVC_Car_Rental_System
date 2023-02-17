@@ -1,0 +1,35 @@
+#adminDashBoard>section:nth-child(1){
+    position: fixed;
+    width: 279px;
+    height: 100vh;
+    background-color:#A16F53 ;
+}
+#adminDashBoard>section:nth-child(2){
+    padding-left: 279px;
+}
+
+#adminDashBoard>section:nth-child(1){
+    display: flex;
+    flex-direction: column;
+
+}
+#adminDashBoard>section:nth-child(1)>div:nth-child(1){
+    font-family: 'Rock Salt';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.1rem;
+    line-height: 76px;
+    text-align: center;
+    color: white;
+    padding-bottom: 7rem;
+
+}
+#adminDashBoard>section>div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+
