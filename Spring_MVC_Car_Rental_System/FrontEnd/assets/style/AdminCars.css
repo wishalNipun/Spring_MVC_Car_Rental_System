@@ -112,5 +112,27 @@
 
 }
 
+#adminCustomer>section:nth-child(2)>div:nth-child(2)>form{
+
+    display: flex;
+    flex-direction: column;
+}
+#adminCustomer>section:nth-child(2)>div:nth-child(2)>form>div{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-around;
+
+}
+#adminCustomer>section:nth-child(2)>div:nth-child(2)>form>div>div{
+
+    width: 100%;
+
+
+}
+#adminCustomer>section:nth-child(2)>div:nth-child(2)>form>div>div>h3{
+
+}
 
 
