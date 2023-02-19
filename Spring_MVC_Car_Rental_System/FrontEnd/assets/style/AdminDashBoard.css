@@ -75,12 +75,14 @@
     font-size: 1.3rem;
     line-height: 35px;
     color: #FFFFFF;
+    cursor: pointer;
 }
 #adminDashBoard>section:nth-child(1)>div:nth-child(3)>div>h1:hover{
     color: #000000;
 }
 #adminDashBoard>section:nth-child(1)>div:nth-child(3)>div:nth-child(1)>h1{
     color: #000000;
+
 }
 #adminDashBoard>section:nth-child(1)>div:nth-child(4){
     display: flex;

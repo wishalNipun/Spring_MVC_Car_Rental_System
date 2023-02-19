@@ -13,6 +13,7 @@
     <link href="assets/font/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style/AdminCustomer.css">
+    <link rel="stylesheet" href="assets/style/AdminCars.css">
 </head>
 <body>
 
@@ -109,13 +110,13 @@
             <h1>Wishal Nipun Siriwardana</h1>
         </div>
         <div>
-            <div><h1><i class="fas fa-th-large"></i> DashBoard</h1></div>
-            <div><h1><i class="fa-solid fa-user"></i> Customer</h1></div>
-            <div><h1><i class="fa-solid fa-car"></i> Cars</h1></div>
-            <div><h1><i class="fas fa-male"></i> Drivers</h1></div>
-            <div><h1><i class="fa-solid fa-calendar-days"></i> Reservation</h1></div>
-            <div><h1><i class="fas fa-money-bill"></i> Payment</h1></div>
-            <div><h1><i class="fas fa-chart-area"></i> Income</h1></div>
+            <div><h1 class="DashBoard"><i class="fas fa-th-large"></i> DashBoard</h1></div>
+            <div><h1 class="Customer"><i class="fa-solid fa-user"></i> Customer</h1></div>
+            <div><h1 class="Cars"><i class="fa-solid fa-car"></i> Cars</h1></div>
+            <div><h1 class="Drivers"><i class="fas fa-male"></i> Drivers</h1></div>
+            <div><h1 class="Reservation"><i class="fa-solid fa-calendar-days"></i> Reservation</h1></div>
+            <div><h1 class="Payment"><i class="fas fa-money-bill"></i> Payment</h1></div>
+            <div><h1 class="Income"><i class="fas fa-chart-area"></i> Income</h1></div>
         </div>
         <div>
             <button class="btn"><i class="fas fa-sign-out-alt"></i> logOut</button>
@@ -174,6 +175,135 @@
                 </tr>
                 </tbody>
             </table>
+        </div>
+
+    </section>
+</main>
+<main id="adminAddCar" class="container-fluid.p0">
+    <section >
+        <div>Easy Car Rental</div>
+        <div>
+            <h2>Admin</h2>
+            <img src="assets/img/adminfaceUser.png">
+            <h1>Wishal Nipun Siriwardana</h1>
+        </div>
+        <div>
+            <div><h1 class="DashBoard"><i class="fas fa-th-large"></i> DashBoard</h1></div>
+            <div><h1 class="Customer"><i class="fa-solid fa-user"></i> Customer</h1></div>
+            <div><h1 class="Cars"><i class="fa-solid fa-car"></i> Cars</h1></div>
+            <div><h1 class="Drivers"><i class="fas fa-male"></i> Drivers</h1></div>
+            <div><h1 class="Reservation"><i class="fa-solid fa-calendar-days"></i> Reservation</h1></div>
+            <div><h1 class="Payment"><i class="fas fa-money-bill"></i> Payment</h1></div>
+            <div><h1 class="Income"><i class="fas fa-chart-area"></i> Income</h1></div>
+        </div>
+        <div>
+            <button class="btn"><i class="fas fa-sign-out-alt"></i> logOut</button>
+        </div>
+    </section>
+    <section>
+        <div>
+            <h1>Add Cars</h1>
+            <div>View Cars</div>
+        </div>
+        <div>
+            <form>
+                <div>
+                    <div>
+                        <h3>Brand</h3>
+                        <input type="text" class="form-control" id="" placeholder="Enter Brand">
+                    </div>
+                    <div>
+                        <h3>Model</h3>
+                        <input type="text" class="form-control" id="" placeholder="Enter Model">
+                    </div>
+                    <div>
+                        <h3>Type</h3>
+                        <input type="text" class="form-control" id="" placeholder="Enter Type">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h3>Transmission</h3>
+                        <input type="text" class="form-control" id="" placeholder="Enter Transmission">
+                    </div>
+                    <div>
+                        <h3>Brand</h3>
+                        <input type="text" class="form-control" id="" placeholder="Enter Fuel">
+                    </div>
+                    <div>
+                        <h3>Number Of Passengers</h3>
+                        <input type="text" class="form-control" id="" placeholder="Enter Number Of Passengers">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h3>Color</h3>
+                        <input type="color" class="form-control" id="" placeholder="Enter Color">
+                    </div>
+                    <div>
+                        <h3>Registration Number</h3>
+                        <input type="text" class="form-control" id="" placeholder="Enter Registration Number">
+                    </div>
+                    <div>
+                        <h3>Free Mileage</h3>
+                        <input type="text" class="form-control" id="" placeholder="Enter Free Mileage">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h3>Daily Rate</h3>
+                        <input type="text" class="form-control" id="" placeholder="Enter Daily Rate">
+                    </div>
+                    <div>
+                        <h3>Monthly Rate</h3>
+                        <input type="text" class="form-control" id="" placeholder="Enter Monthly Rate">
+                    </div>
+                    <div>
+                        <h3>Price Of Extra Km</h3>
+                        <input type="text" class="form-control" id="" placeholder="Enter Price Of Extra Km">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h3>Last Service Mileage</h3>
+                        <input type="text" class="form-control" id="" placeholder="Enter Last Service Mileage">
+                    </div>
+                    <div id="ImgChooser">
+                        <div>
+                            <img src="assets/img/uploadIcon.png">
+                            <div>
+                                <p>Front Img</p>
+                                <input type="file"  >
+                            </div>
+                        </div>
+                        <div>
+                            <img src="assets/img/uploadIcon.png">
+                            <div>
+                                <p>Back Img</p>
+                                <input type="file"  >
+                            </div>
+                        </div>
+                        <div>
+                            <img src="assets/img/uploadIcon.png">
+                            <div>
+                                <p>Interior Img</p>
+                                <input type="file"  >
+                            </div>
+                        </div>
+                        <div>
+                            <img src="assets/img/uploadIcon.png">
+                            <div>
+                                <p>Side Img</p>
+                                <input type="file"  >
+                            </div>
+                        </div>
+                    </div>
+                    <div id="addCarSaveButton">
+                        <button class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </form>
+
         </div>
 
     </section>

@@ -1,26 +1,32 @@
 $('#adminDashBoard').css('display','block');
-
 $('#adminCustomer').css('display','none');
+$('#adminAddCar').css('display','none');
 
 
 $('.DashBoard').click(function (){
     $('#adminDashBoard').css('display','block');
 
     $('#adminCustomer').css('display','none');
+    $('#adminAddCar').css('display','none');
 
 
 });
 
 
 $('.Customer').click(function (){
+
     $('#adminCustomer').css('display','block');
 
     $('#adminDashBoard').css('display','none');
+    $('#adminAddCar').css('display','none');
 
 });
 
-$('.Drivers').click(function (){
+$('.Cars').click(function (){
+    $('#adminAddCar').css('display','block');
 
+    $('#adminDashBoard').css('display','none');
+    $('#adminCustomer').css('display','none');
 });
 
 $('.Reservation').click(function (){
@@ -28,11 +34,7 @@ $('.Reservation').click(function (){
 
 });
 
-$('.Cars').click(function (){
 
-
-
-});
 
 $('.Payment').click(function (){
 
