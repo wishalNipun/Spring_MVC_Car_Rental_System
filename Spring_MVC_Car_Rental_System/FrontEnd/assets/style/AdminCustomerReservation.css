@@ -1,19 +1,19 @@
-#adminCustomer>section:nth-child(1){
+#adminCustomerReservation>section:nth-child(1){
     position: fixed;
     width: 279px;
     height: 100vh;
     background-color:#A16F53 ;
 }
-#adminCustomer>section:nth-child(2){
+#adminCustomerReservation>section:nth-child(2){
     padding-left: 279px;
 }
 
-#adminCustomer>section:nth-child(1){
+#adminCustomerReservation>section:nth-child(1){
     display: flex;
     flex-direction: column;
 
 }
-#adminCustomer>section:nth-child(1)>div:nth-child(1){
+#adminCustomerReservation>section:nth-child(1)>div:nth-child(1){
     font-family: 'Rock Salt';
     font-style: normal;
     font-weight: 400;
@@ -23,12 +23,12 @@
     padding-bottom: 3rem;
 
 }
-#adminCustomer>section:nth-child(1)>div:nth-child(2){
+#adminCustomerReservation>section:nth-child(1)>div:nth-child(2){
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#adminCustomer>section:nth-child(1)>div:nth-child(2)>h2{
+#adminCustomerReservation>section:nth-child(1)>div:nth-child(2)>h2{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -41,12 +41,12 @@
     color: #FFFFFF;
 
 }
-#adminCustomer>section:nth-child(1)>div:nth-child(2)>img{
+#adminCustomerReservation>section:nth-child(1)>div:nth-child(2)>img{
     width: 5rem;
     height: 5rem;
 
  }
-#adminCustomer>section:nth-child(1)>div:nth-child(2)>h1{
+#adminCustomerReservation>section:nth-child(1)>div:nth-child(2)>h1{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -61,13 +61,13 @@
 }
 
 
-#adminCustomer>section:nth-child(1)>div:nth-child(3){
+#adminCustomerReservation>section:nth-child(1)>div:nth-child(3){
     display: flex;
     flex-direction: column;
     padding-top: 1rem;
     padding-left: 2rem;
 }
-#adminCustomer>section:nth-child(1)>div:nth-child(3)>div>h1{
+#adminCustomerReservation>section:nth-child(1)>div:nth-child(3)>div>h1{
 
     font-family: 'Poppins';
     font-style: normal;
@@ -77,36 +77,36 @@
     color: #FFFFFF;
     cursor: pointer;
 }
-#adminCustomer>section:nth-child(1)>div:nth-child(3)>div>h1:hover{
+#adminCustomerReservation>section:nth-child(1)>div:nth-child(3)>div>h1:hover{
     color: #000000;
 }
-#adminCustomer>section:nth-child(1)>div:nth-child(3)>div:nth-child(2)>h1{
+#adminCustomerReservation>section:nth-child(1)>div:nth-child(3)>div:nth-child(5)>h1{
     color: #000000;
 
 }
-#adminCustomer>section:nth-child(1)>div:nth-child(4){
+#adminCustomerReservation>section:nth-child(1)>div:nth-child(4){
     display: flex;
     justify-content: center;
 }
 
-#adminCustomer>section:nth-child(1)>div:nth-child(4)>button{
+#adminCustomerReservation>section:nth-child(1)>div:nth-child(4)>button{
     font-weight: 700;
     font-size: 0.75rem;
     color: white;
     padding-top: 2rem;
 }
-#adminCustomer>section:nth-child(1)>div:nth-child(4)>button:hover{
+#adminCustomerReservation>section:nth-child(1)>div:nth-child(4)>button:hover{
     color: #a00000;
 }
 
 /*******************************************************/
-#adminCustomer>section:nth-child(2)>div:nth-child(1){
+#adminCustomerReservation>section:nth-child(2)>div:nth-child(1){
     padding-top: 2rem;
 }
-#adminCustomer>section:nth-child(2)>div:nth-child(2){
+#adminCustomerReservation>section:nth-child(2)>div:nth-child(2){
     padding: 0.7rem;
 }
-#adminCustomer>section:nth-child(2)>div:nth-child(1)>h1{
+#adminCustomerReservation>section:nth-child(2)>div:nth-child(1)>h1{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -116,16 +116,16 @@
 
 
 }
-#adminCustomer>section:nth-child(2)>div:nth-child(2)>table>tbody>tr>td:nth-child(6)>button{
+#adminCustomerReservation>section:nth-child(2)>div:nth-child(2)>table>tbody>tr>td:nth-child(8)>button{
     color: #005cbf;
     padding: 0;
 }
-#adminCustomer>section:nth-child(2)>div:nth-child(2)>table>tbody>tr>td:nth-child(7)>button:nth-child(1){
+#adminCustomerReservation>section:nth-child(2)>div:nth-child(2)>table>tbody>tr>td:nth-child(9)>button:nth-child(1){
     color: #F04C4C;
     padding: 0;
     padding-left: 0.5rem;
 }
-#adminCustomer>section:nth-child(2)>div:nth-child(2)>table>tbody>tr>td:nth-child(7)>button:nth-child(2){
+#adminCustomerReservation>section:nth-child(2)>div:nth-child(2)>table>tbody>tr>td:nth-child(9)>button:nth-child(2){
     color: #2d7d3c;
     padding: 0;
     padding-left: 0.5rem;
