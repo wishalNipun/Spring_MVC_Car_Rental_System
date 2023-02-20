@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/style/userCheckOut.css">
     <link rel="stylesheet" href="assets/style/userViewCarRents.css">
 
+
 </head>
  <body>
 <header id="UserDashBoardHead">
@@ -53,28 +54,28 @@
         <h1 >Create Your Account.</h1>
         <p>Since this your first trip. You’ll need to provide us
             with some information before you can check out.</p>
-        <form>
+        <form id="userRegisterForm">
             <div>
-                <input type="text" class="form-control" id="" placeholder="Enter Name">
-                <input type="text" class="form-control" id="" placeholder="Enter NIC Number">
+                <input type="text" class="form-control"  placeholder="Enter Name" name="name">
+                <input type="text" class="form-control"  placeholder="Enter NIC Number" name="nicNumber">
 
             </div>
             <div>
-                <input type="text" class="form-control" id="" placeholder="Enter Driving License">
-                <input type="text" class="form-control" id="" placeholder="Enter Contact Number">
+                <input type="text" class="form-control"  placeholder="Enter Driving License" name="drivingLicenseNumber">
+                <input type="text" class="form-control"  placeholder="Enter Contact Number" name="contactNumber">
             </div>
             <div>
-                <input type="text" class="form-control" id="" placeholder="Enter Email">
-                <input type="text" class="form-control" id="" placeholder="Enter Address">
+                <input type="text" class="form-control" placeholder="Enter Email" name="email">
+                <input type="text" class="form-control"  placeholder="Enter Address" name="address">
             </div>
             <div>
-                <input type="text" class="form-control" id="" placeholder="Enter New Password">
+                <input type="text" class="form-control" placeholder="Enter New Password" name="password">
             </div>
             <div>
                 <img src="assets/img/uploadIcon.png">
                 <div>
                     <p>Upload Nic / Driving License</p>
-                    <input type="file"  >
+                    <input type="file"  name="img">
                 </div>
             </div>
             <div>
@@ -100,8 +101,8 @@
     <div>
         <h1 >Login Your Account.</h1>
         <form>
-            <input type="text" class="form-control" id="" placeholder="User Name">
-            <input type="text" class="form-control" id="" placeholder="Password">
+            <input type="text" class="form-control"  placeholder="User Name">
+            <input type="text" class="form-control"  placeholder="Password">
             <button id="btnSignnUp" type="button" class="btn btn-primary">Sign Up</button>
             <p>Forget Password <a href="#">here</a></p>
             <div id="linee1"></div>
@@ -150,9 +151,9 @@
                 </select>
             </div>
             <div>
-                <input type="date" class="form-control" id="" placeholder="From">
-                <input type="date" class="form-control" id="" placeholder="To">
-                <input type="text" class="form-control" id="" placeholder="Search">
+                <input type="date" class="form-control" placeholder="From">
+                <input type="date" class="form-control"  placeholder="To">
+                <input type="text" class="form-control"  placeholder="Search">
             </div>
         </form>
         <div>
@@ -162,7 +163,7 @@
                 <div class="card-body border-bottom-0">
                     <h5 class="card-title">Suzuki Alto</h5>
                     <p class="card-text">Premium - Manual</p>
-                    <button class="viewDetail btn btn-light" href="#">ViewDetail</button>
+                    <button class="viewDetail btn btn-light">ViewDetail</button>
                 </div>
                 <hr>
                 <div class="card-body text-center">
@@ -190,7 +191,7 @@
                 <div class="card-body border-bottom-0">
                     <h5 class="card-title">Suzuki Alto</h5>
                     <p class="card-text">Premium - Manual</p>
-                    <button class="viewDetail btn btn-light" href="#">ViewDetail</button>
+                    <button class="viewDetail btn btn-light" >ViewDetail</button>
                 </div>
                 <hr>
                 <div class="card-body text-center">
@@ -218,7 +219,7 @@
                 <div class="card-body border-bottom-0">
                     <h5 class="card-title">Suzuki Alto</h5>
                     <p class="card-text">Premium - Manual</p>
-                    <button class="viewDetail btn btn-light" href="#">ViewDetail</button>
+                    <button class="viewDetail btn btn-light" >ViewDetail</button>
                 </div>
                 <hr>
                 <div class="card-body text-center">
@@ -246,7 +247,7 @@
                 <div class="card-body border-bottom-0">
                     <h5 class="card-title">Suzuki Alto</h5>
                     <p class="card-text">Premium - Manual</p>
-                    <button class="viewDetail btn btn-light" href="#">ViewDetail</button>
+                    <button class="viewDetail btn btn-light" >ViewDetail</button>
                 </div>
                 <hr>
                 <div class="card-body text-center">
@@ -390,7 +391,7 @@
                     </td>
                     <td class="tblcoldelete">
                         <button class="btn">
-                            <img src="assets/img/circleDelete.png"></img>
+                            <img src="assets/img/circleDelete.png">
                         </button>
 
                     </td>
@@ -429,7 +430,7 @@
                     </td>
                     <td class="tblcoldelete">
                         <button class="btn">
-                            <img src="assets/img/circleDelete.png"></img>
+                            <img src="assets/img/circleDelete.png">
                         </button>
 
                     </td>
@@ -480,11 +481,11 @@
     </div>
     <div>
         <h1>Pick Up Venue</h1>
-        <input type="text" class="form-control" id="" placeholder="Enter PickUp Venue">
+        <input type="text" class="form-control"  placeholder="Enter PickUp Venue">
     </div>
     <div>
         <h1>Return Venue</h1>
-        <input type="text" class="form-control" id="" placeholder="Enter Return Venue">
+        <input type="text" class="form-control"  placeholder="Enter Return Venue">
     </div>
     <div>
         <div>
@@ -525,7 +526,7 @@
                     <th scope="col">Delete</th>
                 </tr>
                 </thead>
-                <tbody id = "tableCheckOutCart">
+                <tbody>
                 <tr>
                     <td>Mercedes</td>
                     <td class="tblcolDriver">
@@ -608,5 +609,7 @@
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/controllers/DashBoardController.js"></script>
+<script src="assets/controllers/userRegisterController.js"></script>
+
 </body>
 </html>
