@@ -9,6 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 
 @Service
@@ -25,7 +28,23 @@ public class CustomerServiceImpl implements CustomerService {
         if (repo.existsById(dto.getNic())) {
             throw new RuntimeException("Customer "+dto.getNic()+" Already Exist..!");
         }
-        repo.save(mapper.map(dto, Customer.class));
+
+        try {
+            String projectPath = new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile().getParentFile().getAbsolutePath();
+            File uploadDir = new File(projectPath + "/uploads");
+            System.out.println(projectPath);
+            uploadDir.mkdir();
+            dto.getImg().transferTo(new File(uploadDir.getAbsolutePath() + "/" + dto.getImg().getOriginalFilename()));
+            dto.setImageLocation("uploads/"+dto.getImg().getOriginalFilename());
+            repo.save(mapper.map(dto, Customer.class));
+
+        } catch (URISyntaxException|IOException e) {
+            e.printStackTrace();
+        }
+
+
+
+
     }
 
     @Override
