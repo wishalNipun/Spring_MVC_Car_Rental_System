@@ -10,14 +10,21 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/customer")
 @CrossOrigin
 public class CustomerController {
+
     @Autowired
     private CustomerService service;
 
     @PostMapping
-    public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO dto){
-        service.addCustomer(dto);
+    public ResponseUtil saveCustomer(CustomerDTO dto){
         System.out.println(dto.toString());
+        service.addCustomer(dto);
         return new ResponseUtil("200",dto.getName()+ " Added.!",null);
+    }
+
+    @GetMapping
+    public String get(){
+
+        return "ss";
     }
 
 }

@@ -3,6 +3,7 @@ package lk.ijse.spring.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.web.multipart.MultipartFile;
 
 
 @AllArgsConstructor
@@ -17,7 +18,7 @@ public class CustomerDTO {
     private String contactNumber;
     private String address;
     private String imageLocation;
-    private byte[] img;
+    private MultipartFile img;
 
     public CustomerDTO(String name, String nic, String drivingLicense, String email, String password, String contactNumber, String address, String imageLocation) {
         this.name = name;
@@ -30,7 +31,7 @@ public class CustomerDTO {
         this.imageLocation = imageLocation;
     }
 
-    public CustomerDTO(String name, String nic, String drivingLicense, String email, String password, String contactNumber, String address, byte[] img) {
+    public CustomerDTO(String name, String nic, String drivingLicense, String email, String password, String contactNumber, String address, MultipartFile img) {
         this.name = name;
         this.nic = nic;
         this.drivingLicense = drivingLicense;
@@ -40,4 +41,8 @@ public class CustomerDTO {
         this.address = address;
         this.img = img;
     }
+
+
+
+
 }

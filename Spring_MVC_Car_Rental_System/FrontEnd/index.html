@@ -56,26 +56,26 @@
             with some information before you can check out.</p>
         <form id="userRegisterForm">
             <div>
-                <input type="text" class="form-control"  placeholder="Enter Name" name="name">
-                <input type="text" class="form-control"  placeholder="Enter NIC Number" name="nicNumber">
+                <input id="txtCustomerName" type="text" class="form-control"  placeholder="Enter Name" name="name">
+                <input id="txtCustomerNIC" type="text" class="form-control"  placeholder="Enter NIC Number" name="nic">
 
             </div>
             <div>
-                <input type="text" class="form-control"  placeholder="Enter Driving License" name="drivingLicenseNumber">
-                <input type="text" class="form-control"  placeholder="Enter Contact Number" name="contactNumber">
+                <input id="txtCustomerDrivingLicense" type="text" class="form-control"  placeholder="Enter Driving License" name="drivingLicense">
+                <input id="txtCustomerContactNumber" type="text" class="form-control"  placeholder="Enter Contact Number" name="contactNumber">
             </div>
             <div>
-                <input type="text" class="form-control" placeholder="Enter Email" name="email">
-                <input type="text" class="form-control"  placeholder="Enter Address" name="address">
+                <input id="txtCustomerEmail" type="text" class="form-control" placeholder="Enter Email" name="email">
+                <input id="txtCustomerAddress" type="text" class="form-control"  placeholder="Enter Address" name="address">
             </div>
             <div>
-                <input type="text" class="form-control" placeholder="Enter New Password" name="password">
+                <input id="txtCustomerPassword" type="text" class="form-control" placeholder="Enter New Password" name="password">
             </div>
             <div>
                 <img src="assets/img/uploadIcon.png">
                 <div>
                     <p>Upload Nic / Driving License</p>
-                    <input type="file"  name="img">
+                    <input id="file" name="img" type="file">
                 </div>
             </div>
             <div>
@@ -608,8 +608,8 @@
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/controllers/DashBoardController.js"></script>
-<script src="assets/controllers/userRegisterController.js"></script>
+<script src="controllers/DashBoardController.js"></script>
+<script src="controllers/userRegisterController.js"></script>
 
 </body>
 </html>
