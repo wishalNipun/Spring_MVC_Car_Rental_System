@@ -28,6 +28,7 @@ public class Customer {
     private String address;
     private String imageLocation;
 
+
     @OneToMany(mappedBy = "customer")
     private List<Rental> rentalList;
 

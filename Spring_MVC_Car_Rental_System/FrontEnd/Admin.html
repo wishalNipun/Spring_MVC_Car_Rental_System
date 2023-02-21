@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/style/AdminCustomer.css">
     <link rel="stylesheet" href="assets/style/AdminCars.css">
     <link rel="stylesheet" href="assets/style/AdminCustomerReservation.css">
+
 </head>
 <body>
 
@@ -211,96 +212,96 @@
                 <div>
                     <div>
                         <h3>Brand</h3>
-                        <input type="text" class="form-control" id="" placeholder="Enter Brand">
+                        <input type="text" class="form-control" id="txtCarBrand" placeholder="Enter Brand">
                     </div>
                     <div>
                         <h3>Model</h3>
-                        <input type="text" class="form-control" id="" placeholder="Enter Model">
+                        <input type="text" class="form-control" id="txtCarModel" placeholder="Enter Model">
                     </div>
                     <div>
                         <h3>Type</h3>
-                        <input type="text" class="form-control" id="" placeholder="Enter Type">
+                        <input type="text" class="form-control" id="txtCarType" placeholder="Enter Type">
                     </div>
                 </div>
                 <div>
                     <div>
                         <h3>Transmission</h3>
-                        <input type="text" class="form-control" id="" placeholder="Enter Transmission">
+                        <input type="text" class="form-control" id="txtCarTransmission" placeholder="Enter Transmission">
                     </div>
                     <div>
-                        <h3>Brand</h3>
-                        <input type="text" class="form-control" id="" placeholder="Enter Fuel">
+                        <h3>Fuel</h3>
+                        <input type="text" class="form-control" id="txtCarFuel" placeholder="Enter Fuel">
                     </div>
                     <div>
                         <h3>Number Of Passengers</h3>
-                        <input type="text" class="form-control" id="" placeholder="Enter Number Of Passengers">
+                        <input type="text" class="form-control" id="txtCarNumberOfPassengers" placeholder="Enter Number Of Passengers">
                     </div>
                 </div>
                 <div>
                     <div>
                         <h3>Color</h3>
-                        <input type="color" class="form-control" id="" placeholder="Enter Color">
+                        <input type="color" class="form-control" id="txtCarColor" placeholder="Enter Color">
                     </div>
                     <div>
                         <h3>Registration Number</h3>
-                        <input type="text" class="form-control" id="" placeholder="Enter Registration Number">
+                        <input type="text" class="form-control" id="txtCarRegistrationNumber" placeholder="Enter Registration Number">
                     </div>
                     <div>
                         <h3>Free Mileage</h3>
-                        <input type="text" class="form-control" id="" placeholder="Enter Free Mileage">
+                        <input type="text" class="form-control" id="txtCarFreeMileage" placeholder="Enter Free Mileage">
                     </div>
                 </div>
                 <div>
                     <div>
                         <h3>Daily Rate</h3>
-                        <input type="text" class="form-control" id="" placeholder="Enter Daily Rate">
+                        <input type="text" class="form-control" id="txtCarDailyRate" placeholder="Enter Daily Rate">
                     </div>
                     <div>
                         <h3>Monthly Rate</h3>
-                        <input type="text" class="form-control" id="" placeholder="Enter Monthly Rate">
+                        <input type="text" class="form-control" id="txtCarMonthlyRate" placeholder="Enter Monthly Rate">
                     </div>
                     <div>
                         <h3>Price Of Extra Km</h3>
-                        <input type="text" class="form-control" id="" placeholder="Enter Price Of Extra Km">
+                        <input type="text" class="form-control" id="txtCarPriceOfExtraKm" placeholder="Enter Price Of Extra Km">
                     </div>
                 </div>
                 <div>
                     <div>
                         <h3>Last Service Mileage</h3>
-                        <input type="text" class="form-control" id="" placeholder="Enter Last Service Mileage">
+                        <input type="text" class="form-control" id="txtCarLastServiceMileage" placeholder="Enter Last Service Mileage">
                     </div>
                     <div id="ImgChooser">
                         <div>
                             <img src="assets/img/uploadIcon.png">
                             <div>
                                 <p>Front Img</p>
-                                <input type="file"  >
+                                <input id="file1" name="img1" type="file">
                             </div>
                         </div>
                         <div>
                             <img src="assets/img/uploadIcon.png">
                             <div>
                                 <p>Back Img</p>
-                                <input type="file"  >
+                                <input id="file2" name="img2" type="file">
                             </div>
                         </div>
                         <div>
                             <img src="assets/img/uploadIcon.png">
                             <div>
                                 <p>Interior Img</p>
-                                <input type="file"  >
+                                <input id="file3" name="img3" type="file">
                             </div>
                         </div>
                         <div>
                             <img src="assets/img/uploadIcon.png">
                             <div>
                                 <p>Side Img</p>
-                                <input type="file"  >
+                                <input id="file4" name="img4" type="file">
                             </div>
                         </div>
                     </div>
                     <div id="addCarSaveButton">
-                        <button class="btn btn-primary">Save</button>
+                        <button id="btnCarSave" class="btn btn-primary">Save</button>
                     </div>
                 </div>
             </form>
@@ -400,5 +401,6 @@
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="controllers/AdminDashBoardController.js"></script>
+<script src="controllers/carController.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-$('#adminDashBoard').css('display','block');
+//$('#adminDashBoard').css('display','block');
 $('#adminCustomer').css('display','none');
 $('#adminAddCar').css('display','none');
 $('#adminCustomerReservation').css('display','none');
