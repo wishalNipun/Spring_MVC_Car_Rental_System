@@ -29,7 +29,22 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public void addCar(CarDTO dto) {
+        if (repo.existsById(dto.getRegistrationNumber())) {
+            throw new RuntimeException("Customer "+dto.getRegistrationNumber()+" Already Exist..!");
+        }
 
+//        try {
+//            String projectPath = new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile().getParentFile().getAbsolutePath();
+//            File uploadDir = new File(projectPath + "/uploads");
+//            System.out.println(projectPath);
+//            uploadDir.mkdir();
+//            dto.getImg().transferTo(new File(uploadDir.getAbsolutePath() + "/" + dto.getImg().getOriginalFilename()));
+//            dto.setImageLocation("uploads/"+dto.getImg().getOriginalFilename());
+//            repo.save(mapper.map(dto, Customer.class));
+//
+//        } catch (URISyntaxException|IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     @Override

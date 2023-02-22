@@ -16,14 +16,14 @@ $("#btnCarSave").click(function (){
     let carLastServiceMileage = $("#txtCarLastServiceMileage").val();
     let availability = "available";
     var data = new FormData();
-    let file1 = $("#file")[0].files[0];
-    let file1Name = $("#file")[0].files[0].name;
-    let file2 = $("#file")[0].files[0];
-    let file2Name = $("#file")[0].files[0].name;
-    let file3 = $("#file")[0].files[0];
-    let file3Name = $("#file")[0].files[0].name;
-    let file4 = $("#file")[0].files[0];
-    let file4Name = $("#file")[0].files[0].name;
+    let file1 = $("#file1")[0].files[0];
+    let file1Name = $("#file1")[0].files[0].name;
+    let file2 = $("#file2")[0].files[0];
+    let file2Name = $("#file2")[0].files[0].name;
+    let file3 = $("#file3")[0].files[0];
+    let file3Name = $("#file3")[0].files[0].name;
+    let file4 = $("#file4")[0].files[0];
+    let file4Name = $("#file4")[0].files[0].name;
 
     data.append("brand",carBrand);
     data.append("model",carModel);
@@ -40,10 +40,10 @@ $("#btnCarSave").click(function (){
     data.append("lastServiceMileage",carLastServiceMileage);
     data.append("availability",availability);
 
-    data.append("img", file1, file1Name);
-    data.append("img", file2, file2Name);
-    data.append("img", file3, file3Name);
-    data.append("img", file4, file4Name);
+    data.append("img1", file1, file1Name);
+    data.append("img2", file2, file2Name);
+    data.append("img3", file3, file3Name);
+    data.append("img4", file4, file4Name);
     alert(data);
 
     $.ajax({
