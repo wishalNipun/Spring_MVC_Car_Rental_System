@@ -360,41 +360,31 @@
                     <td>2023/10/11</td>
                     <td>store</td>
                     <td>kalutara</td>
-                    <td><button class="btn" >view Image</button></td>
+                    <td><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">view Image</button></td>
                     <td><button class="btn"><i class="fas fa-times-circle"></i> Accept</button>
                         <button class="btn"><i class="fas fa-check-circle"></i> Deny</button>
                     </td>
                 </tr>
-                <tr>
-                    <td>Wishal Nipun Siriwardana</td>
-                    <td>BMW</td>
-                    <td>D0001</td>
-                    <td>2023/10/11</td>
-                    <td>2023/10/11</td>
-                    <td>store</td>
-                    <td>kalutara</td>
-                    <td><button class="btn" >view Image</button></td>
-                    <td><button class="btn"><i class="fas fa-times-circle"></i> Accept</button>
-                        <button class="btn"><i class="fas fa-check-circle"></i> Deny</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Wishal Nipun Siriwardana</td>
-                    <td>BMW</td>
-                    <td>D0001</td>
-                    <td>2023/10/11</td>
-                    <td>2023/10/11</td>
-                    <td>store</td>
-                    <td>kalutara</td>
-                    <td><button class="btn" >view Image</button></td>
-                    <td><button class="btn"><i class="fas fa-times-circle"></i> Accept</button>
-                        <button class="btn"><i class="fas fa-check-circle"></i> Deny</button>
-                    </td>
-                </tr>
+
                 </tbody>
             </table>
         </div>
-
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
     </section>
 </main>
 <main id="adminAddDriver" class="container-fluid.p0">
@@ -428,36 +418,36 @@
                 <div>
                     <div>
                         <h3>Driver Id</h3>
-                        <input type="text" class="form-control" placeholder="Driver Id" name="driverId">
+                        <input id="did" type="text" class="form-control" placeholder="Driver Id" name="driverID">
                     </div>
                     <div>
                         <h3>Name</h3>
-                        <input type="text" class="form-control" placeholder="Enter name" name="name">
+                        <input id="dname" type="text" class="form-control" placeholder="Enter name" name="name">
                     </div>
                     <div>
                         <h3>NIC</h3>
-                        <input type="text" class="form-control"  placeholder="Enter nic" name="nic">
+                        <input id="dnic" type="text" class="form-control"  placeholder="Enter nic" name="nic">
                     </div>
                 </div>
                 <div>
 
                     <div>
                         <h3>Address</h3>
-                        <input type="text" class="form-control"  placeholder="Enter address" name="address">
+                        <input id="daddress" type="text" class="form-control"  placeholder="Enter address" name="address">
                     </div>
                     <div>
                         <h3>Driving License</h3>
-                        <input type="text" class="form-control"  placeholder="Enter Number Of Driving License" name="drivingLicense">
+                        <input id="dlicen" type="text" class="form-control" id="date"  placeholder="Enter Number Of Driving License" name="drivingLicense">
                     </div>
                     <div>
                         <h3>Date Of Birth</h3>
-                        <input type="date" class="form-control"  placeholder="Enter Date Of Birth" name="dob">
+                        <input  type="date" class="form-control"  placeholder="Enter Date Of Birth" name="dob" id="dateOfBirth">
                     </div>
                 </div>
                 <div>
                     <div>
                         <h3>Status</h3>
-                        <select class="form-control" aria-label="Default select example" name="status">
+                        <select id="state" class="form-control" aria-label="Default select example" name="status">
                             <option selected="">Available</option>
                             <option value="1">Not Available</option>
                         </select>
@@ -507,6 +497,6 @@
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="controllers/AdminDashBoardController.js"></script>
 <script src="controllers/carController.js"></script>
-<script src="controllers/driverController.js"></script>
+<script src="controllers/DriverController.js"></script>
 </body>
 </html>

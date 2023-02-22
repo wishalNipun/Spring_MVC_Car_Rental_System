@@ -1,5 +1,6 @@
 package lk.ijse.spring.config;
 
+import lk.ijse.spring.advice.AppWideExceptionHandler;
 import lk.ijse.spring.controllers.CustomerController;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -12,7 +13,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackageClasses = {CustomerController.class})
+@ComponentScan(basePackageClasses = {CustomerController.class, AppWideExceptionHandler.class})
 public class WebAppConfig implements WebMvcConfigurer {
     @Bean
     public MultipartResolver multipartResolver() {

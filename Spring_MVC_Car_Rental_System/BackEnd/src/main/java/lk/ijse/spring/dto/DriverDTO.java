@@ -16,13 +16,13 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-
+@ToString
 public class DriverDTO {
-    private String driverId;
+    private String driverID;
     private String name;
     private String nic;
     private String address;
-    private String drivingLicense;
+    private String drivingLicense;//wait
     private LocalDate dob;
     private String status;
 }

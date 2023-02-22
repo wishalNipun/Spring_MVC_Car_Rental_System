@@ -2,7 +2,6 @@ package lk.ijse.spring.controllers;
 
 import lk.ijse.spring.dto.CustomerDTO;
 import lk.ijse.spring.dto.DriverDTO;
-import lk.ijse.spring.service.CustomerService;
 import lk.ijse.spring.service.DriverService;
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,10 +16,10 @@ public class DriverController {
     private DriverService service;
 
     @PostMapping
-    public ResponseUtil saveDriver(DriverDTO dto){
+    public ResponseUtil saveDriver(@RequestBody DriverDTO dto){
         System.out.println(dto.toString());
-       // service.addDriver(dto);
-        return new ResponseUtil("200",dto.getDriverId()+ " Added.!",null);
+        service.addDriver(dto);
+        return new ResponseUtil("200",dto.getDriverID()+ " Added.!",null);
     }
 
     @GetMapping
