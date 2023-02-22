@@ -2,6 +2,7 @@ package lk.ijse.spring.service.impl;
 
 import lk.ijse.spring.dto.CarDTO;
 import lk.ijse.spring.dto.CustomerDTO;
+import lk.ijse.spring.entity.Car;
 import lk.ijse.spring.entity.Customer;
 import lk.ijse.spring.repo.CarRepo;
 import lk.ijse.spring.repo.CustomerRepo;
@@ -33,18 +34,30 @@ public class CarServiceImpl implements CarService {
             throw new RuntimeException("Customer "+dto.getRegistrationNumber()+" Already Exist..!");
         }
 
-//        try {
-//            String projectPath = new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile().getParentFile().getAbsolutePath();
-//            File uploadDir = new File(projectPath + "/uploads");
-//            System.out.println(projectPath);
-//            uploadDir.mkdir();
-//            dto.getImg().transferTo(new File(uploadDir.getAbsolutePath() + "/" + dto.getImg().getOriginalFilename()));
-//            dto.setImageLocation("uploads/"+dto.getImg().getOriginalFilename());
-//            repo.save(mapper.map(dto, Customer.class));
-//
-//        } catch (URISyntaxException|IOException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            String projectPath = new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile().getParentFile().getAbsolutePath();
+            File uploadDir = new File(projectPath + "/uploads");
+            System.out.println(projectPath);
+            uploadDir.mkdir();
+
+            dto.getImg1().transferTo(new File(uploadDir.getAbsolutePath() + "/" + dto.getImg1().getOriginalFilename()));
+            dto.setFrontImageLocation("uploads/"+dto.getImg1().getOriginalFilename());
+
+            dto.getImg2().transferTo(new File(uploadDir.getAbsolutePath() + "/" + dto.getImg2().getOriginalFilename()));
+            dto.setBackImageLocation("uploads/"+dto.getImg2().getOriginalFilename());
+
+            dto.getImg3().transferTo(new File(uploadDir.getAbsolutePath() + "/" + dto.getImg3().getOriginalFilename()));
+            dto.setBgTransparentImageLocation("uploads/"+dto.getImg3().getOriginalFilename());
+
+            dto.getImg4().transferTo(new File(uploadDir.getAbsolutePath() + "/" + dto.getImg4().getOriginalFilename()));
+            dto.setSideImageLocation("uploads/"+dto.getImg4().getOriginalFilename());
+
+
+            repo.save(mapper.map(dto, Car.class));
+
+        } catch (URISyntaxException|IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
