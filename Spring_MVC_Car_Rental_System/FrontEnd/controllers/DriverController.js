@@ -30,6 +30,7 @@ $("#btnDriverSave").click(function (){
         dataType:"json",
         success: function (res) {
             alert(res.message);
+            loadAllDrivers();
         },
         error:function(error){
             var jsObject=JSON.parse(error.responseText);
@@ -38,3 +39,20 @@ $("#btnDriverSave").click(function (){
     });
 });
 
+loadAllDrivers();
+function loadAllDrivers() {
+    $("#tblDriver").empty();
+    $.ajax({
+        url: baseURL+"driver",
+        dataType: "json",
+        success: function (resp) {
+            console.log(resp);
+            for (let driver of resp.data) {
+                var row = '<tr><td>' + driver.driverID + '</td><td>' + driver.name+ '</td><td>' + driver.nic + '</td><td>' + driver.address + '</td><td>' + driver.drivingLicense + '</td><td>' + driver.dob + '</td><td>' + driver.status+ '</td></tr>';
+                $("#tblDriver").append(row);
+            }
+
+        }
+    });
+
+}

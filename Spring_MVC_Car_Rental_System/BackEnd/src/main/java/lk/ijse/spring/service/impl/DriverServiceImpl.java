@@ -1,6 +1,7 @@
 package lk.ijse.spring.service.impl;
 
 import lk.ijse.spring.dto.CarDTO;
+import lk.ijse.spring.dto.CustomerDTO;
 import lk.ijse.spring.dto.DriverDTO;
 import lk.ijse.spring.entity.Car;
 import lk.ijse.spring.entity.Customer;
@@ -10,6 +11,7 @@ import lk.ijse.spring.repo.DriverRepo;
 import lk.ijse.spring.service.CarService;
 import lk.ijse.spring.service.DriverService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -48,7 +50,9 @@ public class DriverServiceImpl implements DriverService {
 
     @Override
     public ArrayList<DriverDTO> getAllDrivers() {
-        return null;
+
+        return mapper.map(repo.findAll(), new TypeToken<ArrayList<DriverDTO>>() {
+        }.getType());
     }
 
     @Override

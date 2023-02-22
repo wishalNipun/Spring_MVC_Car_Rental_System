@@ -7,6 +7,8 @@ import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @RestController
 @RequestMapping("/driver")
 @CrossOrigin
@@ -23,9 +25,9 @@ public class DriverController {
     }
 
     @GetMapping
-    public String get(){
-
-        return "ss";
+    public ResponseUtil getAllDrivers(){
+        ArrayList<DriverDTO> allDrivers = service.getAllDrivers();
+        return new ResponseUtil("200"," Success.!",allDrivers);
     }
 
 }
