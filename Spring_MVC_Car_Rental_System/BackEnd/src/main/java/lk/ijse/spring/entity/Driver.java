@@ -24,7 +24,7 @@ public class Driver {
     private String nic;
     private String address;
     private String drivingLicense;
-    private LocalDate dob;
+    private String dob;
     private String status;
 
     @OneToMany(mappedBy = "driver")

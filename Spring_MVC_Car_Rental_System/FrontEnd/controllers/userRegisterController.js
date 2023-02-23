@@ -8,6 +8,7 @@ $("#btnSignUp").click(function (){
     let customerEmail = $("#txtCustomerEmail").val();
     let customerAddress = $("#txtCustomerAddress").val();
     let customerPassword = $("#txtCustomerPassword").val();
+    let customerStatus = "Pending";
 
     var data = new FormData();
     let file = $("#file")[0].files[0];
@@ -20,9 +21,11 @@ $("#btnSignUp").click(function (){
     data.append("password",customerPassword);
     data.append("contactNumber",contactNumber);
     data.append("address",customerAddress);
+
     data.append("img", file, fileName);
 
-    alert(data);
+    data.append("status",customerStatus);
+
     $.ajax({
         url: baseURL+"customer",
         method: "post",

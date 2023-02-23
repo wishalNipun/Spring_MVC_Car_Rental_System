@@ -18,9 +18,10 @@ public class CustomerDTO {
     private String contactNumber;
     private String address;
     private String imageLocation;
+    private String status;
     private MultipartFile img;
 
-    public CustomerDTO(String name, String nic, String drivingLicense, String email, String password, String contactNumber, String address, String imageLocation) {
+    public CustomerDTO(String name, String nic, String drivingLicense, String email, String password, String contactNumber, String address, String imageLocation, String status) {
         this.name = name;
         this.nic = nic;
         this.drivingLicense = drivingLicense;
@@ -29,9 +30,10 @@ public class CustomerDTO {
         this.contactNumber = contactNumber;
         this.address = address;
         this.imageLocation = imageLocation;
+        this.status = status;
     }
 
-    public CustomerDTO(String name, String nic, String drivingLicense, String email, String password, String contactNumber, String address, MultipartFile img) {
+    public CustomerDTO(String name, String nic, String drivingLicense, String email, String password, String contactNumber, String address, String status, MultipartFile img) {
         this.name = name;
         this.nic = nic;
         this.drivingLicense = drivingLicense;
@@ -39,10 +41,7 @@ public class CustomerDTO {
         this.password = password;
         this.contactNumber = contactNumber;
         this.address = address;
+        this.status = status;
         this.img = img;
     }
-
-
-
-
 }

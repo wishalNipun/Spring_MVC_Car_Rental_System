@@ -35,17 +35,24 @@ public class DriverServiceImpl implements DriverService {
         if (repo.existsById(dto.getDriverID())) {
             throw new RuntimeException("Driver "+dto.getDriverID()+" Already Exist..!");
         }
+
         repo.save(mapper.map(dto, Driver.class));
     }
 
     @Override
     public void deleteDriver(String id) {
-
+        if (!repo.existsById(id)){
+            throw new RuntimeException("Driver "+id+" Not Available to Delete..!");
+        }
+        repo.deleteById(id);
     }
 
     @Override
     public void updateDriver(DriverDTO dto) {
-
+        if (!repo.existsById(dto.getDriverID())){
+            throw new RuntimeException("Driver "+dto.getDriverID()+" Not Available to Update..!");
+        }
+        repo.save( mapper.map(dto, Driver.class));
     }
 
     @Override

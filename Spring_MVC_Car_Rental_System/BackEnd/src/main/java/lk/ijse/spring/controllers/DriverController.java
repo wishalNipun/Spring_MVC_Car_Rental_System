@@ -19,7 +19,7 @@ public class DriverController {
 
     @PostMapping
     public ResponseUtil saveDriver(@RequestBody DriverDTO dto){
-        System.out.println(dto.toString());
+
         service.addDriver(dto);
         return new ResponseUtil("200",dto.getDriverID()+ " Added.!",null);
     }
@@ -30,4 +30,15 @@ public class DriverController {
         return new ResponseUtil("200"," Success.!",allDrivers);
     }
 
+    @PutMapping
+    public ResponseUtil updateCustomer(@RequestBody DriverDTO dto){
+        service.updateDriver(dto);
+        return new ResponseUtil("200",dto.getDriverID()+": Updated.!",null);
+    }
+
+    @DeleteMapping(params = "id")
+    public ResponseUtil deleteCustomer(String id){
+        service.deleteDriver(id);
+        return new ResponseUtil("200",id+" : Deleted.!",null);
+    }
 }

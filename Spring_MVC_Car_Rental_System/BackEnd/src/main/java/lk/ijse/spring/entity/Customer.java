@@ -27,7 +27,7 @@ public class Customer {
     private String contactNumber;
     private String address;
     private String imageLocation;
-
+    private String status;
 
     @OneToMany(mappedBy = "customer")
     private List<Rental> rentalList;
