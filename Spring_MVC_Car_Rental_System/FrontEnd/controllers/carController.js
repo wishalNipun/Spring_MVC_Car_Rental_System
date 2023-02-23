@@ -1,6 +1,6 @@
 let baseURL="http://localhost:8080/CarRental/";
 $("#btnCarSave").click(function (){
-    alert("ss")
+
     let carBrand = $("#txtCarBrand").val();
     let carModel = $("#txtCarModel").val();
     let carType= $("#txtCarType").val();

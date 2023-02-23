@@ -9,38 +9,6 @@
     height: 700px;
 }
 
-/*.headerNav{*/
-/*    z-index: 1;*/
-/*    position: absolute;*/
-/*    top: 16px;*/
-/*    right: 65px;*/
-/*}*/
-
-/*header>nav>ul>li{*/
-/*    display: inline-block;*/
-/*    padding-left: 25px;*/
-/*    font-family: 'Poppins', sans-serif;*/
-/*    font-style: normal;*/
-/*    font-weight: 400;*/
-/*    font-size: 30px;*/
-/*    line-height: 45px;*/
-
-/*}*/
-/*header>nav>ul>li:nth-child(1)>a:hover{*/
-/*    text-decoration: none;*/
-/*}*/
-/*header>nav>ul>li:nth-child(2)>a{*/
-/*    color: black;*/
-/*}*/
-/*header>nav>ul>li>a{*/
-/*    color: black;*/
-/*    text-decoration: none;*/
-/*}*/
-/*header>nav>ul>li>a:hover{*/
-/*    color: black;*/
-/*    text-decoration: none;*/
-/*}*/
-
 #UserStore>div:nth-child(2){
     position: relative;
     top: 70px;
@@ -78,7 +46,7 @@ span{
     color: #0300A7
 }
 
-#UserStore>div:nth-child(2)>form>div:nth-child(1){
+#UserStore>div:nth-child(2)>form>div:nth-child(1)>div{
     display: flex;
     gap: 20px;
     flex-direction: row;

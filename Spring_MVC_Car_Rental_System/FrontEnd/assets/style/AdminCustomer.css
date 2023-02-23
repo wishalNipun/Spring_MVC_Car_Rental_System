@@ -117,16 +117,16 @@
 
 
 }
-#adminCustomer>section:nth-child(2)>div:nth-child(2)>table>tbody>tr>td:nth-child(6)>button{
+.btnViewCustomerImg{
     color: #005cbf;
     padding: 0;
 }
-#adminCustomer>section:nth-child(2)>div:nth-child(2)>table>tbody>tr>td:nth-child(7)>button:nth-child(1){
+.btncusDeny{
     color: #F04C4C;
     padding: 0;
     padding-left: 0.5rem;
 }
-#adminCustomer>section:nth-child(2)>div:nth-child(2)>table>tbody>tr>td:nth-child(7)>button:nth-child(2){
+.btncusAccept{
     color: #2d7d3c;
     padding: 0;
     padding-left: 0.5rem;

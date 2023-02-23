@@ -134,7 +134,8 @@
                 <thead class="table-primary ">
                 <tr>
                     <th scope="col">Name</th>
-                    <th scope="col">NIC / Driving License</th>
+                    <th scope="col">NIC</th>
+                    <th scope="col">Driving License</th>
                     <th scope="col">Contact Number</th>
                     <th scope="col">Email</th>
                     <th scope="col">Address</th>
@@ -142,44 +143,24 @@
                     <th scope="col">Status</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <td>Wishal Nipun Siriwardana</td>
-                    <td>200012345678</td>
-                    <td>0701234567</td>
-                    <td>wishal@gmail.com</td>
-                    <td>No 24/7 Kaluthara Beruwala</td>
-                    <td><button class="btn" >view Image</button></td>
-                    <td><button class="btn"><i class="fas fa-times-circle"></i> Accept</button>
-                        <button class="btn"><i class="fas fa-check-circle"></i> Deny</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Wishal Nipun Siriwardana</td>
-                    <td>200012345678</td>
-                    <td>0701234567</td>
-                    <td>wishal@gmail.com</td>
-                    <td>No 24/7 Kaluthara Beruwala</td>
-                    <td><button class="btn" >view Image</button></td>
-                    <td><button class="btn"><i class="fas fa-times-circle"></i> Accept</button>
-                        <button class="btn"><i class="fas fa-check-circle"></i> Deny</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Wishal Nipun Siriwardana</td>
-                    <td>200012345678</td>
-                    <td>0701234567</td>
-                    <td>wishal@gmail.com</td>
-                    <td>No 24/7 Kaluthara Beruwala</td>
-                    <td><button class="btn" >view Image</button></td>
-                    <td><button class="btn"><i class="fas fa-times-circle"></i> Accept</button>
-                        <button class="btn"><i class="fas fa-check-circle"></i> Deny</button>
-                    </td>
-                </tr>
+                <tbody id="tblCustomerVerification">
                 </tbody>
             </table>
         </div>
+        <div id="modalCustomer" class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">NIC /Driving License</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="modalCustomerImg" src="https://tse4.mm.bing.net/th?id=OIP.pRv9p80mHitjVVNR3nWsqwHaFj&pid=Api&P=0">
+                    </div>
 
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 <main id="adminAddCar" class="container-fluid.p0">
@@ -360,7 +341,7 @@
                     <td>2023/10/11</td>
                     <td>store</td>
                     <td>kalutara</td>
-                    <td><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">view Image</button></td>
+                    <td><button class="btn">view Image</button></td>
                     <td><button class="btn"><i class="fas fa-times-circle"></i> Accept</button>
                         <button class="btn"><i class="fas fa-check-circle"></i> Deny</button>
                     </td>
@@ -369,22 +350,6 @@
                 </tbody>
             </table>
         </div>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
     </section>
 </main>
 <main id="adminAddDriver" class="container-fluid.p0">
@@ -437,7 +402,7 @@
                     </div>
                     <div>
                         <h3>Driving License</h3>
-                        <input id="dlicen" type="text" class="form-control" id="date"  placeholder="Enter Number Of Driving License" name="drivingLicense">
+                        <input id="dlicen" type="text" class="form-control"   placeholder="Enter Number Of Driving License" name="drivingLicense">
                     </div>
                     <div>
                         <h3>Date Of Birth</h3>
@@ -449,7 +414,7 @@
                         <h3>Status</h3>
                         <select id="state" class="form-control" aria-label="Default select example" name="status">
                             <option selected="">Available</option>
-                            <option value="1">Not Available</option>
+                            <option value="Not Available">Not Available</option>
                         </select>
                     </div>
                     <div id="driverButtonField">
@@ -487,5 +452,6 @@
 <script src="controllers/AdminDashBoardController.js"></script>
 <script src="controllers/carController.js"></script>
 <script src="controllers/DriverController.js"></script>
+<script src="controllers/CustomerController.js"></script>
 </body>
 </html>
