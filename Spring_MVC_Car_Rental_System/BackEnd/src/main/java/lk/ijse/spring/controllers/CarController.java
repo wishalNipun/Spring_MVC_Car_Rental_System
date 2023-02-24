@@ -8,6 +8,8 @@ import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @RestController
 @RequestMapping("/car")
 @CrossOrigin
@@ -24,9 +26,9 @@ public class CarController {
     }
 
     @GetMapping
-    public String get(){
-
-        return "ss";
+    public ResponseUtil getAllCars(){
+        ArrayList<CarDTO> allCars = service.getAllCars();
+        return new ResponseUtil("200"," Success.!",allCars);
     }
 
 }

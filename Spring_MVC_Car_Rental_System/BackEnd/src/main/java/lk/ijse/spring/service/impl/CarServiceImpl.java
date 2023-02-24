@@ -9,6 +9,7 @@ import lk.ijse.spring.repo.CustomerRepo;
 import lk.ijse.spring.service.CarService;
 import lk.ijse.spring.service.CustomerService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -72,9 +73,9 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public ArrayList<CarDTO> getAllCars() {
-        return null;
+        return mapper.map(repo.findAll(), new TypeToken<ArrayList<CarDTO>>() {
+        }.getType());
     }
-
     @Override
     public CarDTO searchCarByRegistrationNumber(String registrationNumber) {
         return null;

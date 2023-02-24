@@ -123,40 +123,68 @@
         <p>Recommendation for You</p>
         <form>
             <div>
-                <div></div>
-                <select class="form-control" aria-label="Default select example">
-                    <option selected>Brand</option>
-                    <option value="1">One</option>
+                <div>
+                    <h1>Brand</h1>
+                    <select class="form-control" aria-label="Default select example">
+                        <option selected>Brand</option>
+                        <option value="1">One</option>
 
-                </select>
-                <select class="form-control" aria-label="Default select example">
-                    <option selected>Type</option>
-                    <option value="1">One</option>
+                    </select>
+                </div>
 
-                </select>
-                <select class="form-control" aria-label="Default select example">
-                    <option selected>Fuel Type</option>
-                    <option value="1">One</option>
+                <div>
+                    <h1>Type</h1>
+                    <select class="form-control" aria-label="Default select example">
+                        <option selected>Type</option>
+                        <option value="1">One</option>
 
-                </select>
-                <select class="form-control" aria-label="Default select example">
-                    <option selected>Transmission</option>
-                    <option value="1">One</option>
+                    </select>
+                </div>
+                <div>
+                    <h1>Fuel Type</h1>
+                    <select class="form-control" aria-label="Default select example">
+                        <option selected>Fuel Type</option>
+                        <option value="1">One</option>
 
-                </select>
-                <select class="form-control" aria-label="Default select example">
-                    <option selected>Passengers</option>
-                    <option value="1">One</option>
+                    </select>
+                </div>
+                <div>
+                    <h1>Transmission</h1>
+                    <select class="form-control" aria-label="Default select example">
+                        <option selected>Transmission</option>
+                        <option value="1">One</option>
 
-                </select>
+                    </select>
+                </div>
+                <div>
+                    <h1>Passengers</h1>
+                    <select class="form-control" aria-label="Default select example">
+                        <option selected>Passengers</option>
+                        <option value="1">One</option>
+
+                    </select>
+                </div>
+
+
             </div>
             <div>
-                <input type="date" class="form-control" placeholder="From">
-                <input type="date" class="form-control"  placeholder="To">
-                <input type="text" class="form-control"  placeholder="Search">
+                <div>
+                    <h1>Pick Up Date</h1>
+                    <input type="date" class="form-control" placeholder="From">
+
+                </div>
+                <div>
+                    <h1>Return Date</h1>
+                    <input type="date" class="form-control"  placeholder="To">
+
+                </div>
+                <div>
+                    <h1>Search</h1>
+                    <input type="text" class="form-control"  placeholder="Search">
+                </div>
             </div>
         </form>
-        <div>
+        <div id="cardsStore">
             <div class="card" style="width: 18rem;">
                 <img src="assets/img/carStore.png" class="card-img-top" alt="...">
                 <hr>
@@ -185,90 +213,7 @@
                 </div>
 
             </div>
-            <div class="card" style="width: 18rem;">
-                <img src="assets/img/carStore.png" class="card-img-top" alt="...">
-                <hr>
-                <div class="card-body border-bottom-0">
-                    <h5 class="card-title">Suzuki Alto</h5>
-                    <p class="card-text">Premium - Manual</p>
-                    <button class="viewDetail btn btn-light" >ViewDetail</button>
-                </div>
-                <hr>
-                <div class="card-body text-center">
-                    <div>
-                        <div>
-                            <h5>Daily</h5>
-                            <p>5000</p>
-                        </div>
-                        <div>
-                            <h5>Monthy</h5>
-                            <p>300000</p>
-                        </div>
-                        <div>
-                            <h5>Daily</h5>
-                            <p>15000</p>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-primary">Add To Cart</a>
-                </div>
 
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="assets/img/carStore.png" class="card-img-top" alt="...">
-                <hr>
-                <div class="card-body border-bottom-0">
-                    <h5 class="card-title">Suzuki Alto</h5>
-                    <p class="card-text">Premium - Manual</p>
-                    <button class="viewDetail btn btn-light" >ViewDetail</button>
-                </div>
-                <hr>
-                <div class="card-body text-center">
-                    <div>
-                        <div>
-                            <h5>Daily</h5>
-                            <p>5000</p>
-                        </div>
-                        <div>
-                            <h5>Monthy</h5>
-                            <p>300000</p>
-                        </div>
-                        <div>
-                            <h5>Daily</h5>
-                            <p>15000</p>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-primary">Add To Cart</a>
-                </div>
-
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="assets/img/carStore.png" class="card-img-top" alt="...">
-                <hr>
-                <div class="card-body border-bottom-0">
-                    <h5 class="card-title">Suzuki Alto</h5>
-                    <p class="card-text">Premium - Manual</p>
-                    <button class="viewDetail btn btn-light" >ViewDetail</button>
-                </div>
-                <hr>
-                <div class="card-body text-center">
-                    <div>
-                        <div>
-                            <h5>Daily</h5>
-                            <p>5000</p>
-                        </div>
-                        <div>
-                            <h5>Monthy</h5>
-                            <p>300000</p>
-                        </div>
-                        <div>
-                            <h5>Daily</h5>
-                            <p>15000</p>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-primary">Add To Cart</a>
-                </div>
-
-            </div>
         </div>
     </div>
 
@@ -649,6 +594,7 @@
 
 <script src="controllers/DashBoardController.js"></script>
 <script src="controllers/userRegisterController.js"></script>
+<script src="controllers/StoreController.js"></script>
 
 </body>
 </html>

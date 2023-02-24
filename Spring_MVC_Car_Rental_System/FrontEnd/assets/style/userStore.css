@@ -1,3 +1,8 @@
+
+
+
+
+
 #UserStore>div:nth-child(1){
     background:url("../img/storeblob1.png");
     background-size:cover;
@@ -45,19 +50,44 @@ span{
 
     color: #0300A7
 }
-
-#UserStore>div:nth-child(2)>form>div:nth-child(1)>div{
-    display: flex;
-    gap: 20px;
-    flex-direction: row;
+#UserStore>div:nth-child(2)>form{
+    margin-top: 10px;
     margin-bottom: 20px;
 }
+#UserStore>div:nth-child(2)>form>div:nth-child(1){
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+#UserStore>div:nth-child(2)>form>div:nth-child(1)>div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+}
+#UserStore>div:nth-child(2)>form>div:nth-child(1)>div>h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.1rem;
+
+}
+#UserStore>div:nth-child(2)>form>div:nth-child(2)>div>h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.1rem;
+
+}
+
 #UserStore>div:nth-child(2)>form>div:nth-child(2){
     display: flex;
-    gap: 20px;
-    flex-direction: row;
-    width: 896px;
-    margin-bottom: 20px;
+    gap: 10px;
+
+}
+#UserStore>div:nth-child(2)>form>div:nth-child(2)>div{
+   width: 289.837px;
+
 }
 #UserStore>div:nth-child(2)>div:nth-child(5){
     display: flex;
@@ -66,6 +96,10 @@ span{
     align-items: center;
     justify-content: space-around;
 }
+
+
+
+
 
 /*card Manage start*/
 .card>hr{
