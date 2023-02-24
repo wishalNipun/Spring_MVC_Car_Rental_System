@@ -56,6 +56,12 @@ $("#btnSignUp").click(function (){
 });
 
 
+var uNIC;
+var uDrivingLicense;
+var uEmail;
+let uPassword;
+let uImgL;
+let uStatus;
 $("#btnSignnUp").click(function (){
 
     let email =  $("#txtLogEmail").val();
@@ -68,10 +74,15 @@ $("#btnSignnUp").click(function (){
             alert(res.message);
             if (res.data.password==password  && res.data.email == email){
 
-                $("#txtCustomerUName").val(res.data.id);
-                $("#txtCustomerUAddress").val(res.data.address);
+                $("#txtCustomerUName").val(res.data.name);
                 $("#txtCustomerUContactNumber").val(res.data.contactNumber);
-
+                $("#txtCustomerUAddress").val(res.data.address);
+                uNIC=res.data.nic;
+                uDrivingLicense=res.data.name;
+                uEmail=res.data.email;
+                uPassword=res.data.password;
+                uImgL=res.data.nic;
+                uStatus=res.data.status;
 
                 $('.userNameTag').text(res.data.name);
                 $('.userEmailTag').text(res.data.email);
@@ -121,38 +132,39 @@ $("#customerUpdateModalShow").click(function (){
 });
 
 $("#btnUpdateCustomer").click(function (){
-    // let id=  $("#did").val();
-    // let dname=  $("#dname").val();
-    // let dnic=  $("#dnic").val();
-    // let daddress=  $("#daddress").val();
-    // let dlicen=  $("#dlicen").val();
-    // let dob=  $("#dateOfBirth").val();
-    // let sate=  $("#state").val();
-    //
-    // let driver={
-    //     driverID: id,
-    //     name: dname,
-    //     nic: dnic,
-    //     address: daddress,
-    //     drivingLicense: dlicen,
-    //     dob: dob,
-    //     status: sate
-    // }
+    let cname=  $("#txtCustomerUName").val();
+    let ccnumber=  $("#txtCustomerUContactNumber").val();
+    let ccddress=  $("#txtCustomerUAddress").val();
 
-    // $.ajax({
-    //     url: baseURL+'customer',
-    //     method: 'put',
-    //     contentType:"application/json",
-    //     data:JSON.stringify(driver),
-    //     dataType:"json",
-    //     success: function (res) {
-    //         alert(res.message);
-    //         loadAllDrivers();
-    //     },
-    //     error:function (error){
-    //         let cause= JSON.parse(error.responseText).message;
-    //         alert(cause);
-    //     }
-    //
-    // });
+
+    let cutomer={
+
+        name: cname,
+        nic: uNIC,
+        address: ccddress,
+        drivingLicense: uDrivingLicense,
+        email: uEmail,
+        password: uPassword,
+        contactNumber: ccnumber,
+        imageLocation: uImgL,
+        status: uStatus
+    }
+
+    $.ajax({
+        url: baseURL+'customer',
+        method: 'put',
+        contentType:"application/json",
+        data:JSON.stringify(cutomer),
+        dataType:"json",
+        success: function (res) {
+            alert(res.message);
+        },
+        error:function (error){
+            let cause= JSON.parse(error.responseText).message;
+            alert(cause);
+        }
+
+    });
+
+    $("#customerUpdatePopUp").modal('toggle');
 });

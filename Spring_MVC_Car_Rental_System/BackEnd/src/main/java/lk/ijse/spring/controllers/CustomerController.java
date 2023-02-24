@@ -1,6 +1,7 @@
 package lk.ijse.spring.controllers;
 
 import lk.ijse.spring.dto.CustomerDTO;
+import lk.ijse.spring.dto.DriverDTO;
 import lk.ijse.spring.service.CustomerService;
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,10 +33,14 @@ public class CustomerController {
 
     @GetMapping(params = "email")
     public ResponseUtil checkLogCustomer(String email,String password) {
-        System.out.println(email);
         CustomerDTO dto = service.searchCustomerByEmailAndPassword(email,password);
-        System.out.println(dto);
         return new ResponseUtil("200", "Login Success", dto);
+    }
+
+    @PutMapping
+    public ResponseUtil updateCustomer(@RequestBody CustomerDTO dto){
+        service.updateCustomer(dto);
+        return new ResponseUtil("200",dto.getNic()+": Updated.!",null);
     }
 
 }

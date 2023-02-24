@@ -3,6 +3,7 @@ package lk.ijse.spring.service.impl;
 import lk.ijse.spring.dto.CustomerDTO;
 import lk.ijse.spring.dto.DriverDTO;
 import lk.ijse.spring.entity.Customer;
+import lk.ijse.spring.entity.Driver;
 import lk.ijse.spring.repo.CustomerRepo;
 import lk.ijse.spring.service.CustomerService;
 import org.modelmapper.ModelMapper;
@@ -56,7 +57,10 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void updateCustomer(CustomerDTO dto) {
-
+        if (!repo.existsById(dto.getNic())){
+            throw new RuntimeException("Customer "+dto.getNic()+" Not Available to Update..!");
+        }
+        repo.save( mapper.map(dto, Customer.class));
     }
 
     @Override
