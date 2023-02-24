@@ -96,5 +96,3 @@ function loadAllCustomers() {
 }
 
 loadAllCustomers();
-
-

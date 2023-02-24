@@ -70,4 +70,10 @@ public class CustomerServiceImpl implements CustomerService {
     public CustomerDTO searchCustomerByName(String name) {
         return null;
     }
+
+
+    @Override
+    public CustomerDTO searchCustomerByEmailAndPassword(String email,String password) {
+        return mapper.map( repo.findCustomerByEmailAndPassword(email,password),CustomerDTO.class);
+    }
 }

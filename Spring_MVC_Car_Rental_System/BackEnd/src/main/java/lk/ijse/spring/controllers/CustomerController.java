@@ -30,4 +30,12 @@ public class CustomerController {
     }
 
 
+    @GetMapping(params = "email")
+    public ResponseUtil checkLogCustomer(String email,String password) {
+        System.out.println(email);
+        CustomerDTO dto = service.searchCustomerByEmailAndPassword(email,password);
+        System.out.println(dto);
+        return new ResponseUtil("200", "Login Success", dto);
+    }
+
 }

@@ -106,18 +106,3 @@ $('.CheckOut').click(function (){
     $('#UserDashBoardHeadNav>ul>li>a').css('font-weight','400');
     $(' #UserDashBoardHeadNav>ul>li:nth-child(4)>a').css('font-weight','800');
 });
-$('#btnSignIn,#btnSignnIn,#btnSignnUp,#btnSignUp').click(function (){
-
-    $('#UserViewCarRents').css('display','block');
-
-    $('#UserDashBoard').css('display','none');
-    $('#UserAccount').css('display','none');
-    $('#UserLoginAccount').css('display','none');
-    $('#UserStore').css('display','none');
-    $('#userCarCatalogue').css('display','none');
-    $('#UserCheckOut').css('display','none');
-
-    $('#UserDashBoardHeadNav>ul>li>a').css('color','black');
-    $('#UserDashBoardHeadNav>ul>li>a').css('font-weight','400');
-    $(' #UserDashBoardHeadNav>ul>li:nth-child(3)>a').css('font-weight','800');
-});

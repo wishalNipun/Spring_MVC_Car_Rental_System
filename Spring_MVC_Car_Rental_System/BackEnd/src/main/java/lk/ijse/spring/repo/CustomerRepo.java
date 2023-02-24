@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface CustomerRepo extends JpaRepository<Customer,String> {
     List<Customer> findCustomerByStatus(String status);
+    Customer  findCustomerByEmailAndPassword(String email,String password);
 }
