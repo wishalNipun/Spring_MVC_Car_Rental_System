@@ -5,11 +5,12 @@
     <title>User Create Account</title>
     <meta content="width=device-width initial-scale=1" name="viewport">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/style/userViewCarRents.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
 <header>
@@ -26,7 +27,7 @@
     <div></div>
     <div></div>
     <div>
-        <h1 >Car Checkout.</h1>
+        <h1 >Car Rent View .</h1>
 
         <form>
             <table class="table table-hover" >
@@ -40,87 +41,130 @@
                     <th scope="col">Delete</th>
                 </tr>
                 </thead>
-                <tbody id = "tableCheckOutCart">
-                    <tr>
-                        <td>Mercedes</td>
-                        <td class="tblcolDriver">
-                            <div>D-001</div>
-                            <button class="btn">
-                                Driver Detail
-                            </button>
+                <tbody>
+                <tr>
+                    <td>Mercedes</td>
+                    <td class="tblcolDriver">
+                        <div>D-001</div>
+                        <button class="btn">
+                            Driver Detail
+                        </button>
 
-                        </td>
-                        <td>15000.00</td>
-                        <td class="tblcoldate">
-                            <div>
-                                <h1>From</h1>
-                                <h2>10/01/2023</h2>
-                            </div>
-                            <div>
-                                <h1>To</h1>
-                                <h2>10/02/2023</h2>
-                            </div>
-                        </td>
-                        <td>Pending</td>
+                    </td>
+                    <td>15000.00</td>
+                    <td class="tblcoldate">
+                        <div>
+                            <h1>From</h1>
+                            <h2>10/01/2023</h2>
+                        </div>
+                        <div>
+                            <h1>To</h1>
+                            <h2>10/02/2023</h2>
+                        </div>
+                    </td>
+                    <td>Pending</td>
 
-                        <td class="tblcoldelete">
-                            <button class="btn">
-                                <img src="assets/img/circleDelete.png"></img>
-                            </button>
+                    <td class="tblcoldelete">
+                        <button class="btn">
+                            <img src="assets/img/circleDelete.png"></img>
+                        </button>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Mercedes</td>
-                        <td class="tblcolDriver">
-                            <div>D-001</div>
-                            <button class="btn">
-                                Driver Detail
-                            </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mercedes</td>
+                    <td class="tblcolDriver">
+                        <div>D-001</div>
+                        <button class="btn">
+                            Driver Detail
+                        </button>
 
-                        </td>
-                        <td>15000.00</td>
-                        <td class="tblcoldate">
-                            <div>
-                                <h1>From</h1>
-                                <h2>10/01/2023</h2>
-                            </div>
-                            <div>
-                                <h1>To</h1>
-                                <h2>10/02/2023</h2>
-                            </div>
-                        </td>
-                        <td>Pending</td>
+                    </td>
+                    <td>15000.00</td>
+                    <td class="tblcoldate">
+                        <div>
+                            <h1>From</h1>
+                            <h2>10/01/2023</h2>
+                        </div>
+                        <div>
+                            <h1>To</h1>
+                            <h2>10/02/2023</h2>
+                        </div>
+                    </td>
+                    <td>Pending</td>
 
-                        <td class="tblcoldelete">
-                            <button class="btn">
-                                <img src="assets/img/circleDelete.png"></img>
-                            </button>
+                    <td class="tblcoldelete">
+                        <button class="btn">
+                            <img src="assets/img/circleDelete.png"></img>
+                        </button>
 
-                        </td>
-                    </tr>
+                    </td>
+                </tr>
                 </tbody>
             </table>
         </form>
+
+        <div>
+            <h1>Pick Up Venue</h1>
+            <h2>store</h2>
+        </div>
+        <div>
+            <h1>Return Venue</h1>
+            <h2>colombo</h2>
+        </div>
     </div>
+
     <div>
-        <h1>Pick Up Venue</h1>
-        <h2>store</h2>
-    </div>
-    <div>
-        <h1>Return Venue</h1>
-        <h2>colombo</h2>
-    </div>
-    <div>
-        <h1>Wishal Nipun Siriwardana</h1>
-        <h2>Wishal@gmail.com</h2>
+        <h1 class="userNameTag">Wishal Nipun Siriwardana</h1>
+        <h2 class="userEmailTag">Wishal@gmail.com</h2>
+        <button type="button" class="btn" id="customerUpdateModalShow" data-bs-toggle="modal" data-bs-target="#customerUpdatePopUp">Update</button>
     </div>
     <div>
         <button class="btn"><img src="assets/img/userlogout.png"> Log Out</button>
     </div>
-  </main>
+
+
+    <div class="modal fade" id="customerUpdatePopUp" tabindex="-1"  aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" >Update Customer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="txtCustomerUID" class="form-label">Customer ID</label>
+                        <input class="form-control" type="text" id="txtCustomerUID">
+                        <p id="lblCustomerIDUValidate">Input Content is not matching Required type 'C001'</p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtCustomerUName" class="form-label">Customer Name</label>
+                        <input class="form-control" type="text" id="txtCustomerUName" multiple>
+                        <p id="lblCustomerNameUValidate">Input Content is not matching</p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtCustomerUAddress" class="form-label">Customer Address</label>
+                        <input class="form-control" type="text" id="txtCustomerUAddress">
+                        <p id="lblCustomerAddressUValidate">Input Content is not matching</p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtCustomerUSalary" class="form-label">Customer Salary</label>
+                        <input class="form-control form-control-sm" id="txtCustomerUSalary" type="number">
+                        <p id="lblCustomerSalaryUValidate">Input Content is not matching</p>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="btnUpdateCustomer" type="button" class="btn btn-secondary">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="controllers/CustomerController.js"></script>
 </body>
 </html>

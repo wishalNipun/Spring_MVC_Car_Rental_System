@@ -6,8 +6,8 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 400px;
-    height: 400px;
+    width: 260px;
+    height: 300px;
 }
 #UserViewCarRents>div:nth-child(2){
     background:url("../img/UserViewCarRentsblob2.png");
@@ -17,8 +17,8 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 300px;
-    height: 300px;
+    width: 240px;
+    height: 185px;
 }
 
 
@@ -65,8 +65,8 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    top: 70px;
+
+    top: 150px;
 }
 #UserViewCarRents>div>h1{
     font-family: 'Poppins';
@@ -113,25 +113,25 @@
 .tblcoldelete>button{
    border: 0;
 }
-/*-------*/
-#UserViewCarRents>div:nth-child(4){
-    margin-top: 9vh;
+
+#UserViewCarRents>div:nth-child(3)>div:nth-child(3){
+    margin-top: 3vh;
 }
-#UserViewCarRents>div:nth-child(4),#UserViewCarRents>div:nth-child(5){
+#UserViewCarRents>div:nth-child(3)>div:nth-child(3),#UserViewCarRents>div:nth-child(3)>div:nth-child(4){
 
     display: flex;
     gap: 20px;
     align-items: center;
 
 }
-#UserViewCarRents>div:nth-child(4)>h1,#UserViewCarRents>div:nth-child(5)>h1{
+#UserViewCarRents>div:nth-child(3)>div:nth-child(3)>h1,#UserViewCarRents>div:nth-child(3)>div:nth-child(4)>h1{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: 1.5rem;
-    width: 13%;
+    font-size: 1.3rem;
+
 }
-#UserViewCarRents>div:nth-child(4)>h2,#UserViewCarRents>div:nth-child(5)>h2{
+#UserViewCarRents>div:nth-child(3)>div:nth-child(3)>h2,#UserViewCarRents>div:nth-child(3)>div:nth-child(4)>h2{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -139,23 +139,20 @@
     width: 13%;
     color: #6A6A6A;
 }
-#UserViewCarRents>div:nth-child(4)>input,#UserViewCarRents>div:nth-child(5)>input{
-
-    width: 20%;
-}
 
 
-#UserViewCarRents>div:nth-child(6){
+
+#UserViewCarRents>div:nth-child(4){
     position: absolute;
     width: 240px;
-    height: 85px;
+    height:120px;
     background-color: #dededecc;
     border-radius: 13px;
     border: 0;
     top: 30px;
 
 }
-#UserViewCarRents>div:nth-child(6)>h1{
+#UserViewCarRents>div:nth-child(4)>h1{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -165,7 +162,7 @@
     padding-left: 10px;
 
 }
-#UserViewCarRents>div:nth-child(6)>h2{
+#UserViewCarRents>div:nth-child(4)>h2{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -175,25 +172,35 @@
     font-size: 0.75rem;
 
 }
-#UserViewCarRents>div:nth-child(7){
+#UserViewCarRents>div:nth-child(5){
     position: absolute;
     right: 3vw;
     bottom: 3vw;
 }
-#UserViewCarRents>div:nth-child(7)>button>img{
+#UserViewCarRents>div:nth-child(5)>button>img{
 
-    height: 2rem;
+    height: 1rem;
 
 }
-#UserViewCarRents>div:nth-child(7)>button{
+#UserViewCarRents>div:nth-child(5)>button{
 
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     color: #ffffff;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding-left: 10px;
 
+}
+#customerUpdateModalShow{
+    font-size: 0.7rem;
+    background-color: #ffeb3b;
+    height: fit-content;
+    padding: 0;
+    color: #000000;
+    margin-left-left: 10px;
+    margin-left: 196px;
+    margin-top: 22px;
 }
 

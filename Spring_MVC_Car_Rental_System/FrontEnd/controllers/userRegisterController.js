@@ -50,7 +50,7 @@ $("#btnSignUp").click(function (){
             $(' #UserDashBoardHeadNav>ul>li:nth-child(3)>a').css('font-weight','800');
         },
         error:function(error){
-
+            alert(JSON.parse(error.responseText).message);
         }
     });
 });
@@ -67,7 +67,14 @@ $("#btnSignnUp").click(function (){
         success: function (res) {
             alert(res.message);
             if (res.data.password==password  && res.data.email == email){
-                alert("true")
+
+                $("#txtCustomerUName").val(res.data.id);
+                $("#txtCustomerUAddress").val(res.data.address);
+                $("#txtCustomerUContactNumber").val(res.data.contactNumber);
+
+
+                $('.userNameTag').text(res.data.name);
+                $('.userEmailTag').text(res.data.email);
                 $('#UserViewCarRents').css('display','block');
 
                 $('#UserDashBoard').css('display','none');
@@ -79,10 +86,28 @@ $("#btnSignnUp").click(function (){
 
                 $('#UserDashBoardHeadNav>ul>li>a').css('color','black');
                 $('#UserDashBoardHeadNav>ul>li>a').css('font-weight','400');
-                $(' #UserDashBoardHeadNav>ul>li:nth-child(3)>a').css('font-weight','800');
+                $(' #UserDashBoardHeadNav>ul>li:nth-child(2)>a').css('font-weight','800');
             }
             $("#txtLogEmail").val("");
             $("#txtLogPassword").val("");
+
+            $(".Account").click(function (){
+                $('.userNameTag').text(res.data.name);
+                $('.userEmailTag').text(res.data.email);
+                $('#UserViewCarRents').css('display','block');
+
+                $('#UserDashBoard').css('display','none');
+                $('#UserAccount').css('display','none');
+                $('#UserLoginAccount').css('display','none');
+                $('#UserStore').css('display','none');
+                $('#userCarCatalogue').css('display','none');
+                $('#UserCheckOut').css('display','none');
+
+                $('#UserDashBoardHeadNav>ul>li>a').css('color','black');
+                $('#UserDashBoardHeadNav>ul>li>a').css('font-weight','400');
+                $(' #UserDashBoardHeadNav>ul>li:nth-child(2)>a').css('font-weight','800');
+
+            });
         },
         error:function(error){
             alert("Invalid email or password");
@@ -90,20 +115,44 @@ $("#btnSignnUp").click(function (){
     });
 });
 
+$("#customerUpdateModalShow").click(function (){
+    $("#customerUpdatePopUp").modal('show');
 
+});
 
-// $('#btnSignIn,#btnSignnIn,#btnSignnUp,#btnSignUp').click(function (){
-//
-//     $('#UserViewCarRents').css('display','block');
-//
-//     $('#UserDashBoard').css('display','none');
-//     $('#UserAccount').css('display','none');
-//     $('#UserLoginAccount').css('display','none');
-//     $('#UserStore').css('display','none');
-//     $('#userCarCatalogue').css('display','none');
-//     $('#UserCheckOut').css('display','none');
-//
-//     $('#UserDashBoardHeadNav>ul>li>a').css('color','black');
-//     $('#UserDashBoardHeadNav>ul>li>a').css('font-weight','400');
-//     $(' #UserDashBoardHeadNav>ul>li:nth-child(3)>a').css('font-weight','800');
-// });
+$("#btnUpdateCustomer").click(function (){
+    // let id=  $("#did").val();
+    // let dname=  $("#dname").val();
+    // let dnic=  $("#dnic").val();
+    // let daddress=  $("#daddress").val();
+    // let dlicen=  $("#dlicen").val();
+    // let dob=  $("#dateOfBirth").val();
+    // let sate=  $("#state").val();
+    //
+    // let driver={
+    //     driverID: id,
+    //     name: dname,
+    //     nic: dnic,
+    //     address: daddress,
+    //     drivingLicense: dlicen,
+    //     dob: dob,
+    //     status: sate
+    // }
+
+    // $.ajax({
+    //     url: baseURL+'customer',
+    //     method: 'put',
+    //     contentType:"application/json",
+    //     data:JSON.stringify(driver),
+    //     dataType:"json",
+    //     success: function (res) {
+    //         alert(res.message);
+    //         loadAllDrivers();
+    //     },
+    //     error:function (error){
+    //         let cause= JSON.parse(error.responseText).message;
+    //         alert(cause);
+    //     }
+    //
+    // });
+});

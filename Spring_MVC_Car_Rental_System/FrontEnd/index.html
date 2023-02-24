@@ -5,7 +5,6 @@
     <title>User Dashboard</title>
     <meta content="width=device-width initial-scale=1" name="viewport">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/styles.css" rel="stylesheet">
     <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
           integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" rel="stylesheet">
     <link rel="stylesheet" href="assets/style/userDashBoard.css">
@@ -103,7 +102,7 @@
         <form>
             <input id="txtLogEmail" type="text" class="form-control"  placeholder="Email">
             <input id="txtLogPassword" type="text" class="form-control"  placeholder="Password">
-            <button id="btnSignnUp" type="button" class="btn btn-primary">Sign Up</button>
+            <button id="btnSignnUp" type="button" class="btn btn-primary">Sign In</button>
             <p>Forget Password <a href="#">here</a></p>
             <div id="linee1"></div>
             <div id="linee2"></div>
@@ -111,7 +110,7 @@
                 <h1>OR</h1>
             </div>
             <button id="btnSignnIn" type="button" class="btn btn-primary">
-                <img id="googlee" src="assets/img/googleIcon.png">Sign Up</button>
+                <img id="googlee" src="assets/img/googleIcon.png">Sign In</button>
         </form>
     </div>
 
@@ -588,26 +587,65 @@
                 </tbody>
             </table>
         </form>
+
+        <div>
+            <h1>Pick Up Venue</h1>
+            <h2>store</h2>
+        </div>
+        <div>
+            <h1>Return Venue</h1>
+            <h2>colombo</h2>
+        </div>
     </div>
+
     <div>
-        <h1>Pick Up Venue</h1>
-        <h2>store</h2>
-    </div>
-    <div>
-        <h1>Return Venue</h1>
-        <h2>colombo</h2>
-    </div>
-    <div>
-        <h1>Wishal Nipun Siriwardana</h1>
-        <h2>Wishal@gmail.com</h2>
+        <h1 class="userNameTag">Wishal Nipun Siriwardana</h1>
+        <h2 class="userEmailTag">Wishal@gmail.com</h2>
+        <button type="button" class="btn" id="customerUpdateModalShow" data-bs-toggle="modal" data-bs-target="#customerUpdatePopUp">Update</button>
     </div>
     <div>
         <button class="btn"><img src="assets/img/userlogout.png"> Log Out</button>
+    </div>
+
+
+    <div class="modal fade" id="customerUpdatePopUp" tabindex="-1"  aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" >Update Customer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="txtCustomerUName" class="form-label">Name</label>
+                        <input class="form-control form-control-sm" id="txtCustomerUName" type="text">
+<!--                        <p id="">Input Content is not matching</p>-->
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtCustomerUAddress" class="form-label">Address</label>
+                        <input class="form-control" type="text" id="txtCustomerUAddress">
+<!--                        <p id="">Input Content is not matching Required type 'C001'</p>-->
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtCustomerUContactNumber" class="form-label">Contact Number</label>
+                        <input class="form-control" type="text" id="txtCustomerUContactNumber">
+<!--                        <p id="lblCustomerNameUValidate">Input Content is not matching</p>-->
+                    </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button id="btnUpdateCustomer" type="button" class="btn btn-secondary">Update</button>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
+
 <script src="controllers/DashBoardController.js"></script>
 <script src="controllers/userRegisterController.js"></script>
 
