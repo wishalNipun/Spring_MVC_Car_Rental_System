@@ -126,10 +126,19 @@
     padding: 0;
     padding-left: 0.5rem;
 }
+.btncusAccept:hover{
+    color: #2d7d3c;
+    padding: 0;
+    padding-left: 0.5rem;
+}
+.btncusDeny:hover{
+    color: #F04C4C;
+    padding: 0;
+    padding-left: 0.5rem;
+}
 .btncusAccept{
     color: #2d7d3c;
     padding: 0;
     padding-left: 0.5rem;
 }
-
 
