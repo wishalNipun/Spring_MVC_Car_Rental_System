@@ -10,6 +10,7 @@ $("#btnCarSave").click(function (){
     let carColor = $("#txtCarColor").val();
     let carRegistrationNumber = $("#txtCarRegistrationNumber").val();
     let carFreeMileage = $("#txtCarFreeMileage").val();
+    let carFreeMonthlyMileage = $("#txtCarMonthlyFreeMileage").val();
     let carDailyRate = $("#txtCarDailyRate").val();
     let carMonthlyRate = $("#txtCarMonthlyRate").val();
     let carPriceOfExtraKm = $("#txtCarPriceOfExtraKm").val();
@@ -34,6 +35,7 @@ $("#btnCarSave").click(function (){
     data.append("color",carColor);
     data.append("registrationNumber", carRegistrationNumber);
     data.append("freeMileage",carFreeMileage);
+    data.append("freeMonthlyMileage",carFreeMonthlyMileage);
     data.append("dailyRate",carDailyRate);
     data.append("monthlyRate",carMonthlyRate);
     data.append("priceForExtraKM",carPriceOfExtraKm);

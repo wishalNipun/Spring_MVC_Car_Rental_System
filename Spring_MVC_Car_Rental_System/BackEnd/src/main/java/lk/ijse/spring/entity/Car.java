@@ -25,6 +25,7 @@ public class Car {
     private String color;
     private long lastServiceMileage;
     private int freeMileage;
+    private int freeMonthlyMileage;
     private String frontImageLocation;
     private String sideImageLocation;
     private String backImageLocation;

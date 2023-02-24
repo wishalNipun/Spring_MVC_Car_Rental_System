@@ -20,6 +20,7 @@ public class CarDTO {
     private String color;
     private long lastServiceMileage;
     private int freeMileage;
+    private int freeMonthlyMileage;
     private String frontImageLocation;
     private String sideImageLocation;
     private String backImageLocation;
@@ -33,7 +34,7 @@ public class CarDTO {
     private MultipartFile img3;
     private MultipartFile img4;
 
-    public CarDTO(String registrationNumber, String type, String brand, String model, String fuelType, String transmissionType, int numberOfPassengers, String color, long lastServiceMileage, int freeMileage, double dailyRate, double monthlyRate, double priceForExtraKM, String availability, MultipartFile img1, MultipartFile img2, MultipartFile img3, MultipartFile img4) {
+    public CarDTO(String registrationNumber, String type, String brand, String model, String fuelType, String transmissionType, int numberOfPassengers, String color, long lastServiceMileage, int freeMileage, int freeMonthlyMileage, String frontImageLocation, String sideImageLocation, String backImageLocation, String bgTransparentImageLocation, double dailyRate, double monthlyRate, double priceForExtraKM, String availability) {
         this.registrationNumber = registrationNumber;
         this.type = type;
         this.brand = brand;
@@ -44,29 +45,7 @@ public class CarDTO {
         this.color = color;
         this.lastServiceMileage = lastServiceMileage;
         this.freeMileage = freeMileage;
-        this.dailyRate = dailyRate;
-        this.monthlyRate = monthlyRate;
-        this.priceForExtraKM = priceForExtraKM;
-        this.availability = availability;
-        this.img1 = img1;
-        this.img2 = img2;
-        this.img3 = img3;
-        this.img4 = img4;
-    }
-
-
-
-    public CarDTO(String registrationNumber, String type, String brand, String model, String fuelType, String transmissionType, int numberOfPassengers, String color, long lastServiceMileage, int freeMileage, String frontImageLocation, String sideImageLocation, String backImageLocation, String bgTransparentImageLocation, double dailyRate, double monthlyRate, double priceForExtraKM, String availability) {
-        this.registrationNumber = registrationNumber;
-        this.type = type;
-        this.brand = brand;
-        this.model = model;
-        this.fuelType = fuelType;
-        this.transmissionType = transmissionType;
-        this.numberOfPassengers = numberOfPassengers;
-        this.color = color;
-        this.lastServiceMileage = lastServiceMileage;
-        this.freeMileage = freeMileage;
+        this.freeMonthlyMileage = freeMonthlyMileage;
         this.frontImageLocation = frontImageLocation;
         this.sideImageLocation = sideImageLocation;
         this.backImageLocation = backImageLocation;
@@ -75,5 +54,27 @@ public class CarDTO {
         this.monthlyRate = monthlyRate;
         this.priceForExtraKM = priceForExtraKM;
         this.availability = availability;
+    }
+
+    public CarDTO(String registrationNumber, String type, String brand, String model, String fuelType, String transmissionType, int numberOfPassengers, String color, long lastServiceMileage, int freeMileage, int freeMonthlyMileage, double dailyRate, double monthlyRate, double priceForExtraKM, String availability, MultipartFile img1, MultipartFile img2, MultipartFile img3, MultipartFile img4) {
+        this.registrationNumber = registrationNumber;
+        this.type = type;
+        this.brand = brand;
+        this.model = model;
+        this.fuelType = fuelType;
+        this.transmissionType = transmissionType;
+        this.numberOfPassengers = numberOfPassengers;
+        this.color = color;
+        this.lastServiceMileage = lastServiceMileage;
+        this.freeMileage = freeMileage;
+        this.freeMonthlyMileage = freeMonthlyMileage;
+        this.dailyRate = dailyRate;
+        this.monthlyRate = monthlyRate;
+        this.priceForExtraKM = priceForExtraKM;
+        this.availability = availability;
+        this.img1 = img1;
+        this.img2 = img2;
+        this.img3 = img3;
+        this.img4 = img4;
     }
 }
