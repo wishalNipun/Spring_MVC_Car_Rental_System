@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Customer</title>
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/AdminAdminManager.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="assets/font/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<main id="adminManager" class="container-fluid.p0">
+    <section >
+        <div>Easy Car Rental</div>
+        <div>
+            <h2>Admin</h2>
+            <img src="assets/img/adminfaceUser.png">
+            <h1>Wishal Nipun Siriwardana</h1>
+        </div>
+        <div>
+            <div><h1 class="DashBoard"><i class="fas fa-th-large"></i> DashBoard</h1></div>
+            <div><h1 class="Customer"><i class="fa-solid fa-user"></i> Customer</h1></div>
+            <div><h1 class="Cars"><i class="fa-solid fa-car"></i> Cars</h1></div>
+            <div><h1 class="Drivers"><i class="fas fa-male"></i> Drivers</h1></div>
+            <div><h1 class="Reservation"><i class="fa-solid fa-calendar-days"></i> Reservation</h1></div>
+            <div><h1 class="Payment"><i class="fas fa-money-bill"></i> Payment</h1></div>
+            <div><h1 class="Income"><i class="fas fa-chart-area"></i> Income</h1></div>
+            <div><h1 class="Admin"><i class="fas fa-male"></i> Admin</h1></div>
+        </div>
+        <div>
+            <button class="btn"><i class="fas fa-sign-out-alt"></i> logOut</button>
+        </div>
+    </section>
+    <section>
+        <div>
+            <h1>Admin Manager</h1>
+
+        </div>
+        <div>
+            <form id="adminForm">
+                <div>
+                    <div>
+                        <h3>Admin Id</h3>
+                        <input  type="text" class="form-control" placeholder="Driver Id" name="driverID">
+                    </div>
+                    <div>
+                        <h3>Email</h3>
+                        <input  type="text" class="form-control" placeholder="Enter name" name="name">
+                    </div>
+                    <div>
+                        <h3>UserName</h3>
+                        <input  type="text" class="form-control"  placeholder="Enter nic" name="nic">
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <h3>Password</h3>
+                        <input  type="text" class="form-control"  placeholder="Enter address" name="address">
+                    </div>
+                    <div id="adminButtonField">
+                        <button type="button" class="btn btn-success" id="btnAdminSave">Save</button>
+                        <button type="button" class="btn btn-warning" id="btnAdminUpdate">Update</button>
+                        <button type="button" class="btn btn-danger" id="btnAdminDelete">Delete</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div>
+            <table class="table table-hover" >
+                <thead class="table-primary ">
+                <tr>
+                    <th scope="col">Admin Id</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">UserName</th>
+                    <th scope="col">Password</th>
+
+                </tr>
+                </thead>
+                <tbody id="tblAdmin">
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

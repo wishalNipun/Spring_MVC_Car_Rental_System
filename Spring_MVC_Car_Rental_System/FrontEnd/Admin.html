@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="assets/style/AdminCars.css">
     <link rel="stylesheet" href="assets/style/AdminCustomerReservation.css">
     <link rel="stylesheet" href="assets/style/AdminDrivers.css">
-
+    <link rel="stylesheet" href="assets/style/AdminAdminManager.css">
 </head>
 <body>
 
@@ -451,6 +451,82 @@
     </section>
 
 </main>
+<main id="adminManager" class="container-fluid.p0">
+    <section >
+        <div>Easy Car Rental</div>
+        <div>
+            <h2>Admin</h2>
+            <img src="assets/img/adminfaceUser.png">
+            <h1>Wishal Nipun Siriwardana</h1>
+        </div>
+        <div>
+            <div><h1 class="DashBoard"><i class="fas fa-th-large"></i> DashBoard</h1></div>
+            <div><h1 class="Customer"><i class="fa-solid fa-user"></i> Customer</h1></div>
+            <div><h1 class="Cars"><i class="fa-solid fa-car"></i> Cars</h1></div>
+            <div><h1 class="Drivers"><i class="fas fa-male"></i> Drivers</h1></div>
+            <div><h1 class="Reservation"><i class="fa-solid fa-calendar-days"></i> Reservation</h1></div>
+            <div><h1 class="Payment"><i class="fas fa-money-bill"></i> Payment</h1></div>
+            <div><h1 class="Income"><i class="fas fa-chart-area"></i> Income</h1></div>
+            <div><h1 class="Admin"><i class="fas fa-male"></i> Admin</h1></div>
+        </div>
+        <div>
+            <button class="btn"><i class="fas fa-sign-out-alt"></i> logOut</button>
+        </div>
+    </section>
+    <section>
+        <div>
+            <h1>Admin Manager</h1>
+
+        </div>
+        <div>
+            <form id="adminForm">
+                <div>
+                    <div>
+                        <h3>Admin Id</h3>
+                        <input  type="text" class="form-control" placeholder="Admin Id" name="adminId">
+                    </div>
+                    <div>
+                        <h3>Email</h3>
+                        <input  type="text" class="form-control" placeholder="Enter Email" name="email">
+                    </div>
+                    <div>
+                        <h3>UserName</h3>
+                        <input  type="text" class="form-control"  placeholder="Enter Username" name="username">
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <h3>Password</h3>
+                        <input  type="text" class="form-control"  placeholder="Enter Password" name="password">
+                    </div>
+                    <div id="adminButtonField">
+                        <button type="button" class="btn btn-success" id="btnAdminSave">Save</button>
+                        <button type="button" class="btn btn-warning" id="btnAdminUpdate">Update</button>
+                        <button type="button" class="btn btn-danger" id="btnAdminDelete">Delete</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div>
+            <table class="table table-hover" >
+                <thead class="table-primary ">
+                <tr>
+                    <th scope="col">Admin Id</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">UserName</th>
+                    <th scope="col">Password</th>
+
+                </tr>
+                </thead>
+                <tbody id="tblAdmin">
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -458,5 +534,6 @@
 <script src="controllers/carController.js"></script>
 <script src="controllers/DriverController.js"></script>
 <script src="controllers/CustomerController.js"></script>
+<script src="controllers/AdminController.js"></script>
 </body>
 </html>

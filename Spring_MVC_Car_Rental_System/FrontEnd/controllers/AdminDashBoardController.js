@@ -3,6 +3,7 @@ $('#adminCustomer').css('display','none');
 $('#adminAddCar').css('display','none');
 $('#adminCustomerReservation').css('display','none');
 $('#adminAddDriver').css('display','none');
+$('#adminManager').css('display','none');
 
 $('.DashBoard').click(function (){
     $('#adminDashBoard').css('display','block');
@@ -11,6 +12,7 @@ $('.DashBoard').click(function (){
     $('#adminAddCar').css('display','none');
     $('#adminCustomerReservation').css('display','none');
     $('#adminAddDriver').css('display','none');
+    $('#adminManager').css('display','none');
 
 });
 
@@ -23,6 +25,7 @@ $('.Customer').click(function (){
     $('#adminAddCar').css('display','none');
     $('#adminCustomerReservation').css('display','none');
     $('#adminAddDriver').css('display','none');
+    $('#adminManager').css('display','none');
 
 });
 
@@ -33,6 +36,7 @@ $('.Cars').click(function (){
     $('#adminCustomer').css('display','none');
     $('#adminCustomerReservation').css('display','none');
     $('#adminAddDriver').css('display','none');
+    $('#adminManager').css('display','none');
 });
 
 $('.Reservation').click(function (){
@@ -42,6 +46,8 @@ $('.Reservation').click(function (){
     $('#adminDashBoard').css('display','none');
     $('#adminCustomer').css('display','none');
     $('#adminAddDriver').css('display','none');
+    $('#adminManager').css('display','none');
+
 });
 
 
@@ -49,6 +55,17 @@ $('.Reservation').click(function (){
 $('.Drivers').click(function (){
     $('#adminAddDriver').css('display','block');
 
+    $('#adminAddCar').css('display','none');
+    $('#adminDashBoard').css('display','none');
+    $('#adminCustomer').css('display','none');
+    $('#adminCustomerReservation').css('display','none');
+    $('#adminManager').css('display','none');
+});
+
+$('.Admin').click(function (){
+    $('#adminManager').css('display','block');
+
+    $('#adminAddDriver').css('display','none');
     $('#adminAddCar').css('display','none');
     $('#adminDashBoard').css('display','none');
     $('#adminCustomer').css('display','none');
