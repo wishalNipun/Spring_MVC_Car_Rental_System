@@ -78,6 +78,7 @@ public class CarServiceImpl implements CarService {
     }
     @Override
     public CarDTO searchCarByRegistrationNumber(String registrationNumber) {
-        return null;
+
+        return mapper.map( repo.findCarByRegistrationNumber(registrationNumber),CarDTO.class);
     }
 }

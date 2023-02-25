@@ -32,24 +32,217 @@ function loadAllCards() {
                             <p>${c.freeMileage}</p>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary">Add To Cart</a>
+                    <button type="button" data-register="${c.registrationNumber}" class="btn btn-primary btnAddToCart">Add To Cart</button>
                 </div>
 
             </div>`);
-
-
             }
-            // $(".btnViewCustomerImg").click(function () {
-            //
-            //     let url = $(this).attr('data-url');
-            //     $("#modalCustomerImg").attr("src",baseURL+url);
-            //     $("#modalCustomer").modal('show');
-            // });
+            $(".btnAddToCart").click(function () {
+
+                     cartId =  $(this).attr('data-register')
+                    loadAllCart();
+
+                }
+            );
 
         }
     });
 
 
+
 }
 
 loadAllCards();
+
+var cartId;
+
+
+
+function loadAllCart() {
+    let pDate =$("#txtPickUpDate").val();
+    let rDate =$("#txtReturnDate")
+    $.ajax({
+        url: baseURL+"car?registrationNumber="+cartId,
+        method: "get",
+        dataType:"json",
+        success: function (res) {
+            switch (res.data.type) {
+                case "Luxury":
+                    $("#tableCheckOutCart").append(
+                        `<tr>
+                    <td>${res.data.brand}</td>
+                    <td>${res.data.dailyRate}</td>
+                    <td>${res.data.monthlyRate}</td>
+                    <td>20000</td>
+                    <td class="tblcoldate">
+                        <div>
+                            <h1>From</h1>
+                            <h2>${pDate}</h2>
+                        </div>
+                        <div>
+                            <h1>To</h1>
+                            <h2>${rDate}</h2>
+                        </div>
+                    </td>
+                    <td class="tblcolSelect">
+                        <select class="form-control" aria-label="Default select example">
+                            <option selected="">None</option>
+                            <option value="Driver added">add Driver</option>
+
+                        </select>
+                    </td>
+                    <td class="tblcolDamageUpload">
+                        <div>
+                            <img src="assets/img/uploadIcon.png">
+                            <div>
+                                <p>Lost Damage Waiver</p>
+                                <input type="file"  >
+                            </div>
+                        </div>
+
+                    </td>
+                    <td class="tblcoldelete">
+                        <button class="btn">
+                            <img src="assets/img/circleDelete.png">
+                        </button>
+
+                    </td>
+                </tr>`);
+                    break;
+                case "Premium":
+                    $("#tableCheckOutCart").append(
+                        `<tr>
+                    <td>${res.data.brand}</td>
+                    <td>${res.data.dailyRate}</td>
+                    <td>${res.data.monthlyRate}</td>
+                    <td>15000</td>
+                    <td class="tblcoldate">
+                        <div>
+                            <h1>From</h1>
+                            <h2>${pDate}</h2>
+                        </div>
+                        <div>
+                            <h1>To</h1>
+                            <h2>${rDate}</h2>
+                        </div>
+                    </td>
+                    <td class="tblcolSelect">
+                        <select class="form-control" aria-label="Default select example">
+                            <option selected="">None</option>
+                            <option value="Driver added">add Driver</option>
+
+                        </select>
+                    </td>
+                    <td class="tblcolDamageUpload">
+                        <div>
+                            <img src="assets/img/uploadIcon.png">
+                            <div>
+                                <p>Lost Damage Waiver</p>
+                                <input type="file"  >
+                            </div>
+                        </div>
+
+                    </td>
+                    <td class="tblcoldelete">
+                        <button class="btn">
+                            <img src="assets/img/circleDelete.png">
+                        </button>
+
+                    </td>
+                </tr>`);
+                    break;
+                case "General":
+                    $("#tableCheckOutCart").append(
+                        `<tr>
+                    <td>${res.data.brand}</td>
+                    <td>${res.data.dailyRate}</td>
+                    <td>${res.data.monthlyRate}</td>
+                    <td>10000</td>
+                    <td class="tblcoldate">
+                        <div>
+                            <h1>From</h1>
+                            <h2>${pDate}</h2>
+                        </div>
+                        <div>
+                            <h1>To</h1>
+                            <h2>${rDate}</h2>
+                        </div>
+                    </td>
+                    <td class="tblcolSelect">
+                        <select class="form-control" aria-label="Default select example">
+                            <option selected="">None</option>
+                            <option value="Driver added">add Driver</option>
+
+                        </select>
+                    </td>
+                    <td class="tblcolDamageUpload">
+                        <div>
+                            <img src="assets/img/uploadIcon.png">
+                            <div>
+                                <p>Lost Damage Waiver</p>
+                                <input type="file"  >
+                            </div>
+                        </div>
+
+                    </td>
+                    <td class="tblcoldelete">
+                        <button class="btn">
+                            <img src="assets/img/circleDelete.png">
+                        </button>
+
+                    </td>
+                </tr>`);
+                    break;
+                default:
+                    $("#tableCheckOutCart").append(
+                        `<tr>
+                    <td>${res.data.brand}</td>
+                    <td>${res.data.dailyRate}</td>
+                    <td>${res.data.monthlyRate}</td>
+                    <td>0</td>
+                    <td class="tblcoldate">
+                        <div>
+                            <h1>From</h1>
+                            <h2>${pDate}</h2>
+                        </div>
+                        <div>
+                            <h1>To</h1>
+                            <h2>${rDate}</h2>
+                        </div>
+                    </td>
+                    <td class="tblcolSelect">
+                        <select class="form-control" aria-label="Default select example">
+                            <option selected="">None</option>
+                            <option value="Driver added">add Driver</option>
+
+                        </select>
+                    </td>
+                    <td class="tblcolDamageUpload">
+                        <div>
+                            <img src="assets/img/uploadIcon.png">
+                            <div>
+                                <p>Lost Damage Waiver</p>
+                                <input type="file"  >
+                            </div>
+                        </div>
+
+                    </td>
+                    <td class="tblcoldelete">
+                        <button class="btn">
+                            <img src="assets/img/circleDelete.png">
+                        </button>
+
+                    </td>
+                </tr>`);
+                    ;
+            }
+
+        },
+        error:function(error){
+            let cause= JSON.parse(error.responseText).message;
+            alert(cause);
+        }
+    });
+
+
+}

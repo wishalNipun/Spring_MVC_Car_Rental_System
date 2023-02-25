@@ -31,4 +31,10 @@ public class CarController {
         return new ResponseUtil("200"," Success.!",allCars);
     }
 
+    @GetMapping(params = "registrationNumber")
+    public ResponseUtil getCarUsingRegisterNumber(String registrationNumber) {
+        CarDTO dto = service.searchCarByRegistrationNumber(registrationNumber);
+        return new ResponseUtil("200", "added", dto);
+    }
+
 }
