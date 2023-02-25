@@ -10,6 +10,9 @@ $("#btnSignUp").click(function (){
     let customerPassword = $("#txtCustomerPassword").val();
     let customerStatus = "Pending";
 
+    $('.userNameTag').text(customerName);
+    $('.userEmailTag').text(customerEmail);
+
     var data = new FormData();
     let file = $("#file")[0].files[0];
     let fileName = $("#file")[0].files[0].name;
@@ -48,6 +51,22 @@ $("#btnSignUp").click(function (){
             $('#UserDashBoardHeadNav>ul>li>a').css('color','black');
             $('#UserDashBoardHeadNav>ul>li>a').css('font-weight','400');
             $(' #UserDashBoardHeadNav>ul>li:nth-child(3)>a').css('font-weight','800');
+
+            $(".Account").click(function (){
+                $('#UserViewCarRents').css('display','block');
+
+                $('#UserDashBoard').css('display','none');
+                $('#UserAccount').css('display','none');
+                $('#UserLoginAccount').css('display','none');
+                $('#UserStore').css('display','none');
+                $('#userCarCatalogue').css('display','none');
+                $('#UserCheckOut').css('display','none');
+
+                $('#UserDashBoardHeadNav>ul>li>a').css('color','black');
+                $('#UserDashBoardHeadNav>ul>li>a').css('font-weight','400');
+                $(' #UserDashBoardHeadNav>ul>li:nth-child(2)>a').css('font-weight','800');
+
+            });
         },
         error:function(error){
             alert(JSON.parse(error.responseText).message);

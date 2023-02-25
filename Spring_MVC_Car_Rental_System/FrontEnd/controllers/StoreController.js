@@ -39,8 +39,27 @@ function loadAllCards() {
             }
             $(".btnAddToCart").click(function () {
 
-                     cartId =  $(this).attr('data-register')
-                    loadAllCart();
+                    if (cartId.length == 0){
+                        console.log(cartId.length);
+                        cartId.push($(this).attr('data-register'));
+                        alert("Added Cart")
+                        loadAllCart();
+                    }else {
+                        var count =0
+                        for (let id of cartId) {
+
+                            if(id == $(this).attr('data-register')){
+                               count =count+1;
+                            }
+                        }
+                        if (count==0){
+                            cartId.push($(this).attr('data-register')) ;
+                            alert("Added Cart")
+                            loadAllCart();
+                        }else {
+                            alert("Already Added");
+                        }
+                    }
 
                 }
             );
@@ -51,16 +70,16 @@ function loadAllCards() {
 
 
 }
-
+var cartId=[];
 loadAllCards();
 
-var cartId;
+
 
 function loadAllCart() {
     let pDate =$("#txtPickUpDate").val();
-    let rDate =$("#txtReturnDate")
+    let rDate =$("#txtReturnDate").val();
     $.ajax({
-        url: baseURL+"car?registrationNumber="+cartId,
+        url: baseURL+"car?registrationNumber="+cartId[cartId.length-1],
         method: "get",
         dataType:"json",
         success: function (res) {
