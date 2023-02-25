@@ -141,4 +141,7 @@
     padding: 0;
     padding-left: 0.5rem;
 }
-
+#modalCustomerImg{
+    height: 312px;
+    width: 466px;
+}

@@ -42,5 +42,13 @@ public class CustomerController {
         service.updateCustomer(dto);
         return new ResponseUtil("200",dto.getNic()+": Updated.!",null);
     }
+    @PutMapping("/")
+    public ResponseUtil updateCustomerReservation(@RequestParam String nic,@RequestParam String status) {
+
+
+        service.updateCustomerReservation(nic,status);
+        return new ResponseUtil("200",nic+": Updated.!",null);
+
+    }
 
 }

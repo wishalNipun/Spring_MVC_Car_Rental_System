@@ -11,6 +11,8 @@ public interface CustomerService {
 
     public void updateCustomer(CustomerDTO dto);
 
+    public void updateCustomerReservation(String nic,String status);
+
     public ArrayList<CustomerDTO> getAllCustomers();
 
     public CustomerDTO searchCustomerByName(String name);

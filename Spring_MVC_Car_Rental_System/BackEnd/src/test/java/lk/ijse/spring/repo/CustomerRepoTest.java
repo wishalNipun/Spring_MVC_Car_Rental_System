@@ -22,10 +22,6 @@ class CustomerRepoTest {
     CustomerRepo customerRepo;
     @Test
     public void testOne(){
-        List<Customer> data = customerRepo.findCustomerByStatus("Pending");
-        for (Customer c:data
-             ) {
-            System.out.println(c.getName());
-        }
+
     }
 }

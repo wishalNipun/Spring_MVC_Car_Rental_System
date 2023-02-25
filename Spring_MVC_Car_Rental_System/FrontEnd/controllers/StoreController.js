@@ -56,8 +56,6 @@ loadAllCards();
 
 var cartId;
 
-
-
 function loadAllCart() {
     let pDate =$("#txtPickUpDate").val();
     let rDate =$("#txtReturnDate")

@@ -7,7 +7,6 @@ function loadAllCustomers() {
 
             for (let customer of resp.data) {
 
-
                 switch (customer.status) {
                     case "Deny":
 
@@ -18,12 +17,12 @@ function loadAllCustomers() {
                     <td>${customer.contactNumber}</td>
                     <td>${customer.email}</td>
                     <td>${customer.address}</td>
-                    <td>${customer.imageLocation} 
+                    <td>
                         <button class="btn btnViewCustomerImg" data-url="${customer.imageLocation}">view Image</button>
                     </td>
                     
-                    <td>${customer.status}
-                         <button class="btn btncusAccept"><i class="fas fa-check-circle"></i> Accept</button>
+                    <td>
+                         <button type="button" data-nic="${customer.nic}" data-status="Accept" class="btn btncusAccept"><i class="fas fa-check-circle"></i> Accept</button>
                       
                     </td>
                 </tr>`);
@@ -36,24 +35,17 @@ function loadAllCustomers() {
                     <td>${customer.contactNumber}</td>
                     <td>${customer.email}</td>
                     <td>${customer.address}</td>
-                    <td>${customer.imageLocation} 
+                    <td>
                         <button class="btn btnViewCustomerImg" data-url="${customer.imageLocation}">view Image</button>
                     </td>
                     
                     <td id="denytd">
    
-                         <button class="btn btncusDeny"><i class="fas fa-times-circle"></i> Deny</button>
+                         <button type="button" data-nic="${customer.nic}" data-status="Deny" class="btn btncusDeny"><i class="fas fa-times-circle"></i> Deny</button>
                       
                     </td>
                 </tr>`);
-                        // $("#denytd>.btncusDeny").click(function (){
-                        //     $("#denytd").empty();
-                        //     $("#denytd").append(`<button class="btn btncusAccept"><i class="fas fa-check-circle"></i> Accept</button>`);
-                        // });
-                        // $("#denytd>.btncusAccept").click(function (){
-                        //     $("#denytd").empty();
-                        //     $("#denytd").append(`<button class="btn btncusDeny"><i class="fas fa-times-circle"></i> Deny</button>`);
-                        // });
+
                         break;
                     case "Pending":
                         $("#tblCustomerVerification").append(` <tr>
@@ -68,22 +60,15 @@ function loadAllCustomers() {
                     </td>
                     
                     <td id="pendingTD">
-                         <button class="btn btncusAccept"><i class="fas fa-check-circle"></i> Accept</button>
-                         <button class="btn btncusDeny"><i class="fas fa-times-circle"></i> Deny</button>
+                         <button type="button" data-nic="${customer.nic}" data-status="Accept" class="btn btncusAccept"><i class="fas fa-check-circle"></i> Accept</button>
+                         <button type="button" data-nic="${customer.nic}" data-status="Deny" class="btn btncusDeny"><i class="fas fa-times-circle"></i> Deny</button>
                       
                     </td>
                     
                     
                 </tr>`);
 
-                        // $("#pendingTD>.btncusDeny").click(function (){
-                        //     $("#pendingTD").empty();
-                        //     $("#denytd").append(`<button class="btn btncusAccept"><i class="fas fa-check-circle"></i> Accept</button>`);
-                        // });
-                        // $("#pendingTD>.btncusAccept").click(function (){
-                        //     $("#denytd").empty();
-                        //     $("#denytd").append(`<button class="btn btncusDeny"><i class="fas fa-times-circle"></i> Deny</button>`);
-                        // });
+
                         break;
                     default:
                         $("#tblCustomerVerification").append(` <tr>
@@ -93,7 +78,7 @@ function loadAllCustomers() {
                     <td>${customer.contactNumber}</td>
                     <td>${customer.email}</td>
                     <td>${customer.address}</td>
-                    <td>${customer.imageLocation} 
+                    <td>
                         <button class="btn btnViewCustomerImg" data-url="${customer.imageLocation}">view Image</button>
                     </td>
                     
@@ -108,6 +93,47 @@ function loadAllCustomers() {
                 $("#modalCustomer").modal('show');
             });
 
+            $(".btncusAccept").click(function () {
+                let nic = $(this).attr('data-nic');
+                let status = $(this).attr('data-status');
+
+                $.ajax({
+                    url: baseURL+'customer/?nic='+nic+'&status='+status,
+                    method: 'put',
+
+
+                    success: function (res) {
+                        alert(res.message);
+                        loadAllCustomers();
+                    },
+                    error:function (error){
+                        let cause= JSON.parse(error.responseText).message;
+                        alert(cause);
+                    }
+
+                });
+            });
+
+            $(".btncusDeny").click(function (){
+                let nic = $(this).attr('data-nic');
+                let status = $(this).attr('data-status');
+
+                $.ajax({
+                    url: baseURL+'customer/?nic='+nic+'&status='+status,
+                    method: 'put',
+
+
+                    success: function (res) {
+                        alert(res.message);
+                        loadAllCustomers();
+                    },
+                    error:function (error){
+                        let cause= JSON.parse(error.responseText).message;
+                        alert(cause);
+                    }
+
+                });
+            });
         }
     });
 
