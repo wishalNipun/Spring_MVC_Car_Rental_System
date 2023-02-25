@@ -40,12 +40,20 @@ function loadAllCustomers() {
                         <button class="btn btnViewCustomerImg" data-url="${customer.imageLocation}">view Image</button>
                     </td>
                     
-                    <td>${customer.status}
-                         
+                    <td id="denytd">
+   
                          <button class="btn btncusDeny"><i class="fas fa-times-circle"></i> Deny</button>
                       
                     </td>
                 </tr>`);
+                        // $("#denytd>.btncusDeny").click(function (){
+                        //     $("#denytd").empty();
+                        //     $("#denytd").append(`<button class="btn btncusAccept"><i class="fas fa-check-circle"></i> Accept</button>`);
+                        // });
+                        // $("#denytd>.btncusAccept").click(function (){
+                        //     $("#denytd").empty();
+                        //     $("#denytd").append(`<button class="btn btncusDeny"><i class="fas fa-times-circle"></i> Deny</button>`);
+                        // });
                         break;
                     case "Pending":
                         $("#tblCustomerVerification").append(` <tr>
@@ -55,16 +63,27 @@ function loadAllCustomers() {
                     <td>${customer.contactNumber}</td>
                     <td>${customer.email}</td>
                     <td>${customer.address}</td>
-                    <td>${customer.imageLocation} 
+                    <td>
                         <button class="btn btnViewCustomerImg" data-url="${customer.imageLocation}">view Image</button>
                     </td>
                     
-                    <td>${customer.status}
+                    <td id="pendingTD">
                          <button class="btn btncusAccept"><i class="fas fa-check-circle"></i> Accept</button>
                          <button class="btn btncusDeny"><i class="fas fa-times-circle"></i> Deny</button>
                       
                     </td>
+                    
+                    
                 </tr>`);
+
+                        // $("#pendingTD>.btncusDeny").click(function (){
+                        //     $("#pendingTD").empty();
+                        //     $("#denytd").append(`<button class="btn btncusAccept"><i class="fas fa-check-circle"></i> Accept</button>`);
+                        // });
+                        // $("#pendingTD>.btncusAccept").click(function (){
+                        //     $("#denytd").empty();
+                        //     $("#denytd").append(`<button class="btn btncusDeny"><i class="fas fa-times-circle"></i> Deny</button>`);
+                        // });
                         break;
                     default:
                         $("#tblCustomerVerification").append(` <tr>

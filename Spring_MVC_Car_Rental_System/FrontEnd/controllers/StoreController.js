@@ -37,23 +37,6 @@ function loadAllCards() {
 
             </div>`);
 
-                $("#cardsStore").append(` <tr>
-                    <td></td>
-                    <td>${customer.nic}</td>
-                    <td>${customer.drivingLicense}</td>
-                    <td>${customer.contactNumber}</td>
-                    <td>${customer.email}</td>
-                    <td>${customer.address}</td>
-                    <td>${customer.imageLocation} 
-                        <button class="btn btnViewCustomerImg" data-url="${customer.imageLocation}">view Image</button>
-                    </td>
-
-                    <td>${customer.status}
-
-                         <button class="btn btncusDeny"><i class="fas fa-times-circle"></i> Deny</button>
-
-                    </td>
-                </tr>`);
 
             }
             // $(".btnViewCustomerImg").click(function () {
