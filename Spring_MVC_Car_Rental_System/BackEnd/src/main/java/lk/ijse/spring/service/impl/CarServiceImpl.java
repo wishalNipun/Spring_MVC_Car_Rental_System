@@ -4,6 +4,7 @@ import lk.ijse.spring.dto.CarDTO;
 import lk.ijse.spring.dto.CustomerDTO;
 import lk.ijse.spring.entity.Car;
 import lk.ijse.spring.entity.Customer;
+import lk.ijse.spring.entity.Driver;
 import lk.ijse.spring.repo.CarRepo;
 import lk.ijse.spring.repo.CustomerRepo;
 import lk.ijse.spring.service.CarService;
@@ -71,7 +72,10 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public void updateCar(CarDTO dto) {
-
+        if (!repo.existsById(dto.getRegistrationNumber())){
+            throw new RuntimeException("Car "+dto.getRegistrationNumber()+" Not Available to Update..!");
+        }
+        repo.save( mapper.map(dto, Car.class));
     }
 
     @Override
