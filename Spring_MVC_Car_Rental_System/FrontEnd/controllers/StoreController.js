@@ -14,7 +14,7 @@ function loadAllCards() {
                 <div class="card-body border-bottom-0">
                     <h5 class="card-title">${c.brand}</h5>
                     <p class="card-text">${c.type} - ${c.transmissionType}</p>
-                    <button class="viewDetail btn btn-light">ViewDetail</button>
+                    <button data-register="${c.registrationNumber}" class="btnViewDetail btn btn-light">ViewDetail</button>
                 </div>
                 <hr>
                 <div class="card-body text-center">
@@ -63,7 +63,24 @@ function loadAllCards() {
 
                 }
             );
+            $(".btnViewDetail").click(function () {
+                detail=$(this).attr('data-register')
+                carDetailSet();
+                $('#userCarCatalogue').css('display','block');
 
+
+                $('#UserDashBoard').css('display','none');
+                $('#UserAccount').css('display','none');
+                $('#UserLoginAccount').css('display','none');
+                $('#UserStore').css('display','none');
+                $('#UserCheckOut').css('display','none');
+                $('#UserViewCarRents').css('display','none');
+
+                $('#UserDashBoardHeadNav>ul>li>a').css('color','black');
+                $('#UserDashBoardHeadNav>ul>li>a').css('font-weight','400');
+
+
+            });
         }
     });
 
@@ -71,9 +88,55 @@ function loadAllCards() {
 
 }
 var cartId=[];
+var detail;
 loadAllCards();
 
+function carDetailSet(){
+    $.ajax({
+        url: baseURL+"car?registrationNumber="+detail,
+        method: "get",
+        dataType:"json",
+        success: function (res) {
+            $(".carCatelImg1").attr("src",baseURL+res.data.frontImageLocation);
+            $(".carCatelImg2").attr("src",baseURL+res.data.frontImageLocation);
+            $(".carCatelImg3").attr("src",baseURL+res.data.frontImageLocation);
+            $(".carCatelImg4").attr("src",baseURL+res.data.frontImageLocation);
 
+            $(".carCatelBrand").text(res.data.brand);
+            $(".carCatelModel").text(res.data.model);
+            $(".carCatelTransmission").text(res.data.transmissionType);
+            $(".carCatelFuel").text(res.data.fuelType);
+            $(".carCatelType").text(res.data.type);
+            $(".carCatelNoOfPassengers").text(res.data.numberOfPassengers);
+            $(".carCatelFreeMileage").text(res.data.freeMileage);
+            $(".carCatelFreeMonthlyMileage").text(res.data.freeMonthlyMileage);
+            $(".carCatelCostPerExtraKm").text(res.data.priceForExtraKM);
+            $(".carCatelDaily").text(res.data.dailyRate);
+            $(".carCatelMonthly").text(res.data.monthlyRate);
+
+            switch (res.data.type){
+                case "Luxury":
+                    $(".carLostDamageWaivor").text(20000);
+                    break;
+                case "Premium":
+                    $(".carLostDamageWaivor").text(15000);
+                    break;
+                case "General":
+                    $(".carLostDamageWaivor").text(10000);
+                    break;
+                default:
+                    $(".carLostDamageWaivor").text("0");
+            }
+
+
+            $(".btnAddToCart").attr('data-register',detail);
+        },
+        error:function(error){
+            let cause= JSON.parse(error.responseText).message;
+            alert(cause);
+        }
+    });
+}
 
 function loadAllCart() {
     let pDate =$("#txtPickUpDate").val();
@@ -253,6 +316,7 @@ function loadAllCart() {
                 </tr>`);
                     ;
             }
+
 
         },
         error:function(error){

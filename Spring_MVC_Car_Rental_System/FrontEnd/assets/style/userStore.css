@@ -125,7 +125,7 @@ span{
 .card-body>p{
   margin-bottom: 0;
 }
-.card-body>.viewDetail{
+.card-body>.btnViewDetail{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;

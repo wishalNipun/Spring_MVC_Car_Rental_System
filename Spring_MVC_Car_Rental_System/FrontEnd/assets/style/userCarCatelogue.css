@@ -5,16 +5,10 @@
 
     position: absolute;
     top: 100px;
-    height: 600px;
-    width: 700px;
+    height: 610px;
+    width: 762px;
 }
-#userCarCatalogue>img{
-    position: absolute;
-    height: 60%;
-    top: 267px;
-    left: 130px;
-    width: fit-content;
-}
+
 /*.headerNav{*/
 /*    z-index: 1;*/
 /*    position: absolute;*/
@@ -113,3 +107,18 @@
     margin-top: 30px;
 }
 
+#userCarCatalogue>div>img{
+
+
+    height: 190px;
+    width: 194px;
+}
+#userCarCatalogue>div:nth-child(2){
+    position: absolute;
+    display: flex;
+    width: 396px;
+    top: 236px;
+    left: 151px;
+    gap: 8px;
+    flex-wrap: wrap;
+}
