@@ -36,5 +36,9 @@ public class CarController {
         CarDTO dto = service.searchCarByRegistrationNumber(registrationNumber);
         return new ResponseUtil("200", "added", dto);
     }
-
+//    @PutMapping
+//    public ResponseUtil updateCar(@RequestBody CarDTO dto){
+//        ///service.updateCustomer(dto);
+//        return new ResponseUtil("200",dto.getNic()+": Updated.!",null);
+//    }
 }

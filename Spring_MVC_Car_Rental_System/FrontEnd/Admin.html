@@ -343,8 +343,12 @@
             <form>
                 <div>
                     <div>
+                        <h3>Registration ID</h3>
+                        <input type="text" class="form-control " id="txtCarUpdateRegistrationNumber" placeholder="Registration ID" readonly>
+                    </div>
+                    <div>
                         <h3>Brand</h3>
-                        <input type="text" class="form-control" id="txtCarUpdateBrand" placeholder="Enter Brand" n>
+                        <input type="text" class="form-control" id="txtCarUpdateBrand" placeholder="Enter Brand" >
                     </div>
                     <div>
                         <h3>Model</h3>
@@ -374,11 +378,12 @@
                         </select>
                     </div>
                     <div>
-                        <h3>Number Of Passengers</h3>
+                        <h3>N0 Of Passengers</h3>
                         <input type="text" class="form-control" id="txtCarUpdateNumberOfPassengers" placeholder="Enter Number Of Passengers">
                     </div>
                 </div>
                 <div>
+
                     <div>
                         <h3>Color</h3>
                         <input type="color" class="form-control" id="txtCarUpdateColor" placeholder="Enter Color">
@@ -405,6 +410,7 @@
                     </div>
                 </div>
                 <div>
+
                     <div>
                         <h3>Last Service Mileage</h3>
                         <input type="text" class="form-control" id="txtCarUpdateLastServiceMileage" placeholder="Enter Last Service Mileage">
@@ -412,9 +418,9 @@
 
                     <div>
                         <h3>Availability</h3>
-                        <select id="selectCarUpdateAvailable" class="form-control" aria-label="Default select example">
+                        <select id="selectCarUpdateAvailability" class="form-control" aria-label="Default select example">
                             <option selected="">Available</option>
-                            <option value="1">Not Available</option>
+                            <option value="Not Available">Not Available</option>
                         </select>
                     </div>
 
@@ -424,29 +430,31 @@
                     </div>
 
                     <div>
-                        <img src="assets/img/car.png">
-                        <img src="assets/img/car.png">
-                        <img src="assets/img/car.png">
-                        <img src="assets/img/car.png">
+                        <img id="ucImg1" src="" alt="img">
+                        <img id="ucImg2" src="" alt="img">
+                        <img id="ucImg3" src="" alt="img">
+                        <img id="ucImg4" src="" alt="img">
                     </div>
                 </div>
             </form>
 
         </div>
         <div>
-            <table class="table table-hover" >
+            <table id="carTable" class="table table-hover" >
                 <thead class="table-primary ">
                 <tr>
+                    <th scope="col">Registration Number</th>
                     <th scope="col">Brand</th>
                     <th scope="col">Model</th>
                     <th scope="col">Type</th>
                     <th scope="col">Transmission</th>
                     <th scope="col">Fuel</th>
-                    <th scope="col">Number Of Passengers</th>
+                    <th scope="col">No Of Passengers</th>
                     <th scope="col">Color</th>
                     <th scope="col">Free Mileage</th>
                     <th scope="col">Free Monthly Mileage</th>
                     <th scope="col">Daily Rate</th>
+                    <th scope="col">Monthly Rate</th>
                     <th scope="col">Price Of Extra Km</th>
                     <th scope="col">Last Service Mileage</th>
                     <th scope="col">Availability</th>
