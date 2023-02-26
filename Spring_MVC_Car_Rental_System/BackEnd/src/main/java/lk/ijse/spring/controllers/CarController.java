@@ -41,4 +41,11 @@ public class CarController {
 //        ///service.updateCustomer(dto);
 //        return new ResponseUtil("200",dto.getNic()+": Updated.!",null);
 //    }
+
+    @DeleteMapping(params = "registrationNumber")
+    public ResponseUtil deleteCar(String registrationNumber){
+        System.out.println(registrationNumber);
+        service.deleteCar(registrationNumber);
+        return new ResponseUtil("200",registrationNumber+" : Deleted.!",null);
+    }
 }

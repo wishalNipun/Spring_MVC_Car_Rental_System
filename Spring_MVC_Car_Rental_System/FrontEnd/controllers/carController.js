@@ -159,7 +159,23 @@ function bindCarRowClickEvents() {
         });
     });
 }
+$("#btnCarDelete").click(function () {
 
+    let id =  $("#txtCarUpdateRegistrationNumber").val();
+    console.log(id);
+    $.ajax({
+        url: baseURL+"car?registrationNumber="+id+"",
+        method: "delete",
+
+        success: function (resp) {
+            alert(resp.message);
+            loadAllCars();
+        },
+        error:function (error){
+            alert(JSON.parse(error.responseText).message);
+        }
+    });
+});
 // function setTextFieldValues(id, name, address, nic,licen,dateOfBirth,state) {
 //     $("#did").val(id);
 //     $("#dname").val(name);
