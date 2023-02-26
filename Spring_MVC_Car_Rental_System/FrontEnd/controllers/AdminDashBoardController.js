@@ -4,6 +4,7 @@ $('#adminAddCar').css('display','none');
 $('#adminCustomerReservation').css('display','none');
 $('#adminAddDriver').css('display','none');
 $('#adminManager').css('display','none');
+$('#adminCarDetail').css('display','none');
 
 $('.DashBoard').click(function (){
     $('#adminDashBoard').css('display','block');
@@ -13,7 +14,7 @@ $('.DashBoard').click(function (){
     $('#adminCustomerReservation').css('display','none');
     $('#adminAddDriver').css('display','none');
     $('#adminManager').css('display','none');
-
+    $('#adminCarDetail').css('display','none');
 });
 
 
@@ -26,7 +27,7 @@ $('.Customer').click(function (){
     $('#adminCustomerReservation').css('display','none');
     $('#adminAddDriver').css('display','none');
     $('#adminManager').css('display','none');
-
+    $('#adminCarDetail').css('display','none');
 });
 
 $('.Cars').click(function (){
@@ -37,6 +38,7 @@ $('.Cars').click(function (){
     $('#adminCustomerReservation').css('display','none');
     $('#adminAddDriver').css('display','none');
     $('#adminManager').css('display','none');
+    $('#adminCarDetail').css('display','none');
 });
 
 $('.Reservation').click(function (){
@@ -47,6 +49,7 @@ $('.Reservation').click(function (){
     $('#adminCustomer').css('display','none');
     $('#adminAddDriver').css('display','none');
     $('#adminManager').css('display','none');
+    $('#adminCarDetail').css('display','none');
 
 });
 
@@ -60,6 +63,7 @@ $('.Drivers').click(function (){
     $('#adminCustomer').css('display','none');
     $('#adminCustomerReservation').css('display','none');
     $('#adminManager').css('display','none');
+    $('#adminCarDetail').css('display','none');
 });
 
 $('.Admin').click(function (){
@@ -70,4 +74,18 @@ $('.Admin').click(function (){
     $('#adminDashBoard').css('display','none');
     $('#adminCustomer').css('display','none');
     $('#adminCustomerReservation').css('display','none');
+    $('#adminCarDetail').css('display','none');
+});
+
+
+$('#btnCarDetail').click(function (){
+    $('#adminCarDetail').css('display','block');
+
+    $('#adminManager').css('display','none');
+    $('#adminAddDriver').css('display','none');
+    $('#adminAddCar').css('display','none');
+    $('#adminDashBoard').css('display','none');
+    $('#adminCustomer').css('display','none');
+    $('#adminCustomerReservation').css('display','none');
+
 });

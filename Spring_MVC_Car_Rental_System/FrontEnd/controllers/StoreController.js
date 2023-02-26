@@ -98,9 +98,9 @@ function carDetailSet(){
         dataType:"json",
         success: function (res) {
             $(".carCatelImg1").attr("src",baseURL+res.data.frontImageLocation);
-            $(".carCatelImg2").attr("src",baseURL+res.data.frontImageLocation);
-            $(".carCatelImg3").attr("src",baseURL+res.data.frontImageLocation);
-            $(".carCatelImg4").attr("src",baseURL+res.data.frontImageLocation);
+            $(".carCatelImg2").attr("src",baseURL+res.data.backImageLocation);
+            $(".carCatelImg3").attr("src",baseURL+res.data.bgTransparentImageLocation);
+            $(".carCatelImg4").attr("src",baseURL+res.data.sideImageLocation);
 
             $(".carCatelBrand").text(res.data.brand);
             $(".carCatelModel").text(res.data.model);

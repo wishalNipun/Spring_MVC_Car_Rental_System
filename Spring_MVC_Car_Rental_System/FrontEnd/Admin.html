@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="assets/style/AdminCustomerReservation.css">
     <link rel="stylesheet" href="assets/style/AdminDrivers.css">
     <link rel="stylesheet" href="assets/style/AdminAdminManager.css">
+    <link rel="stylesheet" href="assets/style/AdminCarDetail.css">
+
 </head>
 <body>
 
@@ -190,7 +192,7 @@
     <section>
         <div>
             <h1>Add Cars</h1>
-            <div>View Cars</div>
+            <div id="btnCarDetail">View Cars Details</div>
         </div>
         <div>
             <form>
@@ -310,6 +312,168 @@
         </div>
 
     </section>
+</main>
+<main id="adminCarDetail" class="container-fluid.p0">
+    <section >
+        <div>Easy Car Rental</div>
+        <div>
+            <h2>Admin</h2>
+            <img src="assets/img/adminfaceUser.png">
+            <h1>Wishal Nipun Siriwardana</h1>
+        </div>
+        <div>
+            <div><h1 class="DashBoard"><i class="fas fa-th-large"></i> DashBoard</h1></div>
+            <div><h1 class="Customer"><i class="fa-solid fa-user"></i> Customer</h1></div>
+            <div><h1 class="Cars"><i class="fa-solid fa-car"></i> Cars</h1></div>
+            <div><h1 class="Drivers"><i class="fas fa-male"></i> Drivers</h1></div>
+            <div><h1 class="Reservation"><i class="fa-solid fa-calendar-days"></i> Reservation</h1></div>
+            <div><h1 class="Payment"><i class="fas fa-money-bill"></i> Payment</h1></div>
+            <div><h1 class="Income"><i class="fas fa-chart-area"></i> Income</h1></div>
+            <div><h1 class="Admin"><i class="fas fa-male"></i> Admin</h1></div>
+        </div>
+        <div>
+            <button class="btn"><i class="fas fa-sign-out-alt"></i> logOut</button>
+        </div>
+    </section>
+    <section>
+        <div>
+            <h1>Car Detail</h1>
+        </div>
+        <div>
+            <form>
+                <div>
+                    <div>
+                        <h3>Brand</h3>
+                        <input type="text" class="form-control" id="txtCarUpdateBrand" placeholder="Enter Brand" n>
+                    </div>
+                    <div>
+                        <h3>Model</h3>
+                        <input type="text" class="form-control" id="txtCarUpdateModel" placeholder="Enter Model">
+                    </div>
+                    <div>
+                        <h3>Type</h3>
+
+                        <select id="selectCarUpdateType" class="form-control" aria-label="Default select example" placeholder="Enter Type">
+                            <option selected="">General</option>
+                            <option value="Premium">Premium</option>
+                            <option value="Luxury">Luxury</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h3>Transmission</h3>
+                        <select id="selectCarUpdateTransmission" class="form-control" aria-label="Default select example" placeholder="Enter Transmission">
+                            <option selected="">Auto</option>
+                            <option value="Manual">Manual</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h3>Fuel</h3>
+                        <select id="selectCarUpdateFuel" class="form-control" aria-label="Default select example" placeholder="Enter Fuel">
+                            <option selected="">Diesel</option>
+                            <option value="Petrol">Petrol</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h3>Number Of Passengers</h3>
+                        <input type="text" class="form-control" id="txtCarUpdateNumberOfPassengers" placeholder="Enter Number Of Passengers">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h3>Color</h3>
+                        <input type="color" class="form-control" id="txtCarUpdateColor" placeholder="Enter Color">
+                    </div>
+                    <div>
+                        <h3>Free Mileage</h3>
+                        <input type="text" class="form-control" id="txtCarUpdateFreeMileage" placeholder="Enter Free Mileage">
+                    </div>
+                    <div>
+                        <h3>Free Monthly Mileage</h3>
+                        <input type="text" class="form-control" id="txtCarUpdateMonthlyFreeMileage" placeholder="Enter Free Monthly Mileage">
+                    </div>
+                    <div>
+                        <h3>Daily Rate</h3>
+                        <input type="text" class="form-control" id="txtCarUpdateDailyRate" placeholder="Enter Daily Rate">
+                    </div>
+                    <div>
+                        <h3>Monthly Rate</h3>
+                        <input type="text" class="form-control" id="txtCarUpdateMonthlyRate" placeholder="Enter Monthly Rate">
+                    </div>
+                    <div>
+                        <h3>Price Of Extra Km</h3>
+                        <input type="text" class="form-control" id="txtCarUpdatePriceOfExtraKm" placeholder="Enter Price Of Extra Km">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h3>Last Service Mileage</h3>
+                        <input type="text" class="form-control" id="txtCarUpdateLastServiceMileage" placeholder="Enter Last Service Mileage">
+                    </div>
+
+                    <div>
+                        <h3>Availability</h3>
+                        <select id="selectCarUpdateAvailable" class="form-control" aria-label="Default select example">
+                            <option selected="">Available</option>
+                            <option value="1">Not Available</option>
+                        </select>
+                    </div>
+
+                    <div id="carButtonField">
+                        <button id="btnCarUpdate" type="button" class="btn btn-warning">Update</button>
+                        <button id="btnCarDelete" type="button" class="btn btn-danger">Delete</button>
+                    </div>
+
+                    <div>
+                        <img src="assets/img/car.png">
+                        <img src="assets/img/car.png">
+                        <img src="assets/img/car.png">
+                        <img src="assets/img/car.png">
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div>
+            <table class="table table-hover" >
+                <thead class="table-primary ">
+                <tr>
+                    <th scope="col">Brand</th>
+                    <th scope="col">Model</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Transmission</th>
+                    <th scope="col">Fuel</th>
+                    <th scope="col">Number Of Passengers</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Free Mileage</th>
+                    <th scope="col">Free Monthly Mileage</th>
+                    <th scope="col">Daily Rate</th>
+                    <th scope="col">Price Of Extra Km</th>
+                    <th scope="col">Last Service Mileage</th>
+                    <th scope="col">Availability</th>
+                </tr>
+                </thead>
+                <tbody id="tBodyCarDetail">
+                <tr>
+                    <td>BMW</td>
+                    <td>I8</td>
+                    <td>Luxury</td>
+                    <td>Auto</td>
+                    <td>Diesel</td>
+                    <td>4</td>
+                    <td>black</td>
+                    <td>50</td>
+                    <td>200</td>
+                    <td>5000</td>
+                    <td>100</td>
+                    <td>10055</td>
+                    <td>Available</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
 </main>
 <main id="adminCustomerReservation" class="container-fluid.p0">
     <section >
