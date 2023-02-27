@@ -165,9 +165,9 @@ function loadAllCart() {
                         </div>
                     </td>
                     <td class="tblcolSelect">
-                        <select class="form-control" aria-label="Default select example">
+                        <select data-id="${res.data.registrationNumber}" class="form-control" aria-label="Default select example">
                             <option selected="">None</option>
-                            <option value="Driver added">add Driver</option>
+                            <option  value="Driver added">add Driver</option>
 
                         </select>
                     </td>
@@ -182,7 +182,7 @@ function loadAllCart() {
 
                     </td>
                     <td class="tblcoldelete">
-                        <button class="btn">
+                        <button data-id="${res.data.registrationNumber}" type="button " class="btn btnCartDeleteCheckOut">
                             <img src="assets/img/circleDelete.png">
                         </button>
 
@@ -207,7 +207,7 @@ function loadAllCart() {
                         </div>
                     </td>
                     <td class="tblcolSelect">
-                        <select class="form-control" aria-label="Default select example">
+                        <select data-id="${res.data.registrationNumber}" class="form-control" aria-label="Default select example">
                             <option selected="">None</option>
                             <option value="Driver added">add Driver</option>
 
@@ -224,7 +224,7 @@ function loadAllCart() {
 
                     </td>
                     <td class="tblcoldelete">
-                        <button class="btn">
+                         <button data-id="${res.data.registrationNumber}" type="button" class="btn btnCartDeleteCheckOut">
                             <img src="assets/img/circleDelete.png">
                         </button>
 
@@ -249,7 +249,7 @@ function loadAllCart() {
                         </div>
                     </td>
                     <td class="tblcolSelect">
-                        <select class="form-control" aria-label="Default select example">
+                        <select data-id="${res.data.registrationNumber}" class="form-control" aria-label="Default select example">
                             <option selected="">None</option>
                             <option value="Driver added">add Driver</option>
 
@@ -266,7 +266,7 @@ function loadAllCart() {
 
                     </td>
                     <td class="tblcoldelete">
-                        <button class="btn">
+                         <button data-id="${res.data.registrationNumber}" type="button" class="btn btnCartDeleteCheckOut">
                             <img src="assets/img/circleDelete.png">
                         </button>
 
@@ -291,7 +291,7 @@ function loadAllCart() {
                         </div>
                     </td>
                     <td class="tblcolSelect">
-                        <select class="form-control" aria-label="Default select example">
+                        <select data-id="${res.data.registrationNumber}" class="form-control" aria-label="Default select example">
                             <option selected="">None</option>
                             <option value="Driver added">add Driver</option>
 
@@ -308,7 +308,7 @@ function loadAllCart() {
 
                     </td>
                     <td class="tblcoldelete">
-                        <button class="btn">
+                         <button data-id="${res.data.registrationNumber}" type="button" class="btn btnCartDeleteCheckOut">
                             <img src="assets/img/circleDelete.png">
                         </button>
 
@@ -324,6 +324,61 @@ function loadAllCart() {
             alert(cause);
         }
     });
-
+    // for(var customer of customers){
+    //     var row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`;
+    //     $("#tblCustomers").append(row);
+    // }
 
 }
+// function searchRegisterNumber(id){
+//     for(let c of cartId){
+//         console.log(c);
+//
+//         if (c.id == id){
+//             console.log("aaaa"+c);
+//             return c;
+//         }
+//     }
+//     return null;
+//
+// }
+//
+// function deleteCart(id) {
+//     let c = searchRegisterNumber(id);
+//     if (c != null) {
+//         let indexNumber = cartId.indexOf(c);
+//         cartId.splice(indexNumber, 1);
+//        // loadAllCart();
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+//
+// $(".btnCartDeleteCheckOut").click(function (){
+//     let deleteID = $(this).attr('data-id');
+//
+//     Swal.fire({
+//         title: 'Are you sure?',
+//         text: "You won't be able to revert this!",
+//         icon: 'warning',
+//         showCancelButton: true,
+//         confirmButtonColor: '#3085d6',
+//         cancelButtonColor: '#d33',
+//         confirmButtonText: 'Yes, delete it!'
+//     }).then((result) => {
+//         if (result.isConfirmed) {
+//             deleteCart(deleteID)
+//
+//             Swal.fire(
+//                 'Deleted!',
+//                 'Cart data is deleted.',
+//                 'success'
+//             )
+//
+//         }
+//     })
+//
+//
+//
+// });
