@@ -179,7 +179,7 @@ function loadAllCart() {
                             <img src="assets/img/uploadIcon.png">
                             <div>
                                 <p>Lost Damage Waiver</p>
-                                <input type="file"  >
+                                <input data-fileid="${res.data.registrationNumber}"  type="file"  >
                             </div>
                         </div>
 
@@ -221,7 +221,7 @@ function loadAllCart() {
                             <img src="assets/img/uploadIcon.png">
                             <div>
                                 <p>Lost Damage Waiver</p>
-                                <input type="file"  >
+                                <input data-fileid="${res.data.registrationNumber}" type="file"  >
                             </div>
                         </div>
 
@@ -263,7 +263,7 @@ function loadAllCart() {
                             <img src="assets/img/uploadIcon.png">
                             <div>
                                 <p>Lost Damage Waiver</p>
-                                <input type="file"  >
+                                <input data-fileid="${res.data.registrationNumber}" class="damageImg" type="file"  >
                             </div>
                         </div>
 
@@ -305,7 +305,7 @@ function loadAllCart() {
                             <img src="assets/img/uploadIcon.png">
                             <div>
                                 <p>Lost Damage Waiver</p>
-                                <input type="file"  >
+                                <input data-fileid="${res.data.registrationNumber}" type="file">
                             </div>
                         </div>
 
