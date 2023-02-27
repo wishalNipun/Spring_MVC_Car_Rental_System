@@ -65,6 +65,7 @@ $("#btnCarSave").click(function (){
 
         }
     });
+    setcccTextFieldValues("","","","","","","","","","","","","","","","","","","");
 });
 
 loadAllCars();
@@ -101,6 +102,8 @@ function loadAllCars() {
 
             }
             bindCarRowClickEvents();
+            setccTextFieldValues("","","","","","","","","","","","","","","","","","","",)
+
         }
 
     });
@@ -172,6 +175,7 @@ $("#btnCarDelete").click(function () {
         success: function (resp) {
             alert(resp.message);
             loadAllCars();
+
         },
         error:function (error){
             alert(JSON.parse(error.responseText).message);
@@ -237,7 +241,7 @@ $("#btnCarUpdate").click(function () {
                 priceForExtraKM:carPriceOfExtraKm,
                 availability:availability
             }
-            console.log(car);
+
             $.ajax({
                 url: baseURL+'car',
                 method: 'put',
@@ -261,30 +265,55 @@ $("#btnCarUpdate").click(function () {
             // alert(cause);
         }
     });
-
+    setccTextFieldValues("","","","","","","","","","","","","","","","","","","",)
 
 });
 
 
 
-// function setTextFieldValues(id, name, address, nic,licen,dateOfBirth,state) {
-//     $("#txtCarUpdateRegistrationNumber").val(carRegistrationNumber);
-//     $("#txtCarUpdateBrand").val(carBrand);
-//     $("#txtCarUpdateModel").val(carModel);
-//     $("#selectCarUpdateType").val(carType);
-//     $("#selectCarUpdateTransmission").val(carTransmission);
-//     $("#selectCarUpdateFuel").val(carFuel);
-//     $("#txtCarUpdateNumberOfPassengers").val(carNumberOfPassengers);
-//     $("#txtCarUpdateColor").val(carColor);
-//     $("#txtCarUpdateFreeMileage").val(carFreeMileage );
-//     $("#txtCarUpdateMonthlyFreeMileage").val(carFreeMonthlyMileage);
-//     $("#txtCarUpdateDailyRate").val(carDailyRate);
-//     $("#txtCarUpdateMonthlyRate").val(carMonthlyRate);
-//     $("#txtCarUpdatePriceOfExtraKm").val(carPriceOfExtraKm);
-//     $("#txtCarUpdateLastServiceMileage").val( carLastServiceMileage);
-//     $("#selectCarUpdateAvailability").val(availability);
-//     $("#ucImg1").attr("src",baseURL+res.data.frontImageLocation);
-//     $("#ucImg2").attr("src",baseURL+res.data.backImageLocation);
-//     $("#ucImg3").attr("src",baseURL+res.data.bgTransparentImageLocation);
-//     $("#ucImg4").attr("src",baseURL+res.data.sideImageLocation);
-// }
+function setccTextFieldValues(carRegistrationNumber,carBrand, carModel,carType,carTransmission,carFuel,carNumberOfPassengers,carColor,carFreeMileage,carFreeMonthlyMileage,carDailyRate,carMonthlyRate,carPriceOfExtraKm,carLastServiceMileage,availability,img1,img2,img3,img4) {
+    $("#txtCarUpdateRegistrationNumber").val(carRegistrationNumber);
+    $("#txtCarUpdateBrand").val(carBrand);
+    $("#txtCarUpdateModel").val(carModel);
+    $("#selectCarUpdateType").val(carType);
+    $("#selectCarUpdateTransmission").val(carTransmission);
+    $("#selectCarUpdateFuel").val(carFuel);
+    $("#txtCarUpdateNumberOfPassengers").val(carNumberOfPassengers);
+    $("#txtCarUpdateColor").val(carColor);
+    $("#txtCarUpdateFreeMileage").val(carFreeMileage);
+    $("#txtCarUpdateMonthlyFreeMileage").val(carFreeMonthlyMileage);
+    $("#txtCarUpdateDailyRate").val(carDailyRate);
+    $("#txtCarUpdateMonthlyRate").val(carMonthlyRate);
+    $("#txtCarUpdatePriceOfExtraKm").val(carPriceOfExtraKm);
+    $("#txtCarUpdateLastServiceMileage").val( carLastServiceMileage);
+    $("#selectCarUpdateAvailability").val(availability);
+    $("#ucImg1").attr("src",img1);
+    $("#ucImg2").attr("src",img2);
+    $("#ucImg3").attr("src",img3);
+    $("#ucImg4").attr("src",img4);
+}
+
+
+function setcccTextFieldValues(carRegistrationNumber,carBrand, carModel,carType,carTransmission,carFuel,carNumberOfPassengers,carColor,carFreeMileage,carFreeMonthlyMileage,carDailyRate,carMonthlyRate,carPriceOfExtraKm,carLastServiceMileage,availability,img1,img2,img3,img4) {
+   $("#txtCarBrand").val(carBrand);
+   $("#txtCarModel").val(carModel);
+   $("#txtCarType").val(carType);
+   $("#txtCarTransmission").val(carTransmission);
+    $("#txtCarFuel").val( carFuel);
+   $("#txtCarNumberOfPassengers").val(carNumberOfPassengers);
+   $("#txtCarColor").val(carColor);
+   $("#txtCarRegistrationNumber").val(carRegistrationNumber);
+    $("#txtCarFreeMileage").val(carFreeMileage);
+   $("#txtCarMonthlyFreeMileage").val(carFreeMonthlyMileage);
+   $("#txtCarDailyRate").val(carDailyRate);
+   $("#txtCarMonthlyRate").val(carMonthlyRate);
+   $("#txtCarPriceOfExtraKm").val(carPriceOfExtraKm);
+   $("#txtCarLastServiceMileage").val(carLastServiceMileage);
+
+
+    $("#file1").val(img1);
+   $("#file2").val(img2);
+    $("#file3").val(img3);
+   $("#file4").val(img4);
+
+}
