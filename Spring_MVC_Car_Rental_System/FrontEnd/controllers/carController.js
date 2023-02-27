@@ -15,7 +15,7 @@ $("#btnCarSave").click(function (){
     let carMonthlyRate = $("#txtCarMonthlyRate").val();
     let carPriceOfExtraKm = $("#txtCarPriceOfExtraKm").val();
     let carLastServiceMileage = $("#txtCarLastServiceMileage").val();
-    let availability = "available";
+    let availability = "Available";
     var data = new FormData();
     let file1 = $("#file1")[0].files[0];
     let file1Name = $("#file1")[0].files[0].name;
@@ -198,10 +198,10 @@ $("#btnCarUpdate").click(function () {
     let carPriceOfExtraKm = $("#txtCarUpdatePriceOfExtraKm").val();
     let carLastServiceMileage =  $("#txtCarUpdateLastServiceMileage").val();
     let availability =  $("#selectCarUpdateAvailability").val();
-    let frontImageLocation ;
-    let backImageLocation ;
-    let bgTransparentImageLocation ;
-    let sideImageLocation ;
+    var frontImageLocation ;
+    var backImageLocation ;
+    var bgTransparentImageLocation ;
+    var sideImageLocation ;
 
     $.ajax({
         url: baseURL+"car?registrationNumber="+carRegistrationNumber,
@@ -213,6 +213,47 @@ $("#btnCarUpdate").click(function () {
             bgTransparentImageLocation=res.data.bgTransparentImageLocation;
             sideImageLocation=res.data.sideImageLocation;
 
+            let car={
+
+
+
+                registrationNumber:carRegistrationNumber,
+                type:carType,
+                brand:carBrand,
+                model: carModel,
+                fuelType:carFuel,
+                transmissionType:carTransmission,
+                numberOfPassengers:carNumberOfPassengers,
+                color:carColor,
+                lastServiceMileage:carLastServiceMileage,
+                freeMileage:carFreeMileage,
+                freeMonthlyMileage:carFreeMonthlyMileage,
+                frontImageLocation:frontImageLocation,
+                sideImageLocation:sideImageLocation,
+                backImageLocation:backImageLocation,
+                bgTransparentImageLocation:bgTransparentImageLocation,
+                dailyRate:carDailyRate,
+                monthlyRate:carMonthlyRate,
+                priceForExtraKM:carPriceOfExtraKm,
+                availability:availability
+            }
+            console.log(car);
+            $.ajax({
+                url: baseURL+'car',
+                method: 'put',
+                contentType:"application/json",
+                data:JSON.stringify(car),
+                dataType:"json",
+                success: function (res) {
+                    alert(res.message);
+                    loadAllCars();
+                },
+                error:function (error){
+                    let cause= JSON.parse(error.responseText).message;
+                    alert(cause);
+                }
+
+            });
 
         },
         error:function(error){
@@ -221,45 +262,7 @@ $("#btnCarUpdate").click(function () {
         }
     });
 
-    let car={
 
-        registrationNumber:carRegistrationNumber,
-        type:carType,
-        brand:carBrand,
-        model: carModel,
-        fuelType:carFuel,
-        transmissionType:carTransmission,
-       numberOfPassengers:carNumberOfPassengers,
-        color:carColor,
-        lastServiceMileage:carLastServiceMileage,
-        freeMileage:carFreeMileage,
-        freeMonthlyMileage:carFreeMonthlyMileage,
-        frontImageLocation:frontImageLocation,
-        sideImageLocation:sideImageLocation,
-        backImageLocation:backImageLocation,
-        bgTransparentImageLocation:bgTransparentImageLocation,
-        dailyRate:carDailyRate,
-        monthlyRate:carMonthlyRate,
-        priceForExtraKM:carPriceOfExtraKm,
-        availability:availability
-    }
-
-    $.ajax({
-        url: baseURL+'car',
-        method: 'put',
-        contentType:"application/json",
-        data:JSON.stringify(car),
-        dataType:"json",
-        success: function (res) {
-            alert(res.message);
-            loadAllCars();
-        },
-        error:function (error){
-            let cause= JSON.parse(error.responseText).message;
-            alert(cause);
-        }
-
-    });
 });
 
 
