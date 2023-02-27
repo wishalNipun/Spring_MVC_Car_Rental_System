@@ -75,66 +75,69 @@
 // });
 
 
-function getAllCartData() {
-    for (let r of cartId) {
-        console.log(r);
-    }
-}
+
+
 $("#btnSendRentalRequest").click(function (){
 
     let email =  $("#userCheckOutEmailTag").text();
+    console.log(objectArray);
 
-    getAllCartData();
 
-    // $.ajax({
-    //     url: baseURL+"customer?em="+email,
-    //     method: "get",
-    //     dataType:"json",
-    //     success: function (res) {
-    //
-    //         switch (res.data.status){
-    //             case "Accept":
-    //
-    //
-    //                 getAllCartData();
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //                 break;
-    //             case "Deny":
-    //                 alert(res.data.name +" Register Denied by Admin");
-    //
-    //                 break;
-    //             case "Pending":
-    //                 alert(res.data.name +" Register Pending need to Accept Admin");
-    //                 break;
-    //             default:
-    //                 alert(res.data.name +" try again");
-    //         }
-    //
-    //
-    //     },
-    //     error:function(error){
-    //         alert("login and try again");
-    //     }
-    // });
+    $.ajax({
+        url: baseURL+"customer?em="+email,
+        method: "get",
+        dataType:"json",
+        success: function (res) {
+
+            switch (res.data.status){
+                case "Accept":
+
+
+                    for (const o of objectArray) {
+
+                        var data = new FormData();
+                        data.append("registrationId",o.id)
+                        data.append("mail",email)
+                        data.append("PickUpDate",o.pickUpdate)
+                        data.append("ReturnDate",o.returnDate)
+                        data.append("totalDamageWaiverAmount",$('#txtPickUpVenueCheckOut').val())
+                        data.append("pickupLocation",$('#txtPickUpVenueCheckOut').val())
+                        data.append("returnLocation",$('#txtReturnVenueCheckOut').val())
+                        data.append("img", o.file, o.filename);
+
+                        $.ajax({
+                            url: baseURL+"rental",
+                            method: "post",
+                            data:data,
+                            async:true,
+                            contentType: false,
+                            processData: false,
+
+                            success: function (res) {
+                                alert(res.message);
+
+                            },
+                            error:function(error){
+                                alert(JSON.parse(error.responseText).message);
+                            }
+                        });
+                    }
+                    break;
+                case "Deny":
+                    alert(res.data.name +" Register Denied by Admin");
+
+                    break;
+                case "Pending":
+                    alert(res.data.name +" Register Pending need to Accept Admin");
+                    break;
+                default:
+                    alert(res.data.name +" try again");
+            }
+
+
+        },
+        error:function(error){
+            alert("login and try again");
+        }
+    });
 });

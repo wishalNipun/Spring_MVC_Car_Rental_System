@@ -6,10 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
@@ -22,8 +19,12 @@ public class RentalDetail {
     @Id
     private String id;
     @ManyToOne
+    @JoinColumn(name = "rental_rentalId",referencedColumnName = "rentalId",insertable = false,updatable = false)
+    private Rental rental;
+    @ManyToOne
     private Driver driver;
     @ManyToOne
+    @JoinColumn(name = "car_registrationNumber",referencedColumnName = "registrationNumber",insertable = false,updatable = false)
     private Car car;
     private String damageWaiverImageLocation;
     private LocalDate pickupDate;

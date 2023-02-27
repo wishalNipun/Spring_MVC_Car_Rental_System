@@ -91,7 +91,9 @@ var cartId=[];
 var detail;
 loadAllCards();
 
+var carDetail =[]
 
+var objectArray=[]
 function carDetailSet(){
     $.ajax({
         url: baseURL+"car?registrationNumber="+detail,
@@ -144,6 +146,7 @@ function loadAllCart() {
     let rDate =$("#txtReturnDate").val();
     $("#tableCheckOutCart").empty();
     for (let c of cartId) {
+
         $.ajax({
             url: baseURL+"car?registrationNumber="+c,
             method: "get",
@@ -179,7 +182,7 @@ function loadAllCart() {
                             <img src="assets/img/uploadIcon.png">
                             <div>
                                 <p>Lost Damage Waiver</p>
-                                <input data-fileid="${res.data.registrationNumber}"  type="file"  >
+                                <input class="lostDamageWaiverFile" data-fileid="${res.data.registrationNumber}"  type="file"  >
                             </div>
                         </div>
 
@@ -221,7 +224,7 @@ function loadAllCart() {
                             <img src="assets/img/uploadIcon.png">
                             <div>
                                 <p>Lost Damage Waiver</p>
-                                <input data-fileid="${res.data.registrationNumber}" type="file"  >
+                                <input class="lostDamageWaiverFile" data-fileid="${res.data.registrationNumber}" type="file"  >
                             </div>
                         </div>
 
@@ -263,7 +266,7 @@ function loadAllCart() {
                             <img src="assets/img/uploadIcon.png">
                             <div>
                                 <p>Lost Damage Waiver</p>
-                                <input data-fileid="${res.data.registrationNumber}" class="damageImg" type="file"  >
+                                <input class="lostDamageWaiverFile" data-fileid="${res.data.registrationNumber}" class="damageImg" type="file"  >
                             </div>
                         </div>
 
@@ -305,7 +308,7 @@ function loadAllCart() {
                             <img src="assets/img/uploadIcon.png">
                             <div>
                                 <p>Lost Damage Waiver</p>
-                                <input data-fileid="${res.data.registrationNumber}" type="file">
+                                <input class="lostDamageWaiverFile" data-fileid="${res.data.registrationNumber}" type="file">
                             </div>
                         </div>
 
@@ -329,6 +332,14 @@ function loadAllCart() {
                     loadAllCart();
                 });
 
+                $(".lostDamageWaiverFile").change(function () {
+
+                    if (c ==$(this).attr('data-fileid')){
+                        objectArray.push({id:c,file:$(this)[0].files[0],filename:$(this)[0].files[0].name,pickUpdate:pDate,returnDate:rDate});
+                    }
+
+
+                });
             },
             error:function(error){
                 let cause= JSON.parse(error.responseText).message;
