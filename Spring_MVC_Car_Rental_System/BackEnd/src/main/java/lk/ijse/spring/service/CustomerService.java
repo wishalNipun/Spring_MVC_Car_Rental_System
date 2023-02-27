@@ -17,5 +17,6 @@ public interface CustomerService {
 
     public CustomerDTO searchCustomerByName(String name);
 
+    public CustomerDTO searchCustomerByEmail(String email);
     public CustomerDTO searchCustomerByEmailAndPassword(String email,String password);
 }

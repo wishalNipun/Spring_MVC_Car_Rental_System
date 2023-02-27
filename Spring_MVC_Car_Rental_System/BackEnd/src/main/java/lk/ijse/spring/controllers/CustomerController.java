@@ -36,6 +36,12 @@ public class CustomerController {
         CustomerDTO dto = service.searchCustomerByEmailAndPassword(email,password);
         return new ResponseUtil("200", "Login Success", dto);
     }
+    @GetMapping(params = "em")
+    public ResponseUtil checkLogCustomer(String em) {
+        CustomerDTO customerDTO = service.searchCustomerByEmail(em);
+        return new ResponseUtil("200", "request Sent", customerDTO);
+    }
+
 
     @PutMapping
     public ResponseUtil updateCustomer(@RequestBody CustomerDTO dto){
