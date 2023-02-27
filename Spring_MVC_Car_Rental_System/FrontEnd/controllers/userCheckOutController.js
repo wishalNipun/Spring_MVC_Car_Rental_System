@@ -75,36 +75,66 @@
 // });
 
 
+function getAllCartData() {
+    for (let r of cartId) {
+        console.log(r);
+    }
+}
 $("#btnSendRentalRequest").click(function (){
-
-
 
     let email =  $("#userCheckOutEmailTag").text();
 
-    $.ajax({
-        url: baseURL+"customer?em="+email,
-        method: "get",
-        dataType:"json",
-        success: function (res) {
+    getAllCartData();
 
-            switch (res.data.status){
-                case "Accept":
-                    break;
-                case "Deny":
-                    alert(res.data.name +" Register Denied by Admin");
-
-                    break;
-                case "Pending":
-                    alert(res.data.name +" Register Pending need to Accept Admin");
-                    break;
-                default:
-                    alert(res.data.name +" try again");
-            }
-
-
-        },
-        error:function(error){
-            alert("login and try again");
-        }
-    });
+    // $.ajax({
+    //     url: baseURL+"customer?em="+email,
+    //     method: "get",
+    //     dataType:"json",
+    //     success: function (res) {
+    //
+    //         switch (res.data.status){
+    //             case "Accept":
+    //
+    //
+    //                 getAllCartData();
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //                 break;
+    //             case "Deny":
+    //                 alert(res.data.name +" Register Denied by Admin");
+    //
+    //                 break;
+    //             case "Pending":
+    //                 alert(res.data.name +" Register Pending need to Accept Admin");
+    //                 break;
+    //             default:
+    //                 alert(res.data.name +" try again");
+    //         }
+    //
+    //
+    //     },
+    //     error:function(error){
+    //         alert("login and try again");
+    //     }
+    // });
 });

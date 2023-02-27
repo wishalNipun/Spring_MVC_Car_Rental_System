@@ -91,6 +91,7 @@ var cartId=[];
 var detail;
 loadAllCards();
 
+
 function carDetailSet(){
     $.ajax({
         url: baseURL+"car?registrationNumber="+detail,
@@ -141,15 +142,17 @@ function carDetailSet(){
 function loadAllCart() {
     let pDate =$("#txtPickUpDate").val();
     let rDate =$("#txtReturnDate").val();
-    $.ajax({
-        url: baseURL+"car?registrationNumber="+cartId[cartId.length-1],
-        method: "get",
-        dataType:"json",
-        success: function (res) {
-            switch (res.data.type) {
-                case "Luxury":
-                    $("#tableCheckOutCart").append(
-                        `<tr>
+    $("#tableCheckOutCart").empty();
+    for (let c of cartId) {
+        $.ajax({
+            url: baseURL+"car?registrationNumber="+c,
+            method: "get",
+            dataType:"json",
+            success: function (res) {
+                switch (res.data.type) {
+                    case "Luxury":
+                        $("#tableCheckOutCart").append(
+                            `<tr>
                     <td>${res.data.brand}</td>
                     <td>${res.data.dailyRate}</td>
                     <td>${res.data.monthlyRate}</td>
@@ -188,10 +191,10 @@ function loadAllCart() {
 
                     </td>
                 </tr>`);
-                    break;
-                case "Premium":
-                    $("#tableCheckOutCart").append(
-                        `<tr>
+                        break;
+                    case "Premium":
+                        $("#tableCheckOutCart").append(
+                            `<tr>
                     <td>${res.data.brand}</td>
                     <td>${res.data.dailyRate}</td>
                     <td>${res.data.monthlyRate}</td>
@@ -230,10 +233,10 @@ function loadAllCart() {
 
                     </td>
                 </tr>`);
-                    break;
-                case "General":
-                    $("#tableCheckOutCart").append(
-                        `<tr>
+                        break;
+                    case "General":
+                        $("#tableCheckOutCart").append(
+                            `<tr>
                     <td>${res.data.brand}</td>
                     <td>${res.data.dailyRate}</td>
                     <td>${res.data.monthlyRate}</td>
@@ -272,10 +275,10 @@ function loadAllCart() {
 
                     </td>
                 </tr>`);
-                    break;
-                default:
-                    $("#tableCheckOutCart").append(
-                        `<tr>
+                        break;
+                    default:
+                        $("#tableCheckOutCart").append(
+                            `<tr>
                     <td>${res.data.brand}</td>
                     <td>${res.data.dailyRate}</td>
                     <td>${res.data.monthlyRate}</td>
@@ -314,71 +317,28 @@ function loadAllCart() {
 
                     </td>
                 </tr>`);
-                    ;
+
+                }
+                $(".btnCartDeleteCheckOut").click(function (){
+                    let deleteID = $(this).attr('data-id');
+
+                    console.log(deleteID);
+                    cartId.splice(deleteID, 1);
+
+
+                    loadAllCart();
+                });
+
+            },
+            error:function(error){
+                let cause= JSON.parse(error.responseText).message;
+                alert(cause);
             }
 
+        });
 
-        },
-        error:function(error){
-            let cause= JSON.parse(error.responseText).message;
-            alert(cause);
-        }
-    });
-    // for(var customer of customers){
-    //     var row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`;
-    //     $("#tblCustomers").append(row);
-    // }
+    }
+
 
 }
-// function searchRegisterNumber(id){
-//     for(let c of cartId){
-//         console.log(c);
-//
-//         if (c.id == id){
-//             console.log("aaaa"+c);
-//             return c;
-//         }
-//     }
-//     return null;
-//
-// }
-//
-// function deleteCart(id) {
-//     let c = searchRegisterNumber(id);
-//     if (c != null) {
-//         let indexNumber = cartId.indexOf(c);
-//         cartId.splice(indexNumber, 1);
-//        // loadAllCart();
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
-//
-// $(".btnCartDeleteCheckOut").click(function (){
-//     let deleteID = $(this).attr('data-id');
-//
-//     Swal.fire({
-//         title: 'Are you sure?',
-//         text: "You won't be able to revert this!",
-//         icon: 'warning',
-//         showCancelButton: true,
-//         confirmButtonColor: '#3085d6',
-//         cancelButtonColor: '#d33',
-//         confirmButtonText: 'Yes, delete it!'
-//     }).then((result) => {
-//         if (result.isConfirmed) {
-//             deleteCart(deleteID)
-//
-//             Swal.fire(
-//                 'Deleted!',
-//                 'Cart data is deleted.',
-//                 'success'
-//             )
-//
-//         }
-//     })
-//
-//
-//
-// });
+

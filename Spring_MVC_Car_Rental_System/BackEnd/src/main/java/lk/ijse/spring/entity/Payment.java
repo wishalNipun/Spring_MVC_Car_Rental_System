@@ -28,4 +28,5 @@ public class Payment {
     private String damageDescription;
     private long extraMileage;
     private double costPerExtraMileage;
+
 }
