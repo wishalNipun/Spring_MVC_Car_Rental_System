@@ -21,7 +21,7 @@ public class RentController {
     @PostMapping
     public ResponseUtil saveReservation(RentalDTO dto){
         System.out.println(dto.toString());
-     //   service.addCustomer(dto);
+        service.addRental(dto);
         return new ResponseUtil("200",dto.getMail()+ " Added.!",null);
     }
 

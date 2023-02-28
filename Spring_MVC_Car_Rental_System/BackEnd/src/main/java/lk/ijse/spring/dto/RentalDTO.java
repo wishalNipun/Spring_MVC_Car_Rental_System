@@ -18,15 +18,16 @@ import java.time.LocalDate;
 @Data
 @ToString
 public class RentalDTO {
+    private String rentId;
     private String registrationId;
     private String mail;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate PickUpDate;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate ReturnDate;
-    private double  totalDamageWaiverAmount;
+//    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+//    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private String PickUpDate;
+//    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+//    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private String ReturnDate;
+    private String  driver;
     private String pickupLocation;
     private String returnLocation;
     private String imageLocation;
@@ -34,25 +35,49 @@ public class RentalDTO {
 
     private MultipartFile img;
 
-    public RentalDTO(String registrationId, String mail, LocalDate pickUpDate, LocalDate returnDate, double totalDamageWaiverAmount, String pickupLocation, String returnLocation, MultipartFile img) {
+    public RentalDTO(String rentId, String registrationId, String mail, String pickUpDate, String returnDate, String driver, String pickupLocation, String returnLocation, MultipartFile img) {
+        this.rentId = rentId;
         this.registrationId = registrationId;
         this.mail = mail;
         PickUpDate = pickUpDate;
         ReturnDate = returnDate;
-        this.totalDamageWaiverAmount = totalDamageWaiverAmount;
+        this.driver = driver;
         this.pickupLocation = pickupLocation;
         this.returnLocation = returnLocation;
         this.img = img;
     }
 
-    public RentalDTO(String registrationId, String mail, LocalDate pickUpDate, LocalDate returnDate, double totalDamageWaiverAmount, String pickupLocation, String returnLocation, String imageLocation) {
+    public RentalDTO(String rentId, String registrationId, String mail, String pickUpDate, String returnDate, String driver, String pickupLocation, String returnLocation, String imageLocation) {
+        this.rentId = rentId;
         this.registrationId = registrationId;
         this.mail = mail;
         PickUpDate = pickUpDate;
         ReturnDate = returnDate;
-        this.totalDamageWaiverAmount = totalDamageWaiverAmount;
+        this.driver = driver;
         this.pickupLocation = pickupLocation;
         this.returnLocation = returnLocation;
         this.imageLocation = imageLocation;
     }
+
+    //    public RentalDTO(String registrationId, String mail, LocalDate pickUpDate, LocalDate returnDate, double totalDamageWaiverAmount, String pickupLocation, String returnLocation, MultipartFile img) {
+//        this.registrationId = registrationId;
+//        this.mail = mail;
+//        PickUpDate = pickUpDate;
+//        ReturnDate = returnDate;
+//        this.totalDamageWaiverAmount = totalDamageWaiverAmount;
+//        this.pickupLocation = pickupLocation;
+//        this.returnLocation = returnLocation;
+//        this.img = img;
+//    }
+//
+//    public RentalDTO(String registrationId, String mail, LocalDate pickUpDate, LocalDate returnDate, double totalDamageWaiverAmount, String pickupLocation, String returnLocation, String imageLocation) {
+//        this.registrationId = registrationId;
+//        this.mail = mail;
+//        PickUpDate = pickUpDate;
+//        ReturnDate = returnDate;
+//        this.totalDamageWaiverAmount = totalDamageWaiverAmount;
+//        this.pickupLocation = pickupLocation;
+//        this.returnLocation = returnLocation;
+//        this.imageLocation = imageLocation;
+//    }
 }

@@ -171,9 +171,9 @@ function loadAllCart() {
                         </div>
                     </td>
                     <td class="tblcolSelect">
-                        <select data-id="${res.data.registrationNumber}" class="form-control" aria-label="Default select example">
-                            <option selected="">None</option>
-                            <option  value="Driver added">add Driver</option>
+                        <select data-id="${res.data.registrationNumber}" class="form-control selectDriver" aria-label="Default select example">
+                         <option selected="">added</option>
+                            <option value="none">none</option>
 
                         </select>
                     </td>
@@ -213,9 +213,9 @@ function loadAllCart() {
                         </div>
                     </td>
                     <td class="tblcolSelect">
-                        <select data-id="${res.data.registrationNumber}" class="form-control" aria-label="Default select example">
-                            <option selected="">None</option>
-                            <option value="Driver added">add Driver</option>
+                        <select data-id="${res.data.registrationNumber}" class="form-control selectDriver" aria-label="Default select example">
+                         <option selected="">added</option>
+                            <option value="none">none</option>
 
                         </select>
                     </td>
@@ -255,9 +255,9 @@ function loadAllCart() {
                         </div>
                     </td>
                     <td class="tblcolSelect">
-                        <select data-id="${res.data.registrationNumber}" class="form-control" aria-label="Default select example">
-                            <option selected="">None</option>
-                            <option value="Driver added">add Driver</option>
+                        <select data-id="${res.data.registrationNumber}" class="form-control selectDriver" aria-label="Default select example">
+                           <option selected="">added</option>
+                            <option value="none">none</option>
 
                         </select>
                     </td>
@@ -297,9 +297,9 @@ function loadAllCart() {
                         </div>
                     </td>
                     <td class="tblcolSelect">
-                        <select data-id="${res.data.registrationNumber}" class="form-control" aria-label="Default select example">
-                            <option selected="">None</option>
-                            <option value="Driver added">add Driver</option>
+                        <select data-id="${res.data.registrationNumber}" class="form-control selectDriver" aria-label="Default select example">
+                           <option selected="">added</option>
+                            <option value="none">none</option>
 
                         </select>
                     </td>
@@ -335,9 +335,21 @@ function loadAllCart() {
                 $(".lostDamageWaiverFile").change(function () {
 
                     if (c ==$(this).attr('data-fileid')){
-                        objectArray.push({id:c,file:$(this)[0].files[0],filename:$(this)[0].files[0].name,pickUpdate:pDate,returnDate:rDate});
+                        objectArray.push({id:c,file:$(this)[0].files[0],filename:$(this)[0].files[0].name,pickUpdate:pDate,returnDate:rDate,driver:"added"});
                     }
 
+
+                });
+
+                $(".selectDriver").change(function () {
+console.log("cc")
+                    for (let a of objectArray) {
+
+                        if (a.id ==$(this).attr('data-id')){
+                            a.driver=$(".selectDriver").val();
+                            console.log(a.driver)
+                        }
+                    }
 
                 });
             },

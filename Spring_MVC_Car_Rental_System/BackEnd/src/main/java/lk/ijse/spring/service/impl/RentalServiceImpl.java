@@ -54,6 +54,6 @@ public class RentalServiceImpl implements RentalService {
 
     @Override
     public void addRental(RentalDTO dto) {
-
+        System.out.println("service"+dto);
     }
 }
