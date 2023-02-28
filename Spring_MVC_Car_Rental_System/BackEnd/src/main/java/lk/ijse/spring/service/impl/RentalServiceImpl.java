@@ -3,6 +3,7 @@ package lk.ijse.spring.service.impl;
 import lk.ijse.spring.dto.CustomerDTO;
 import lk.ijse.spring.dto.RentalDTO;
 import lk.ijse.spring.entity.Customer;
+import lk.ijse.spring.repo.CarRepo;
 import lk.ijse.spring.repo.CustomerRepo;
 import lk.ijse.spring.repo.RentalRepo;
 import lk.ijse.spring.service.CustomerService;
@@ -23,6 +24,12 @@ import java.util.ArrayList;
 public class RentalServiceImpl implements RentalService {
     @Autowired
     private RentalRepo repo;
+
+    @Autowired
+    private CustomerRepo customerRepo;
+
+    @Autowired
+    private CarRepo carRepo;
 
     @Autowired
     private ModelMapper mapper;
@@ -54,6 +61,8 @@ public class RentalServiceImpl implements RentalService {
 
     @Override
     public void addRental(RentalDTO dto) {
-        System.out.println("service"+dto);
+
+        Customer customerByEmail = customerRepo.findCustomerByEmail(dto.getMail());
+
     }
 }

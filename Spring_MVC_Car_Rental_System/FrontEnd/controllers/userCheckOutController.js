@@ -15,20 +15,15 @@ $("#btnSendRentalRequest").click(function (){
             switch (res.data.status){
                 case "Accept":
 
-
+                    var data = new FormData();
+                    data.append("rentalId ","")
+                    data.append("pickupLocation",$('#txtPickUpVenueCheckOut').val())
+                    data.append("returnLocation",$('#txtReturnVenueCheckOut').val())
+                    data.append("mail",email);
                     for (const o of objectArray) {
 
-                        var data = new FormData();
-                        data.append("rentalId ","")
-                        data.append("registrationId",o.id);
-                        data.append("mail",email);
-                        data.append("PickUpDate",o.pickUpdate);
-                        data.append("ReturnDate",o.returnDate);
-                        data.append("driver",o.driver);
-                        data.append("pickupLocation",$('#txtPickUpVenueCheckOut').val())
-                        data.append("returnLocation",$('#txtReturnVenueCheckOut').val())
-                        data.append("img", o.file, o.filename);
-
+                        data.append("rentalDetailList",JSON.stringify(o));
+                        data.append("file",o.file, o.filename)
                         $.ajax({
                             url: baseURL+"rental",
                             method: "post",
@@ -42,10 +37,13 @@ $("#btnSendRentalRequest").click(function (){
 
                             },
                             error:function(error){
-                            //    alert(JSON.parse(error.responseText).message);
+                                //    alert(JSON.parse(error.responseText).message);
                             }
                         });
                     }
+
+
+
                     break;
                 case "Deny":
                     alert(res.data.name +" Register Denied by Admin");

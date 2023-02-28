@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -30,4 +31,6 @@ public class RentalDetail {
     private LocalDate pickupDate;
     private LocalDate returnDate;
     private String status;
+
+
 }
