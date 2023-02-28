@@ -342,7 +342,7 @@ function loadAllCart() {
                 });
 
                 $(".selectDriver").change(function () {
-console.log("cc")
+
                     for (let a of objectArray) {
 
                         if (a.id ==$(this).attr('data-id')){

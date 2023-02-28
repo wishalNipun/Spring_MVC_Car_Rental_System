@@ -22,7 +22,7 @@ public class RentController {
     public ResponseUtil saveReservation(RentalDTO dto){
         System.out.println(dto.toString());
         service.addRental(dto);
-        return new ResponseUtil("200",dto.getMail()+ " Added.!",null);
+        return new ResponseUtil("200",dto.getMail()+ " Reservation Added.!",null);
     }
 
 //    @GetMapping

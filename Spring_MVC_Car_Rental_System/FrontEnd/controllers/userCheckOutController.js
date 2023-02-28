@@ -19,12 +19,12 @@ $("#btnSendRentalRequest").click(function (){
                     for (const o of objectArray) {
 
                         var data = new FormData();
-                        data.append("rentId","")
+                        data.append("rentalId ","")
                         data.append("registrationId",o.id);
                         data.append("mail",email);
                         data.append("PickUpDate",o.pickUpdate);
                         data.append("ReturnDate",o.returnDate);
-                        data.append("driver",o.driverR);
+                        data.append("driver",o.driver);
                         data.append("pickupLocation",$('#txtPickUpVenueCheckOut').val())
                         data.append("returnLocation",$('#txtReturnVenueCheckOut').val())
                         data.append("img", o.file, o.filename);

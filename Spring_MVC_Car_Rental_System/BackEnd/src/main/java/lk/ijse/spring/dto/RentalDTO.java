@@ -18,7 +18,7 @@ import java.time.LocalDate;
 @Data
 @ToString
 public class RentalDTO {
-    private String rentId;
+    private String rentalId;
     private String registrationId;
     private String mail;
 //    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
@@ -35,8 +35,8 @@ public class RentalDTO {
 
     private MultipartFile img;
 
-    public RentalDTO(String rentId, String registrationId, String mail, String pickUpDate, String returnDate, String driver, String pickupLocation, String returnLocation, MultipartFile img) {
-        this.rentId = rentId;
+    public RentalDTO(String rentalId, String registrationId, String mail, String pickUpDate, String returnDate, String driver, String pickupLocation, String returnLocation, MultipartFile img) {
+        this.rentalId = rentalId;
         this.registrationId = registrationId;
         this.mail = mail;
         PickUpDate = pickUpDate;
@@ -47,8 +47,8 @@ public class RentalDTO {
         this.img = img;
     }
 
-    public RentalDTO(String rentId, String registrationId, String mail, String pickUpDate, String returnDate, String driver, String pickupLocation, String returnLocation, String imageLocation) {
-        this.rentId = rentId;
+    public RentalDTO(String rentalId, String registrationId, String mail, String pickUpDate, String returnDate, String driver, String pickupLocation, String returnLocation, String imageLocation) {
+        this.rentalId = rentalId;
         this.registrationId = registrationId;
         this.mail = mail;
         PickUpDate = pickUpDate;
