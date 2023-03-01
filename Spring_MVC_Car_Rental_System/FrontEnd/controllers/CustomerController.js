@@ -86,6 +86,7 @@ function loadAllCustomers() {
                 </tr>`);
                 }
             }
+
             $(".btnViewCustomerImg").click(function () {
 
                 let url = $(this).attr('data-url');
