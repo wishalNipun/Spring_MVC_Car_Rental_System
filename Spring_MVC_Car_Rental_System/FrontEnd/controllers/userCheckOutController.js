@@ -1,10 +1,6 @@
-
-
 $("#btnSendRentalRequest").click(function (){
 
     let email =  $("#userCheckOutEmailTag").text();
-
-
 
     $.ajax({
         url: baseURL+"customer?em="+email,
@@ -21,27 +17,25 @@ $("#btnSendRentalRequest").click(function (){
                     data.append("returnLocation",$('#txtReturnVenueCheckOut').val())
                     data.append("mail",email);
                     for (const o of objectArray) {
-
                         data.append("rentalDetailList",JSON.stringify(o));
                         data.append("file",o.file, o.filename)
-                        $.ajax({
-                            url: baseURL+"rental",
-                            method: "post",
-                            data:data,
-                            async:true,
-                            contentType: false,
-                            processData: false,
-
-                            success: function (res) {
-                                alert(res.message);
-
-                            },
-                            error:function(error){
-                                //    alert(JSON.parse(error.responseText).message);
-                            }
-                        });
                     }
+                    $.ajax({
+                        url: baseURL+"rental",
+                        method: "post",
+                        data:data,
+                        async:true,
+                        contentType: false,
+                        processData: false,
 
+                        success: function (res) {
+                            alert(res.message);
+
+                        },
+                        error:function(error){
+                            //    alert(JSON.parse(error.responseText).message);
+                        }
+                    });
 
 
                     break;

@@ -20,12 +20,12 @@ public class RentalDetail {
     @Id
     private String id;
     @ManyToOne
-    @JoinColumn(name = "rental_rentalId",referencedColumnName = "rentalId",insertable = false,updatable = false)
+    @JoinColumn(name = "rental_rentalId",referencedColumnName = "rentalId",insertable = true,updatable = false)
     private Rental rental;
     @ManyToOne
     private Driver driver;
     @ManyToOne
-    @JoinColumn(name = "car_registrationNumber",referencedColumnName = "registrationNumber",insertable = false,updatable = false)
+    @JoinColumn(name = "car_registrationNumber",referencedColumnName = "registrationNumber",insertable = true,updatable = false)
     private Car car;
     private String damageWaiverImageLocation;
     private LocalDate pickupDate;

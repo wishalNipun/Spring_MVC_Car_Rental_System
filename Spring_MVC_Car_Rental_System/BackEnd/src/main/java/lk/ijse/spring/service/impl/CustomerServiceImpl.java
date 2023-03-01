@@ -37,6 +37,7 @@ public class CustomerServiceImpl implements CustomerService {
             File uploadDir = new File(projectPath + "/uploads");
             System.out.println(projectPath);
             uploadDir.mkdir();
+
             dto.getImg().transferTo(new File(uploadDir.getAbsolutePath() + "/" + dto.getImg().getOriginalFilename()));
             dto.setImageLocation("uploads/"+dto.getImg().getOriginalFilename());
             repo.save(mapper.map(dto, Customer.class));

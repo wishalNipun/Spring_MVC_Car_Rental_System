@@ -7,5 +7,5 @@ import java.util.ArrayList;
 
 public interface RentalService {
     public void addRental(RentalDTO dto);
-
+    public String generateRentalId();
 }

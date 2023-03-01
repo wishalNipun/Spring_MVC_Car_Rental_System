@@ -9,7 +9,7 @@ function loadAllCards() {
 
                 $("#cardsStore").append(`
                 <div class="card" style="width: 18rem;">
-                <img src="assets/img/carStore.png" class="card-img-top" alt="...">
+                <img src="${baseURL+c.frontImageLocation}" class="card-img-top" alt="...">
                 <hr>
                 <div class="card-body border-bottom-0">
                     <h5 class="card-title">${c.brand}</h5>

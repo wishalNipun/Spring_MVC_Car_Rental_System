@@ -17,7 +17,7 @@ import java.util.List;
 public class Rental {
     @Id
     private String rentalId;
-    @ManyToOne(cascade = {CascadeType.REFRESH,CascadeType.DETACH})
+    @ManyToOne(cascade = {CascadeType.REFRESH,CascadeType.DETACH,CascadeType.MERGE})
     private Customer customer;
     private LocalDate date;
     private double amount;
@@ -27,4 +27,7 @@ public class Rental {
 
     @OneToMany(mappedBy = "rental", cascade = {CascadeType.ALL})
     private List<RentalDetail> rentalDetailList;
+
 }
+
+
