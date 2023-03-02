@@ -35,5 +35,6 @@ public class ReservationDTO {
     private String pickupLocation;
     private String returnLocation;
     private String status;
+    private String rentalId;
 
 }

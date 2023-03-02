@@ -2,10 +2,7 @@ package lk.ijse.spring.service.impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lk.ijse.spring.dto.CartDTO;
-import lk.ijse.spring.dto.CustomerDTO;
-import lk.ijse.spring.dto.RentalDTO;
-import lk.ijse.spring.dto.RentalDetailDTO;
+import lk.ijse.spring.dto.*;
 import lk.ijse.spring.entity.Car;
 import lk.ijse.spring.entity.Customer;
 import lk.ijse.spring.entity.Rental;
@@ -14,7 +11,6 @@ import lk.ijse.spring.repo.CarRepo;
 import lk.ijse.spring.repo.CustomerRepo;
 import lk.ijse.spring.repo.DriverRepo;
 import lk.ijse.spring.repo.RentalRepo;
-import lk.ijse.spring.service.CustomerService;
 import lk.ijse.spring.service.RentalService;
 import lk.ijse.spring.util.CountDays;
 import org.modelmapper.ModelMapper;
@@ -29,7 +25,6 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.List;
 
 @Service
 @Transactional
@@ -48,31 +43,6 @@ public class RentalServiceImpl implements RentalService {
 
     @Autowired
     private ModelMapper mapper;
-
-//    @Override
-//    public void addRenatl(CustomerDTO dto) {
-//        if (repo.existsById(dto.getNic())) {
-//            throw new RuntimeException("Customer "+dto.getNic()+" Already Exist..!");
-//        }
-//
-//        try {
-//            String projectPath = new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile().getParentFile().getAbsolutePath();
-//            File uploadDir = new File(projectPath + "/uploads");
-//            System.out.println(projectPath);
-//            uploadDir.mkdir();
-//            dto.getImg().transferTo(new File(uploadDir.getAbsolutePath() + "/" + dto.getImg().getOriginalFilename()));
-//            dto.setImageLocation("uploads/"+dto.getImg().getOriginalFilename());
-//            repo.save(mapper.map(dto, Customer.class));
-//
-//        } catch (URISyntaxException|IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//
-//
-//
-//    }
-
 
     @Override
     public void addRental(RentalDTO dto) {
@@ -198,4 +168,13 @@ public class RentalServiceImpl implements RentalService {
         }
         return id;
     }
+
+    @Override
+    public ArrayList<Rental_DTO> getAllRents() {
+
+        return mapper.map(repo.findAll(), new TypeToken<ArrayList<Rental_DTO>>() {
+        }.getType());
+    }
+
+
 }

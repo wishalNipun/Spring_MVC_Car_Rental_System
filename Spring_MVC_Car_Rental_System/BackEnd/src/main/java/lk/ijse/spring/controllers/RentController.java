@@ -1,8 +1,7 @@
 package lk.ijse.spring.controllers;
 
-import lk.ijse.spring.dto.CustomerDTO;
 import lk.ijse.spring.dto.RentalDTO;
-import lk.ijse.spring.service.CustomerService;
+import lk.ijse.spring.dto.Rental_DTO;
 import lk.ijse.spring.service.RentalService;
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +24,11 @@ public class RentController {
         return new ResponseUtil("200",dto.getMail()+ " Reservation Added.!",null);
     }
 
-
+    @GetMapping
+    public ResponseUtil getAllRents(){
+        ArrayList<Rental_DTO> allRents = service.getAllRents();
+        return new ResponseUtil("200"," Success.!",allRents);
+    }
 
 }
 

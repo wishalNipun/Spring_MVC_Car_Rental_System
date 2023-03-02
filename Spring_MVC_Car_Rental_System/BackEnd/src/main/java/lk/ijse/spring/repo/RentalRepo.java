@@ -7,4 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 public interface RentalRepo extends JpaRepository<Rental,String> {
     @Query(value = "SELECT rentalId FROM Rental ORDER BY rentalId DESC LIMIT 1",nativeQuery = true)
     String generateId();
+
+
+
 }

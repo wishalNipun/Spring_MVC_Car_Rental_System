@@ -55,6 +55,7 @@ public class ReservationServiceImpl implements ReservationService {
             map.setCustomer(customer);
             map.setPickupLocation(pickupLocation);
             map.setReturnLocation(returnLocation);
+            map.setRentalId(rentalDetail.getRental().getRentalId());
             lists.add(map);
         }
 
