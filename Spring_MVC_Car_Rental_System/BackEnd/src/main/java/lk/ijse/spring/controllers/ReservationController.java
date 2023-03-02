@@ -2,7 +2,7 @@ package lk.ijse.spring.controllers;
 
 import lk.ijse.spring.dto.CustomerDTO;
 import lk.ijse.spring.dto.RentalDTO;
-import lk.ijse.spring.dto.RentalDetailDTO;
+
 import lk.ijse.spring.dto.ReservationDTO;
 import lk.ijse.spring.service.RentalService;
 import lk.ijse.spring.service.ReservationService;

@@ -1,7 +1,7 @@
 package lk.ijse.spring.service;
 
 
-import lk.ijse.spring.dto.RentalDetailDTO;
+
 import lk.ijse.spring.dto.ReservationDTO;
 
 import java.util.ArrayList;

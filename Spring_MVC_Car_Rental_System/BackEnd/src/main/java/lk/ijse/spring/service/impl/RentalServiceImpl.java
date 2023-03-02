@@ -69,6 +69,7 @@ public class RentalServiceImpl implements RentalService {
         int count =0;
         double damageWaveCost=0;
         double amount =0;
+        double carAmount =0;
         for (String s : dto.getRentalDetailList()) {
             ObjectMapper objectMapper = new ObjectMapper();
             try {
@@ -120,13 +121,17 @@ public class RentalServiceImpl implements RentalService {
                 if(size>=30){
                     while(size>=30){
                         amount=amount+(rentalDetail.getCar().getMonthlyRate());
+                        carAmount=carAmount+(rentalDetail.getCar().getMonthlyRate());
                         size=size-30;
                     }
-                    amount=amount+(size*rentalDetail.getCar().getMonthlyRate());
+                    amount=amount+(size*rentalDetail.getCar().getDailyRate());
+                    carAmount=carAmount+(rentalDetail.getCar().getDailyRate());
                 }else{
-                    amount=amount+(size*rentalDetail.getCar().getMonthlyRate());
+                    amount=amount+(size*rentalDetail.getCar().getDailyRate());
+                    carAmount=carAmount+(rentalDetail.getCar().getDailyRate());
                 }
-
+                rentalDetail.setAmount(carAmount);
+                carAmount=0;
                 rental.setTotalDamageWaiverAmount(damageWaveCost);
                 rental.setAmount(amount);
                 rental.getRentalDetailList().add(rentalDetail);

@@ -36,5 +36,7 @@ public class ReservationDTO {
     private String returnLocation;
     private String status;
     private String rentalId;
+    private double amount;
+    private double  totalDamageWaiverAmount;
 
 }

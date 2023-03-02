@@ -30,6 +30,7 @@ public class RentalDetail {
     private String damageWaiverImageLocation;
     private LocalDate pickupDate;
     private LocalDate returnDate;
+    private double amount;
     private String status;
 
 

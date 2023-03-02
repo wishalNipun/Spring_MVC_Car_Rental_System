@@ -31,6 +31,18 @@ $("#selectReservationIds").change(function () {
                     $("#pcusname").text(r.customer.name);
                     $("#pcuspdate").text(r.pickupDate);
                     $("#pcusrdate").text(r.returnDate);
+
+                    $("#tblPaymentTable").empty();
+                    $("#tblPaymentTable").append(
+                //         ` <tr>
+                //     <td>${r.car.brand}</td>
+                //     <td>none</td>
+                //     <td>${r.car.}</td>
+                //     <td><input type="text" class="form-control"  placeholder="Extra Km">
+                //     </td>
+                //     <td>Paid</td>
+                // </tr>`
+                    )
                 }
 
             }
