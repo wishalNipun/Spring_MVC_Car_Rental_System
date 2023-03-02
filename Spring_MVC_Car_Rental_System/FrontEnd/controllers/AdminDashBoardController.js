@@ -5,6 +5,7 @@ $('#adminCustomerReservation').css('display','none');
 $('#adminAddDriver').css('display','none');
 $('#adminManager').css('display','none');
 $('#adminCarDetail').css('display','none');
+$('#adminPayment').css('display','none');
 
 $('.DashBoard').click(function (){
     $('#adminDashBoard').css('display','block');
@@ -15,6 +16,7 @@ $('.DashBoard').click(function (){
     $('#adminAddDriver').css('display','none');
     $('#adminManager').css('display','none');
     $('#adminCarDetail').css('display','none');
+    $('#adminPayment').css('display','none');
 });
 
 
@@ -28,6 +30,7 @@ $('.Customer').click(function (){
     $('#adminAddDriver').css('display','none');
     $('#adminManager').css('display','none');
     $('#adminCarDetail').css('display','none');
+    $('#adminPayment').css('display','none');
 });
 
 $('.Cars').click(function (){
@@ -39,6 +42,8 @@ $('.Cars').click(function (){
     $('#adminAddDriver').css('display','none');
     $('#adminManager').css('display','none');
     $('#adminCarDetail').css('display','none');
+    $('#adminPayment').css('display','none');
+
 });
 
 $('.Reservation').click(function (){
@@ -50,6 +55,7 @@ $('.Reservation').click(function (){
     $('#adminAddDriver').css('display','none');
     $('#adminManager').css('display','none');
     $('#adminCarDetail').css('display','none');
+    $('#adminPayment').css('display','none');
 
 });
 
@@ -64,6 +70,7 @@ $('.Drivers').click(function (){
     $('#adminCustomerReservation').css('display','none');
     $('#adminManager').css('display','none');
     $('#adminCarDetail').css('display','none');
+    $('#adminPayment').css('display','none');
 });
 
 $('.Admin').click(function (){
@@ -75,8 +82,21 @@ $('.Admin').click(function (){
     $('#adminCustomer').css('display','none');
     $('#adminCustomerReservation').css('display','none');
     $('#adminCarDetail').css('display','none');
+    $('#adminPayment').css('display','none');
 });
 
+$('.Payment').click(function (){
+    $('#adminPayment').css('display','block');
+
+
+    $('#adminManager').css('display','none');
+    $('#adminAddDriver').css('display','none');
+    $('#adminAddCar').css('display','none');
+    $('#adminDashBoard').css('display','none');
+    $('#adminCustomer').css('display','none');
+    $('#adminCustomerReservation').css('display','none');
+    $('#adminCarDetail').css('display','none');
+});
 
 $('#btnCarDetail').click(function (){
     $('#adminCarDetail').css('display','block');
@@ -87,5 +107,5 @@ $('#btnCarDetail').click(function (){
     $('#adminDashBoard').css('display','none');
     $('#adminCustomer').css('display','none');
     $('#adminCustomerReservation').css('display','none');
-
+    $('#adminPayment').css('display','none');
 });

@@ -23,13 +23,14 @@
             <h1>Wishal Nipun Siriwardana</h1>
         </div>
         <div>
-            <div><h1><i class="fas fa-th-large"></i> DashBoard</h1></div>
-            <div><h1><i class="fa-solid fa-user"></i> Customer</h1></div>
-            <div><h1><i class="fa-solid fa-car"></i> Cars</h1></div>
-            <div><h1><i class="fas fa-male"></i> Drivers</h1></div>
-            <div><h1><i class="fa-solid fa-calendar-days"></i> Reservation</h1></div>
-            <div><h1><i class="fas fa-money-bill"></i> Payment</h1></div>
-            <div><h1><i class="fas fa-chart-area"></i> Income</h1></div>
+            <div><h1 class="DashBoard"><i class="fas fa-th-large"></i> DashBoard</h1></div>
+            <div><h1 class="Customer"><i class="fa-solid fa-user"></i> Customer</h1></div>
+            <div><h1 class="Cars"><i class="fa-solid fa-car"></i> Cars</h1></div>
+            <div><h1 class="Drivers"><i class="fas fa-male"></i> Drivers</h1></div>
+            <div><h1 class="Reservation"><i class="fa-solid fa-calendar-days"></i> Reservation</h1></div>
+            <div><h1 class="Payment"><i class="fas fa-money-bill"></i> Payment</h1></div>
+            <div><h1 class="Income"><i class="fas fa-chart-area"></i> Income</h1></div>
+            <div><h1 class="Admin"><i class="fas fa-male"></i> Admin</h1></div>
         </div>
         <div>
             <button class="btn"><i class="fas fa-sign-out-alt"></i> logOut</button>
@@ -82,7 +83,8 @@
                         <td>BMW</td>
                         <td>D0001</td>
                         <td>20000</td>
-                        <td>50</td>
+                        <td><input type="text" class="form-control"  placeholder="Extra Km">
+                        </td>
                         <td>Paid</td>
                     </tr>
 
@@ -92,30 +94,31 @@
         <div>
             <div>
                 <h3>Damage Cost</h3>
-                <input type="text" class="form-control"  placeholder="Enter address">
+                <input type="text" class="form-control"  placeholder="Enter Damage Cost">
             </div>
             <div>
-                <h3>Extra Km</h3>
-                <input type="text" class="form-control"  placeholder="Enter Number Of Driving License">
+                <h3>Extra Km Cost</h3>
+                <input type="text" class="form-control"  placeholder="Enter Extra Km Cost">
             </div>
             <div>
                 <h3>Return Damage Waiver Amount</h3>
-                <input type="date" class="form-control"  placeholder="Enter Date Of Birth">
+                <input type="text" class="form-control"  placeholder="Enter Return Damage Waiver Amount">
             </div>
             <div>
                 <h3>Driver Wages</h3>
-                <input type="text" class="form-control"  placeholder="Enter address">
+                <input type="text" class="form-control"  placeholder="Enter Driver Wages">
             </div>
             <div>
                 <h3>Damage Description</h3>
-                <input type="text" class="form-control"  placeholder="Enter Number Of Driving License">
+                <input type="text" class="form-control"  placeholder="Enter Damage Description">
             </div>
             <div>
                 <h3>Total Amount For Pay</h3>
-                <input type="text" class="form-control"  placeholder="Enter Number Of Driving License">
+                <input type="text" class="form-control"  placeholder="Total Amount For Pay">
             </div>
 
         </div>
+        <div><button id="btnPay" type="button" class="btn">Pay</button></div>
     </section>
 </main>
 

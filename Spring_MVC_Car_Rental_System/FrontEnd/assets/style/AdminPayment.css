@@ -140,7 +140,9 @@
     font-size: 1rem;
 
 }
-
+#adminPayment>section:nth-child(2)>div:nth-child(2)>div:nth-child(2)>div>div{
+    padding-top: 0.4rem;
+}
 #adminPayment>section:nth-child(2)>div:nth-child(3){
     padding-top: 3rem;
 
@@ -163,4 +165,14 @@
 #adminPayment>section:nth-child(2)>div:nth-child(5)>div{
    width: 20rem;
 
+}
+#btnPay{
+    background-color: #9E6D52;
+    right: 0;
+    color: white;
+    position: absolute;
+    width: 12rem;
+    margin-right: 1rem;
+    font-family: 'Poppins';
+    font-weight: 800;
 }
