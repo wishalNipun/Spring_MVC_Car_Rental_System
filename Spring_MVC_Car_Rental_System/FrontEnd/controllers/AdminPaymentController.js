@@ -18,7 +18,7 @@ function loadRentalIds() {
 
 }
 $("#selectReservationIds").change(function () {
-
+    $("#tblPaymentTable").empty();
     $.ajax({
         url: baseURL+"rentalDetail",
         dataType: "json",
@@ -27,21 +27,18 @@ $("#selectReservationIds").change(function () {
             for (let r of resp.data) {
 
                 if (r.rentalId == $("#selectReservationIds").val()) {
-                    console.log(r.customer.name+""+r.pickupDate+""+r.returnDate)
+
                     $("#pcusname").text(r.customer.name);
                     $("#pcuspdate").text(r.pickupDate);
                     $("#pcusrdate").text(r.returnDate);
 
-                    $("#tblPaymentTable").empty();
                     $("#tblPaymentTable").append(
-                //         ` <tr>
-                //     <td>${r.car.brand}</td>
-                //     <td>none</td>
-                //     <td>${r.car.}</td>
-                //     <td><input type="text" class="form-control"  placeholder="Extra Km">
-                //     </td>
-                //     <td>Paid</td>
-                // </tr>`
+                        ` <tr>
+                    <td>${r.car.brand}</td>
+                    <td>none</td>
+                    <td>${r.amount}</td>
+                    <td>${r.totalDamageWaiverAmount}</td>      
+                </tr>`
                     )
                 }
 

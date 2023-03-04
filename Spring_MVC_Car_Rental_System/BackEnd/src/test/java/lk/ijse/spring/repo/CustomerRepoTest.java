@@ -22,6 +22,7 @@ class CustomerRepoTest {
     CustomerRepo customerRepo;
     @Test
     public void testOne(){
-
+        Customer customerByEmail = customerRepo.findCustomerByEmail("wishal1974@gmail.com");
+        System.out.println(customerByEmail);
     }
 }

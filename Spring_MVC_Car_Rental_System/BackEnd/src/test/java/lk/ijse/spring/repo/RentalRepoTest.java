@@ -11,6 +11,8 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 import javax.transaction.Transactional;
 
+import java.util.Optional;
+
 import static org.junit.jupiter.api.Assertions.*;
 @WebAppConfiguration
 @ContextConfiguration(classes = {WebRootConfig.class})
@@ -21,6 +23,7 @@ class RentalRepoTest {
     RentalRepo repo;
     @Test
     public void testOne(){
+        Optional<Rental> byId = repo.findById("R00-0003");
 
     }
 }
