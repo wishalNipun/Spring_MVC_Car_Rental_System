@@ -38,13 +38,48 @@ $("#selectReservationIds").change(function () {
                     <td>none</td>
                     <td>${r.amount}</td>
                     <td>${r.totalDamageWaiverAmount}</td>      
-                </tr>`
-                    )
+                </tr>`)
+
+
+
                 }
 
             }
 
         }
+    });
+    $.ajax({
+        url: baseURL+"rental",
+        dataType: "json",
+        success: function (resp) {
+
+            for (let r of resp.data) {
+                if (r.rentalId == $("#selectReservationIds").val()) {
+
+                    $("#txtPaymentTotalDueAmount").val(r.amount);
+                    $("#txtPaymentTotalPaidLossDamageWaiverAmount").val(r.totalDamageWaiverAmount);
+
+                }
+            }
+
+        }
+    });
+    var test=0;
+    $(".txtInputPayment").on('keyup',function (){
+
+        $("#txtPaymentTotalDueAmount").val();
+        $("#txtPaymentTotalPaidLossDamageWaiverAmount").val()
+        $("#txtPaymentDamageCost").val()
+        $("#txtPaymentExtraKm").val()
+        $("#txtPaymentExtraKmCost").val()
+        $("#txtPaymentReturnDamageWaiverAmount").val()
+        $("#txtPaymentDriverWages").val()
+        $("#txtPaymentDamageDescription").val()
+        $("#txtPaymentTotalAmountForPay").val()
+
+
+
+
     });
 
 });
