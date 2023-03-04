@@ -116,16 +116,16 @@
 
 
 }
-#adminCustomerReservation>section:nth-child(2)>div:nth-child(2)>table>tbody>tr>td:nth-child(8)>button{
+#adminCustomerReservation>section:nth-child(2)>div:nth-child(2)>table>tbody>tr>td:nth-child(11)>button{
     color: #005cbf;
     padding: 0;
 }
-#adminCustomerReservation>section:nth-child(2)>div:nth-child(2)>table>tbody>tr>td:nth-child(9)>button:nth-child(1){
+#adminCustomerReservation>section:nth-child(2)>div:nth-child(2)>table>tbody>tr>td:nth-child(12)>button:nth-child(1){
     color: #F04C4C;
     padding: 0;
     padding-left: 0.5rem;
 }
-#adminCustomerReservation>section:nth-child(2)>div:nth-child(2)>table>tbody>tr>td:nth-child(9)>button:nth-child(2){
+#adminCustomerReservation>section:nth-child(2)>div:nth-child(2)>table>tbody>tr>td:nth-child(12)>button:nth-child(2){
     color: #2d7d3c;
     padding: 0;
     padding-left: 0.5rem;

@@ -103,12 +103,15 @@ public class RentalServiceImpl implements RentalService {
                 switch (rentalDetail.getCar().getType()){
                     case "General":
                         damageWaveCost=damageWaveCost+10000;
+                        rentalDetail.setDamageWaiverAmount(10000);
                         break;
                     case "Luxury":
                         damageWaveCost=damageWaveCost+20000;
+                        rentalDetail.setDamageWaiverAmount(20000);
                         break;
                     case "Premium":
                         damageWaveCost=damageWaveCost+15000;
+                        rentalDetail.setDamageWaiverAmount(15000);
                         break;
                     default:
 
@@ -180,6 +183,12 @@ public class RentalServiceImpl implements RentalService {
         return mapper.map(repo.findAll(), new TypeToken<ArrayList<Rental_DTO>>() {
         }.getType());
     }
+
+    @Override
+    public Rental_DTO searchRentByNIC(String nic) {
+        return null;
+    }
+
 
 
 }

@@ -15,6 +15,7 @@ function loadAllReservations() {
                     case "Deny":
                         $("#tblCustomerReservation").append(
                             `<tr>
+                    <td>${c.id}</td>
                     <td>${c.customer.name}</td>
                     <td>${c.car.brand}</td>
                     <td>none</td>
@@ -22,6 +23,8 @@ function loadAllReservations() {
                     <td>${c.returnDate}</td>
                     <td>${c.pickupLocation}</td>
                     <td>${c.returnLocation}</td>
+                    <td>${c.amount}</td>
+                    <td>${c.totalDamageWaiverAmount}</td>
                     <td><button data-img="${c.damageWaiverImageLocation}"class="btn btnViewCustomerReservationImg">view Image</button></td>
                     <td><button data-id="${c.id}" data-status="Accept" class="btn  btnReservationAccept"><i class="fas fa-times-circle"></i> Accept</button>
                     </td>
@@ -32,6 +35,7 @@ function loadAllReservations() {
                     case "Accept":
                         $("#tblCustomerReservation").append(
                             `<tr>
+                   <td>${c.id}</td>
                     <td>${c.customer.name}</td>
                     <td>${c.car.brand}</td>
                     <td>none</td>
@@ -39,6 +43,8 @@ function loadAllReservations() {
                     <td>${c.returnDate}</td>
                     <td>${c.pickupLocation}</td>
                     <td>${c.returnLocation}</td>
+                    <td>${c.amount}</td>
+                    <td>${c.totalDamageWaiverAmount}</td>
                     <td><button data-img="${c.damageWaiverImageLocation}"class="btn btnViewCustomerReservationImg">view Image</button></td>
                     <td>
                         <button data-id="${c.id}" data-status="Deny" class="btn btnReservationDeny"><i class="fas fa-check-circle"></i> Deny</button>
@@ -50,6 +56,7 @@ function loadAllReservations() {
 
                         $("#tblCustomerReservation").append(
                             `<tr>
+                     <td>${c.id}</td>
                     <td>${c.customer.name}</td>
                     <td>${c.car.brand}</td>
                     <td>none</td>
@@ -57,6 +64,8 @@ function loadAllReservations() {
                     <td>${c.returnDate}</td>
                     <td>${c.pickupLocation}</td>
                     <td>${c.returnLocation}</td>
+                    <td>${c.amount}</td>
+                    <td>${c.totalDamageWaiverAmount}</td>
                     <td><button data-img="${c.damageWaiverImageLocation}"class="btn btnViewCustomerReservationImg">view Image</button></td>
                     <td><button data-id="${c.id}" data-status="Accept" class="btn btnReservationAccept"><i class="fas fa-times-circle"></i> Accept</button>
                         <button data-id="${c.id}" data-status="Deny" class="btn btnReservationDeny"><i class="fas fa-check-circle"></i> Deny</button>
@@ -68,6 +77,7 @@ function loadAllReservations() {
                     default:
                         $("#tblCustomerReservation").append(
                             `<tr>
+                     <td>${c.id}</td>
                     <td>${c.customer.name}</td>
                     <td>${c.car.brand}</td>
                     <td>none</td>
@@ -75,6 +85,8 @@ function loadAllReservations() {
                     <td>${c.returnDate}</td>
                     <td>${c.pickupLocation}</td>
                     <td>${c.returnLocation}</td>
+                    <td>${c.amount}</td>
+                    <td>${c.totalDamageWaiverAmount}</td>
                     <td><button  data-img="${c.damageWaiverImageLocation}"class="btn">view Image</button></td>
                     <td>  </td>
                 </tr>`

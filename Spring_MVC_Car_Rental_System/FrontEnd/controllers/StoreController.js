@@ -188,7 +188,7 @@ function loadAllCart() {
 
                     </td>
                     <td class="tblcoldelete">
-                        <button data-id="${res.data.registrationNumber}" type="button " class="btn btnCartDeleteCheckOut">
+                        <button data-id="${res.data.registrationNumber}" type="button" class="btn btnCartDeleteCheckOut">
                             <img src="assets/img/circleDelete.png">
                         </button>
 
@@ -214,8 +214,8 @@ function loadAllCart() {
                     </td>
                     <td class="tblcolSelect">
                         <select data-id="${res.data.registrationNumber}" class="form-control selectDriver" aria-label="Default select example">
-                         <option selected="">added</option>
-                            <option value="none">none</option>
+                             <option selected="">added</option>
+                             <option value="none">none</option>
 
                         </select>
                     </td>

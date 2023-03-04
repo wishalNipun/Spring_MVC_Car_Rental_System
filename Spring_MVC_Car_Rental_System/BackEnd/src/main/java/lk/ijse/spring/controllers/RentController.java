@@ -1,5 +1,6 @@
 package lk.ijse.spring.controllers;
 
+import lk.ijse.spring.dto.CustomerDTO;
 import lk.ijse.spring.dto.RentalDTO;
 import lk.ijse.spring.dto.Rental_DTO;
 import lk.ijse.spring.service.RentalService;
@@ -28,6 +29,12 @@ public class RentController {
     public ResponseUtil getAllRents(){
         ArrayList<Rental_DTO> allRents = service.getAllRents();
         return new ResponseUtil("200"," Success.!",allRents);
+    }
+
+    @GetMapping(params = "nic")
+    public ResponseUtil checkLogCustomer(String nic) {
+        Rental_DTO dto = service.searchRentByNIC(nic);
+        return new ResponseUtil("200", "Login Success", dto);
     }
 
 }

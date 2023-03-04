@@ -31,6 +31,7 @@ public class RentalDetail {
     private LocalDate pickupDate;
     private LocalDate returnDate;
     private double amount;
+    private double damageWaiverAmount;
     private String status;
 
 
