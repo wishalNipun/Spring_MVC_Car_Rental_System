@@ -40,7 +40,7 @@ $("#selectReservationIds").change(function () {
                     <td>${r.totalDamageWaiverAmount}</td>      
                 </tr>`)
 
-
+                    setTotal();
 
                 }
 
@@ -60,28 +60,66 @@ $("#selectReservationIds").change(function () {
                     $("#txtPaymentTotalPaidLossDamageWaiverAmount").val(r.totalDamageWaiverAmount);
 
                 }
+                setTotal();
             }
 
         }
     });
-    var test=0;
-    $(".txtInputPayment").on('keyup',function (){
 
-        $("#txtPaymentTotalDueAmount").val();
-        $("#txtPaymentTotalPaidLossDamageWaiverAmount").val()
-        $("#txtPaymentDamageCost").val()
-        $("#txtPaymentExtraKm").val()
-        $("#txtPaymentExtraKmCost").val()
-        $("#txtPaymentReturnDamageWaiverAmount").val()
-        $("#txtPaymentDriverWages").val()
-        $("#txtPaymentDamageDescription").val()
-        $("#txtPaymentTotalAmountForPay").val()
+    $(".PaymentButton").click(function () {
 
+        var data=new FormData();
 
+        data.append("rentalId",$("#selectReservationIds").val());
+        data.append("amount",$("#txtPaymentTotalAmountForPay").val());
+        data.append("damageCost",$("#txtPaymentDamageCost").val());
+        data.append("damageDescription",$("#txtPaymentDamageDescription").val());
+        data.append("extraMileage",$("#txtPaymentExtraKm").val());
+        data.append("costPerExtraMileage",$("#txtPaymentDamageCost").val());
+        data.append("driverWages",$("#txtPaymentDriverWages").val());
 
+        $.ajax({
+            url: baseURL+"payment",
+            data:data,
+            success: function (resp) {
+
+            }
+        });
 
     });
 
 });
 
+function setTotal() {
+    var total=0.0;
+    let TotalDueAmount=0.0;
+    let TotalPaidLossDamageWaiverAmount=0.0;
+    let DamageCost = 0.0;
+    let ExtraKm=0.0;
+    let ExtraKmCost=0.0;
+    let ReturnDamageWaiverAmount=0.0;
+    let DriverWages=0.0;
+    TotalDueAmount= parseInt($("#txtPaymentTotalDueAmount").val());
+    TotalPaidLossDamageWaiverAmount= parseInt($("#txtPaymentTotalPaidLossDamageWaiverAmount").val());
+
+
+
+
+    total=TotalDueAmount+TotalPaidLossDamageWaiverAmount;
+    $(".txtInputPayment").on('keyup',function (){
+        console.log("keyup");
+        DamageCost = parseInt($("#txtPaymentDamageCost").val());
+        ExtraKm=    parseInt($("#txtPaymentExtraKm").val());
+        ExtraKmCost= parseInt($("#txtPaymentExtraKmCost").val()) ;
+        ReturnDamageWaiverAmount=  parseInt($("#txtPaymentReturnDamageWaiverAmount").val()) ;
+        DriverWages=  parseInt($("#txtPaymentDriverWages").val());
+        total=0;
+        total=TotalDueAmount+TotalPaidLossDamageWaiverAmount+DamageCost+(ExtraKm*ExtraKmCost)-ReturnDamageWaiverAmount+DriverWages;
+        console.log(total)
+        $("#txtPaymentTotalAmountForPay").val(total);
+    });
+    $("#txtPaymentTotalAmountForPay").val(total);
+
+
+}
 

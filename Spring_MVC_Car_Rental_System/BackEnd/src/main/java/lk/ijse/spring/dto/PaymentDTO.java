@@ -1,5 +1,6 @@
-package lk.ijse.spring.entity;
+package lk.ijse.spring.dto;
 
+import lk.ijse.spring.entity.Rental;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,16 +11,13 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import java.time.LocalDate;
 
-@Entity
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @ToString
-public class Payment {
-
-    @Id
+public class PaymentDTO {
     private String paymentId;
-    @OneToOne
     private Rental rental;
     private String paymentStatus;
     private LocalDate date;
@@ -28,5 +26,5 @@ public class Payment {
     private String damageDescription;
     private long extraMileage;
     private double costPerExtraMileage;
-    private double driverWages;
+
 }

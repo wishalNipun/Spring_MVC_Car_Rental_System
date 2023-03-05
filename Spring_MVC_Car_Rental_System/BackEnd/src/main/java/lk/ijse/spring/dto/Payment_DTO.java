@@ -1,28 +1,20 @@
-package lk.ijse.spring.entity;
+package lk.ijse.spring.dto;
 
+import lk.ijse.spring.entity.Rental;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import java.time.LocalDate;
 
-@Entity
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @ToString
-public class Payment {
-
-    @Id
-    private String paymentId;
-    @OneToOne
-    private Rental rental;
-    private String paymentStatus;
-    private LocalDate date;
+public class Payment_DTO {
+    private String rentalId;
     private double amount;
     private double damageCost;
     private String damageDescription;
