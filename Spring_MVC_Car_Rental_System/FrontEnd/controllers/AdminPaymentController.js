@@ -66,30 +66,45 @@ $("#selectReservationIds").change(function () {
         }
     });
 
-    $(".PaymentButton").click(function () {
 
-        var data=new FormData();
-
-        data.append("rentalId",$("#selectReservationIds").val());
-        data.append("amount",$("#txtPaymentTotalAmountForPay").val());
-        data.append("damageCost",$("#txtPaymentDamageCost").val());
-        data.append("damageDescription",$("#txtPaymentDamageDescription").val());
-        data.append("extraMileage",$("#txtPaymentExtraKm").val());
-        data.append("costPerExtraMileage",$("#txtPaymentDamageCost").val());
-        data.append("driverWages",$("#txtPaymentDriverWages").val());
-
-        $.ajax({
-            url: baseURL+"payment",
-            data:data,
-            success: function (resp) {
-
-            }
-        });
-
-    });
 
 });
+$(".PaymentButton").click(function () {
 
+
+    var rentalId =$("#selectReservationIds").val();
+    var amount =$("#txtPaymentTotalAmountForPay").val();
+    var damageCost =$("#txtPaymentDamageCost").val();
+    var damageDescription =$("#txtPaymentDamageDescription").val();
+    var extraMileage =$("#txtPaymentExtraKm").val();
+    var costPerExtraMileage =$("#txtPaymentExtraKmCost").val();
+    var driverWages =$("#txtPaymentDriverWages").val();
+
+    let payment={
+        rentalId: rentalId,
+        amount: amount,
+        damageCost: damageCost,
+        damageDescription: damageDescription,
+        extraMileage: extraMileage,
+        costPerExtraMileage: costPerExtraMileage,
+        driverWages:driverWages
+    }
+
+    $.ajax({
+        url:baseURL+"payment",
+        method: "post",
+        data:JSON.stringify(payment),
+        contentType:"application/json",
+        dataType:"json",
+        success: function (res) {
+            alert(res.message);
+        },
+        error:function(error){
+            var jsObject=JSON.parse(error.responseText);
+            alert(jsObject.message);
+        }
+    });
+});
 function setTotal() {
     var total=0.0;
     let TotalDueAmount=0.0;

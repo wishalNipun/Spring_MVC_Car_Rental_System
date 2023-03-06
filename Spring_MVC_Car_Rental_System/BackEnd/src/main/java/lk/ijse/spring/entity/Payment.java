@@ -21,7 +21,6 @@ public class Payment {
     private String paymentId;
     @OneToOne
     private Rental rental;
-    private String paymentStatus;
     private LocalDate date;
     private double amount;
     private double damageCost;

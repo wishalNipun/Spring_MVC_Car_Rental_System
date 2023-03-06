@@ -19,12 +19,12 @@ import java.time.LocalDate;
 public class PaymentDTO {
     private String paymentId;
     private Rental rental;
-    private String paymentStatus;
+
     private LocalDate date;
     private double amount;
     private double damageCost;
     private String damageDescription;
     private long extraMileage;
     private double costPerExtraMileage;
-
+    private double driverWages;
 }

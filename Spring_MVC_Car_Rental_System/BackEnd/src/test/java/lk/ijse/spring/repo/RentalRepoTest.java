@@ -23,7 +23,7 @@ class RentalRepoTest {
     RentalRepo repo;
     @Test
     public void testOne(){
-        Optional<Rental> byId = repo.findById("R00-0003");
-
+        Rental rentUsingRentId = repo.findRentUsingRentId("R00-0007");
+        System.out.println(rentUsingRentId);
     }
 }
