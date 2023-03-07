@@ -35,6 +35,11 @@ public class ReservationServiceImpl implements ReservationService {
     @Autowired
     private ModelMapper mapper;
 
+    @Autowired
+    private RentalRepo rentrepo;
+    @Autowired
+
+    private CustomerRepo crepo;
     @Override
     public void updateReservation(ReservationDTO dto) {
 
@@ -72,4 +77,26 @@ public class ReservationServiceImpl implements ReservationService {
 
         repo.save(map);
     }
+
+    @Override
+    public ArrayList<ReservationDTO> getAllReservationUsingEmail(String mail) {
+        Customer customerByEmail = crepo.findCustomerByEmail(mail);
+        String nic = customerByEmail.getNic();
+        System.out.println(nic);
+        Rental latestRentUsingId = rentrepo.findLatestRentUsingNIC(nic);
+        System.out.println(latestRentUsingId);
+//        String rentalId = latestRentUsingId.getRentalId();
+//        ArrayList<ReservationDTO> lists = new ArrayList<>();
+//
+//        for (RentalDetail rentalDetail : repo.findAll()) {
+//                if (rentalDetail.getRental().getRentalId() ==rentalId){
+//                    ReservationDTO map = mapper.map(rentalDetail, ReservationDTO.class);
+//                    lists.add(map);
+//                }
+//
+//        }
+        return null;
+    }
+
+
 }

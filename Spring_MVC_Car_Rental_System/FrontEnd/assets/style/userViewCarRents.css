@@ -1,5 +1,5 @@
 #UserViewCarRents>div:nth-child(1){
-    background:url("../img/UserViewCarRentsblob1.png");
+    background:url("../img/UserViewCarRentsblob2.png");
     background-size:cover;
     background-position:center;
 
@@ -10,7 +10,7 @@
     height: 300px;
 }
 #UserViewCarRents>div:nth-child(2){
-    background:url("../img/UserViewCarRentsblob2.png");
+    background:url("../img/UserViewCarRentsblob1.png");
     background-size:cover;
     background-position:center;
 
@@ -114,24 +114,24 @@
    border: 0;
 }
 
-#UserViewCarRents>div:nth-child(3)>div:nth-child(3){
+#UserViewCarRents>div:nth-child(3)>div:nth-child(4){
     margin-top: 3vh;
 }
-#UserViewCarRents>div:nth-child(3)>div:nth-child(3),#UserViewCarRents>div:nth-child(3)>div:nth-child(4){
+#UserViewCarRents>div:nth-child(3)>div:nth-child(5),#UserViewCarRents>div:nth-child(3)>div:nth-child(4){
 
     display: flex;
     gap: 20px;
     align-items: center;
 
 }
-#UserViewCarRents>div:nth-child(3)>div:nth-child(3)>h1,#UserViewCarRents>div:nth-child(3)>div:nth-child(4)>h1{
+#UserViewCarRents>div:nth-child(3)>div:nth-child(5)>h1,#UserViewCarRents>div:nth-child(3)>div:nth-child(4)>h1{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 1.3rem;
 
 }
-#UserViewCarRents>div:nth-child(3)>div:nth-child(3)>h2,#UserViewCarRents>div:nth-child(3)>div:nth-child(4)>h2{
+#UserViewCarRents>div:nth-child(3)>div:nth-child(5)>h2,#UserViewCarRents>div:nth-child(3)>div:nth-child(4)>h2{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -204,3 +204,10 @@
     margin-top: 22px;
 }
 
+#btnReloadTable{
+    width: 10rem;right: 0; padding: 0; text-align: left;color: #2519cd;
+    margin-bottom: 0.5rem;
+}
+#btnReloadTable:hover{
+    color: red;
+}

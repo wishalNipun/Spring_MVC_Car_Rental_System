@@ -35,6 +35,12 @@ public class ReservationController {
 
     }
 
+    @GetMapping(params = "em")
+    public ResponseUtil getRents(String em) {
+        ArrayList<ReservationDTO> allReservationUsingEmail = service.getAllReservationUsingEmail(em);
+        return new ResponseUtil("200", "request Sent", allReservationUsingEmail);
+    }
+
 }
 
 

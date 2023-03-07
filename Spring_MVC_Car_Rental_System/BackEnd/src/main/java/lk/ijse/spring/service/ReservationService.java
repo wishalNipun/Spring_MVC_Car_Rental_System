@@ -12,4 +12,5 @@ public interface ReservationService {
 
     public ArrayList<ReservationDTO> getAllReservation();
     public void updateReservation(String id,String status);
+    public ArrayList<ReservationDTO> getAllReservationUsingEmail(String mail);
 }

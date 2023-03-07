@@ -160,14 +160,16 @@ function loadAllCart() {
                     <td>${res.data.dailyRate}</td>
                     <td>${res.data.monthlyRate}</td>
                     <td>20000</td>
-                    <td class="tblcoldate">
-                        <div>
-                            <h1>From</h1>
-                            <h2>${pDate}</h2>
-                        </div>
-                        <div>
-                            <h1>To</h1>
-                            <h2>${rDate}</h2>
+                    <td >
+                       <div class="tblcoldate">
+                            <div>
+                                <h1>From</h1>
+                                <h2>${pDate}</h2>
+                            </div>
+                            <div>
+                                <h1>To</h1>
+                                <h2>${rDate}</h2>
+                            </div>
                         </div>
                     </td>
                     <td class="tblcolSelect">
@@ -202,15 +204,17 @@ function loadAllCart() {
                     <td>${res.data.dailyRate}</td>
                     <td>${res.data.monthlyRate}</td>
                     <td>15000</td>
-                    <td class="tblcoldate">
-                        <div>
-                            <h1>From</h1>
-                            <h2>${pDate}</h2>
-                        </div>
-                        <div>
-                            <h1>To</h1>
-                            <h2>${rDate}</h2>
-                        </div>
+                    <td >
+                       <div class="tblcoldate">
+                             <div>
+                                <h1>From</h1>
+                                <h2>${pDate}</h2>
+                             </div>
+                                <div>
+                                 <h1>To</h1>
+                                    <h2>${rDate}</h2>
+                            </div>
+                       </div>
                     </td>
                     <td class="tblcolSelect">
                         <select data-id="${res.data.registrationNumber}" class="form-control selectDriver" aria-label="Default select example">
@@ -244,7 +248,8 @@ function loadAllCart() {
                     <td>${res.data.dailyRate}</td>
                     <td>${res.data.monthlyRate}</td>
                     <td>10000</td>
-                    <td class="tblcoldate">
+                    <td >
+                        <div class="tblcoldate">
                         <div>
                             <h1>From</h1>
                             <h2>${pDate}</h2>
@@ -252,6 +257,7 @@ function loadAllCart() {
                         <div>
                             <h1>To</h1>
                             <h2>${rDate}</h2>
+                        </div>
                         </div>
                     </td>
                     <td class="tblcolSelect">
@@ -286,15 +292,16 @@ function loadAllCart() {
                     <td>${res.data.dailyRate}</td>
                     <td>${res.data.monthlyRate}</td>
                     <td>0</td>
-                    <td class="tblcoldate">
-                        <div>
+                    <td >
+                      <div class="tblcoldate">  
+                      <div>
                             <h1>From</h1>
                             <h2>${pDate}</h2>
                         </div>
                         <div>
                             <h1>To</h1>
                             <h2>${rDate}</h2>
-                        </div>
+                        </div></div>
                     </td>
                     <td class="tblcolSelect">
                         <select data-id="${res.data.registrationNumber}" class="form-control selectDriver" aria-label="Default select example">
