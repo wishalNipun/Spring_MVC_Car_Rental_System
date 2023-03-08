@@ -33,14 +33,14 @@ function loadAllAdmins() {
                 var row = '<tr><td>' + admin.adminId + '</td><td>' +admin.email+ '</td><td>' + admin.username + '</td><td>' + admin.password + '</td></tr>';
                 $("#tblAdmin").append(row);
             }
-           bindRowClickEvents()
-           setTextFieldValues("","","","")
+           bindRowwClickEvents()
+           setTextFieldAdminValues("","","","")
         }
     });
 
 }
 
-function bindRowClickEvents() {
+function bindRowwClickEvents() {
     $("#tblAdmin>tr").click(function () {
         let id = $(this).children(":eq(0)").text();
         let email = $(this).children(":eq(1)").text();
@@ -55,7 +55,7 @@ function bindRowClickEvents() {
     });
 }
 
-function setTextFieldValues(id, email, username, password) {
+function setTextFieldAdminValues(id, email, username, password) {
 
     $("#txtAdminId").val(id);
     $("#txtAdminEmail").val(email);
@@ -101,7 +101,7 @@ $("#btnAdminUpdate").click(function () {
         dataType:"json",
         success: function (res) {
             alert(res.message);
-            loadAllDrivers();
+            loadAllAdmins();
         },
         error:function (error){
             let cause= JSON.parse(error.responseText).message;

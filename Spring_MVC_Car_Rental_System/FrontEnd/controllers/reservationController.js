@@ -26,7 +26,7 @@ function loadAllReservations() {
                     <td>${c.amount}</td>
                     <td>${c.totalDamageWaiverAmount}</td>
                     <td><button data-img="${c.damageWaiverImageLocation}"class="btn btnViewCustomerReservationImg">view Image</button></td>
-                    <td><button data-id="${c.id}" data-status="Accept" class="btn  btnReservationAccept"><i class="fas fa-times-circle"></i> Accept</button>
+                    <td><button data-id="${c.id}" data-status="Accept" class="btn  btnReservationAccept"><i class="fas fa-check-circle"></i> Accept</button>
                     </td>
                 </tr>`
                         );
@@ -47,7 +47,7 @@ function loadAllReservations() {
                     <td>${c.totalDamageWaiverAmount}</td>
                     <td><button data-img="${c.damageWaiverImageLocation}"class="btn btnViewCustomerReservationImg">view Image</button></td>
                     <td>
-                        <button data-id="${c.id}" data-status="Deny" class="btn btnReservationDeny"><i class="fas fa-check-circle"></i> Deny</button>
+                        <button data-id="${c.id}" data-status="Deny" class="btn btnReservationDeny"><i class="fas fa-times-circle"></i></i> Deny</button>
                     </td>
                 </tr>`
                         );
@@ -67,8 +67,8 @@ function loadAllReservations() {
                     <td>${c.amount}</td>
                     <td>${c.totalDamageWaiverAmount}</td>
                     <td><button data-img="${c.damageWaiverImageLocation}"class="btn btnViewCustomerReservationImg">view Image</button></td>
-                    <td><button data-id="${c.id}" data-status="Accept" class="btn btnReservationAccept"><i class="fas fa-times-circle"></i> Accept</button>
-                        <button data-id="${c.id}" data-status="Deny" class="btn btnReservationDeny"><i class="fas fa-check-circle"></i> Deny</button>
+                    <td><button data-id="${c.id}" data-status="Accept" class="btn btnReservationAccept"><i class="fas fa-check-circle"></i>  Accept</button>
+                        <button data-id="${c.id}" data-status="Deny" class="btn btnReservationDeny"><i class="fas fa-times-circle"></i> Deny</button>
                     </td>
                 </tr>`
                         );

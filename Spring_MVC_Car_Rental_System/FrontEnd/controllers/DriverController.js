@@ -53,14 +53,14 @@ function loadAllDrivers() {
                 var row = '<tr><td>' + driver.driverID + '</td><td>' + driver.name+ '</td><td>' + driver.nic + '</td><td>' + driver.address + '</td><td>' + driver.drivingLicense + '</td><td>' + driver.dob + '</td><td>' + driver.status+ '</td></tr>';
                 $("#tblDriver").append(row);
             }
-            bindRowClickEvents()
-            setTextFieldValues("","","","","","","")
+            bindddRowClickEvents()
+            setTextDriverFieldValues("","","","","","","")
         }
     });
 
 }
 
-function bindRowClickEvents() {
+function bindddRowClickEvents() {
     $("#tblDriver>tr").click(function () {
         let id = $(this).children(":eq(0)").text();
         let name = $(this).children(":eq(1)").text();
@@ -81,7 +81,7 @@ function bindRowClickEvents() {
     });
 }
 
-function setTextFieldValues(id, name, address, nic,licen,dateOfBirth,state) {
+function setTextDriverFieldValues(id, name, address, nic,licen,dateOfBirth,state) {
     $("#did").val(id);
     $("#dname").val(name);
     $("#dnic").val(nic);
