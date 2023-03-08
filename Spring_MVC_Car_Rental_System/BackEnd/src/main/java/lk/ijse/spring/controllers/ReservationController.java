@@ -1,9 +1,7 @@
 package lk.ijse.spring.controllers;
 
-import lk.ijse.spring.dto.CustomerDTO;
-import lk.ijse.spring.dto.RentalDTO;
+import lk.ijse.spring.dto.*;
 
-import lk.ijse.spring.dto.ReservationDTO;
 import lk.ijse.spring.service.RentalService;
 import lk.ijse.spring.service.ReservationService;
 import lk.ijse.spring.util.ResponseUtil;
@@ -35,9 +33,9 @@ public class ReservationController {
 
     }
 
-    @GetMapping(params = "em")
-    public ResponseUtil getRents(String em) {
-        ArrayList<ReservationDTO> allReservationUsingEmail = service.getAllReservationUsingEmail(em);
+    @GetMapping(params = "emm")
+    public ResponseUtil getRents(String emm) {
+        ArrayList<RentalDetail_DTO> allReservationUsingEmail = service.getAllReservationUsingEmail(emm);
         return new ResponseUtil("200", "request Sent", allReservationUsingEmail);
     }
 

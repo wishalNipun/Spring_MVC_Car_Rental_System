@@ -23,6 +23,7 @@ public class RentalDetail {
     @JoinColumn(name = "rental_rentalId",referencedColumnName = "rentalId",insertable = true,updatable = false)
     private Rental rental;
     @ManyToOne
+    //@JoinColumn(name = "driver_driverId",referencedColumnName = "driverId",insertable = true,updatable = false)
     private Driver driver;
     @ManyToOne
     @JoinColumn(name = "car_registrationNumber",referencedColumnName = "registrationNumber",insertable = true,updatable = false)

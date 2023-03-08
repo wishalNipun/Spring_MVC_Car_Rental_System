@@ -2,6 +2,8 @@ package lk.ijse.spring.service;
 
 
 
+import lk.ijse.spring.dto.RentalDetailDTO;
+import lk.ijse.spring.dto.RentalDetail_DTO;
 import lk.ijse.spring.dto.ReservationDTO;
 
 import java.util.ArrayList;
@@ -12,5 +14,6 @@ public interface ReservationService {
 
     public ArrayList<ReservationDTO> getAllReservation();
     public void updateReservation(String id,String status);
-    public ArrayList<ReservationDTO> getAllReservationUsingEmail(String mail);
+    public ArrayList<RentalDetail_DTO> getAllReservationUsingEmail(String mail);
+
 }

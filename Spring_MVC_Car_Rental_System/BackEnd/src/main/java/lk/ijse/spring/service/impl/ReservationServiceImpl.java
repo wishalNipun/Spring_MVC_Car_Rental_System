@@ -23,6 +23,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -79,23 +80,32 @@ public class ReservationServiceImpl implements ReservationService {
     }
 
     @Override
-    public ArrayList<ReservationDTO> getAllReservationUsingEmail(String mail) {
+    public ArrayList<RentalDetail_DTO> getAllReservationUsingEmail(String mail) {
         Customer customerByEmail = crepo.findCustomerByEmail(mail);
         String nic = customerByEmail.getNic();
         System.out.println(nic);
-        Rental latestRentUsingId = rentrepo.findLatestRentUsingNIC(nic);
-        System.out.println(latestRentUsingId);
-//        String rentalId = latestRentUsingId.getRentalId();
-//        ArrayList<ReservationDTO> lists = new ArrayList<>();
-//
-//        for (RentalDetail rentalDetail : repo.findAll()) {
-//                if (rentalDetail.getRental().getRentalId() ==rentalId){
-//                    ReservationDTO map = mapper.map(rentalDetail, ReservationDTO.class);
-//                    lists.add(map);
-//                }
-//
-//        }
-        return null;
+        String latestRentUsingNIC = rentrepo.findLatestRentUsingNIC(nic);
+
+        ArrayList<RentalDetail_DTO> list = new ArrayList<>();
+        Rental rentUsingRentId = rentrepo.findRentUsingRentId(latestRentUsingNIC);
+        System.out.println("v"+latestRentUsingNIC);
+        System.out.println(rentUsingRentId.getRentalId());
+
+
+        for (RentalDetail rentalDetail : repo.findAll()) {
+            if (rentalDetail.getRental().getRentalId() ==rentUsingRentId.getRentalId()){
+                RentalDetail_DTO map = mapper.map(rentalDetail, RentalDetail_DTO.class);
+                map.setReturnLocation(rentUsingRentId.getReturnLocation());
+                map.setPickupLocation(rentUsingRentId.getPickupLocation());
+                list.add(map);
+            }
+
+        }
+        System.out.println(list);
+
+
+        return list;
+
     }
 
 
