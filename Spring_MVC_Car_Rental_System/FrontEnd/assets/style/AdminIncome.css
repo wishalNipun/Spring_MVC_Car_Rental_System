@@ -1,0 +1,119 @@
+#adminIncome>section:nth-child(1){
+    position: fixed;
+    width: 279px;
+    height: 100vh;
+    background-color:#A16F53 ;
+}
+#adminIncome>section:nth-child(2){
+    padding-left: 279px;
+}
+
+#adminIncome>section:nth-child(1){
+    display: flex;
+    flex-direction: column;
+
+}
+#adminIncome>section:nth-child(1)>div:nth-child(1){
+    font-family: 'Rock Salt';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    text-align: center;
+    color: white;
+    padding-bottom: 3rem;
+
+}
+#adminIncome>section:nth-child(1)>div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#adminIncome>section:nth-child(1)>div:nth-child(2)>h2{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+}
+#adminIncome>section:nth-child(1)>div:nth-child(2)>img{
+    width: 5rem;
+    height: 5rem;
+
+ }
+#adminIncome>section:nth-child(1)>div:nth-child(2)>h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+
+#adminIncome>section:nth-child(1)>div:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-left: 2rem;
+}
+#adminIncome>section:nth-child(1)>div:nth-child(3)>div>h1{
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 35px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#adminIncome>section:nth-child(1)>div:nth-child(3)>div>h1:hover{
+    color: #000000;
+}
+#adminIncome>section:nth-child(1)>div:nth-child(3)>div:nth-child(7)>h1{
+    color: #000000;
+
+}
+#adminIncome>section:nth-child(1)>div:nth-child(4){
+    display: flex;
+    justify-content: center;
+}
+
+#adminIncome>section:nth-child(1)>div:nth-child(4)>button{
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: white;
+    padding-top: 2rem;
+}
+#adminIncome>section:nth-child(1)>div:nth-child(4)>button:hover{
+    color: #a00000;
+}
+
+/*******************************************************/
+#adminIncome>section:nth-child(2)>div:nth-child(1){
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#adminIncome>section:nth-child(2)>div>h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 52px;
+    padding-left: 10px;
+
+}
+

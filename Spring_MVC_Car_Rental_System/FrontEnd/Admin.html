@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="assets/style/AdminAdminManager.css">
     <link rel="stylesheet" href="assets/style/AdminCarDetail.css">
     <link rel="stylesheet" href="assets/style/AdminPayment.css">
-
+    <link rel="stylesheet" href="assets/style/AdminIncome.css">
 
 </head>
 <body>
@@ -844,6 +844,43 @@
         <div><button id="btnPay" type="button" class="btn PaymentButton">Pay</button></div>
     </section>
 </main>
+<main id="adminIncome" class="container-fluid.p0">
+    <section >
+        <div>Easy Car Rental</div>
+        <div>
+            <h2>Admin</h2>
+            <img src="assets/img/adminfaceUser.png">
+            <h1>Wishal Nipun Siriwardana</h1>
+        </div>
+        <div>
+            <div><h1 class="DashBoard"><i class="fas fa-th-large"></i> DashBoard</h1></div>
+            <div><h1 class="Customer"><i class="fa-solid fa-user"></i> Customer</h1></div>
+            <div><h1 class="Cars"><i class="fa-solid fa-car"></i> Cars</h1></div>
+            <div><h1 class="Drivers"><i class="fas fa-male"></i> Drivers</h1></div>
+            <div><h1 class="Reservation"><i class="fa-solid fa-calendar-days"></i> Reservation</h1></div>
+            <div><h1 class="Payment"><i class="fas fa-money-bill"></i> Payment</h1></div>
+            <div><h1 class="Income"><i class="fas fa-chart-area"></i> Income</h1></div>
+            <div><h1 class="Admin"><i class="fas fa-male"></i> Admin</h1></div>
+        </div>
+        <div>
+            <button class="btn"><i class="fas fa-sign-out-alt"></i> logOut</button>
+        </div>
+    </section>
+    <section>
+        <div>
+            <h1>Income</h1>
+
+        </div>
+        <div style="padding-left: 1rem">
+            <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+
+        </div>
+
+    </section>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+</main>
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -854,5 +891,29 @@
 <script src="controllers/AdminController.js"></script>
 <script src="controllers/reservationController.js"></script>
 <script src="controllers/AdminPaymentController.js"></script>
+<script>
+    var xValues = [50,60,70,80,90,100,110,120,130,140,150];
+    var yValues = [7,8,8,9,9,9,10,11,14,14,15];
+
+    new Chart("myChart", {
+        type: "line",
+        data: {
+            labels: xValues,
+            datasets: [{
+                fill: false,
+                lineTension: 0,
+                backgroundColor: "rgba(0,0,255,1.0)",
+                borderColor: "rgba(0,0,255,0.1)",
+                data: yValues
+            }]
+        },
+        options: {
+            legend: {display: false},
+            scales: {
+                yAxes: [{ticks: {min: 6, max:16}}],
+            }
+        }
+    });
+</script>
 </body>
 </html>
